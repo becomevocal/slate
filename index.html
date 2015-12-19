@@ -46,163 +46,340 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        <h2 id="index-of-hierarchical-categories-used-to-organize-and-group-products">Index of hierarchical categories used to organize and group products.</h2>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Manages</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>OAuth Scopes</strong></td>
+<td><code class="prettyprint">store_v2_products</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code class="prettyprint">store_v2_products_read_only</code></td>
+</tr>
+</tbody></table>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p></div></p>
 
-<p>This example API documentation page was created with <a href="http://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<p></div></p>
 
-<h1 id="authentication">Authentication</h1>
+<h2 id="operations">Operations</h2>
 
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<ul>
+<li>  <a href="#list-categories">List Categories</a></li>
+<li>  <a href="#get-a-category">Get a Category</a></li>
+<li>  <a href="#get-a-count-of-categories">Get a Count of Categories</a></li>
+<li>  <a href="#create-a-category">Create a Category</a></li>
+<li>  <a href="#update-a-category">Update a Category</a></li>
+<li>  <a href="#delete-a-category">Delete a Category</a></li>
+<li>  <a href="#delete-all-categories">Delete All Categories</a></li>
+</ul>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<h2 id="list-categories">List Categories</h2>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<p>Gets the list of categories. (Default sorting is by category id, from lowest to highest.)</p>
 
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<ul>
+<li>  <a href="#list-categories-oauth">OAuth</a>
+&gt;<code class="prettyprint">GET /stores/{store_hash}/v2/categories</code></div></li>
+<li>  <a href="#list-categories-basic">Basic Auth</a>
+&gt;<code class="prettyprint">GET /api/v2/categories</code></div></li>
+</ul>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<h3 id="filters">Filters</h3>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
-
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isis"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all kittens.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
+<p>Filter parameters can be added to the URL query string to select specific categories in the collection.</p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Type</th>
+<th>Example</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td><code class="prettyprint">parent_id</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/categories?parent_id={value}</code></td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td><code class="prettyprint">name</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/categories?name={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">is_visible</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/categories?is_visible={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">min_id</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/categories?min_id={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">max_id</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/categories?max_id={value}</code></td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+<h3 id="pagination">Pagination</h3>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 categories are returned by default.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">Page</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/categories?page={number}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Limit</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/categories?limit={count}</code></td>
+</tr>
+</tbody></table>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight plaintext"><code>[
+  {
+    "id": 1,
+    "parent_id": 0,
+    "name": "Shop Mac",
+    "description": "",
+    "sort_order": 0,
+    "page_title": "",
+    "meta_keywords": "",
+    "meta_description": "",
+    "layout_file": "category.html",
+    "parent_category_list": [
+      1
+    ],
+    "image_file": "",
+    "is_visible": true,
+    "search_keywords": "",
+    "url": "/shop-mac/"
+  }
+]
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h2 id="get-a-category">Get a Category</h2>
 
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
+<p>Gets a single category.</p>
+
+<ul>
+<li>  <a href="#get-a-category-oauth">OAuth</a>
+&gt;<code class="prettyprint">GET /stores/{store_hash}/v2/categories/{id}</code></div></li>
+<li>  <a href="#get-a-category-basic">Basic Auth</a>
+&gt;<code class="prettyprint">GET /api/v2/categories/{id}</code></div></li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isis"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Xmen toys"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"page_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"meta_keywords"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"meta_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"layout_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parent_category_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="mi">10</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"image_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d/apiy2uz6q__69888.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"is_visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"search_keywords"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/xmen-toys/"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves a specific kitten.</p>
+<h2 id="get-a-count-of-categories">Get a Count of Categories</h2>
 
-<aside class="warning">If you&rsquo;re not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+<p>Gets a count of the total number of categories in the store.</p>
 
-<h3 id="http-request">HTTP Request</h3>
+<ul>
+<li>  <a href="#get-a-count-of-categories-oauth">OAuth</a>
+&gt;<code class="prettyprint">GET /stores/{store_hash}/v2/categories/count</code></div></li>
+<li>  <a href="#get-a-count-of-categories-basic">Basic Auth</a>
+&gt;<code class="prettyprint">GET /api/v2/categories/count</code></div></li>
+</ul>
 
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<h3 id="response">Response</h3>
 
-<h3 id="url-parameters">URL Parameters</h3>
+<p>Example JSON returned in the response:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
+<h2 id="create-a-category">Create a Category</h2>
+
+<p>Creates a new category.</p>
+
+<ul>
+<li>  <a href="#create-a-category-oauth">OAuth</a>
+&gt;<code class="prettyprint">POST /stores/{store_hash}/v2/categories</code></div></li>
+<li>  <a href="#create-a-category-basic">Basic Auth</a>
+&gt;<code class="prettyprint">POST /api/v2/categories</code></div></li>
+</ul>
+
+<h3 id="read-only-properties">Read-only Properties</h3>
+
+<p>The following properties of the category are read-only. If one or more of these properties are included in the request, it will be rejected.</p>
+
+<ul>
+<li>  <code class="prettyprint">id</code></li>
+<li>  <code class="prettyprint">parent_category_list</code></li>
+</ul>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>The following properties of the category are required. The request won’t be fulfilled unless these properties are valid.</p>
+
+<ul>
+<li>  <code class="prettyprint">name</code></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<p>To maximize system performance, Bigcommerce caps the number of categories that can be added to a store at 16,000. If your POST causes the store to exceed the maximum of 16,000 categories, Bigcommerce will return a 403 error.</p>
+
+<p>In addition, Bigcommerce caps the total number of parent categories at seven. If your <code class="prettyprint">POST</code> includes the ID of a parent category in the <code class="prettyprint">parent_id</code> field, Bigcommerce will check that parent category and its parent and so on to determine the total number of parent categories. If your <code class="prettyprint">POST</code> would cause the total number of parent categories to exceed seven, Bigcommerce will return a 403 error.</p>
+
+<h3 id="request">Request</h3>
+
+<p>Example request object:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Xmen toys"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Xmen toys"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"page_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"meta_keywords"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"meta_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"layout_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parent_category_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="mi">10</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"image_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d/apiy2uz6q__69888.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"is_visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"search_keywords"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/xmen-toys/"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="update-a-category">Update a Category</h2>
+
+<p>Updates an existing category.</p>
+
+<ul>
+<li>  <a href="#update-a-category-oauth">OAuth</a>
+&gt;<code class="prettyprint">PUT /stores/{store_hash}/v2/categories/{id}</code></div></li>
+<li>  <a href="#update-a-category-basic">Basic Auth</a>
+&gt;<code class="prettyprint">PUT /api/v2/categories/{id}</code></div></li>
+</ul>
+
+<h3 id="read-only-properties">Read-only Properties</h3>
+
+<p>The following properties of the category are read-only. If one or more of these properties are included in the request, it will be rejected.</p>
+
+<ul>
+<li>  <code class="prettyprint">id</code></li>
+<li>  <code class="prettyprint">parent_category_list</code></li>
+</ul>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>The following properties of the category are required. The request won’t be fulfilled unless these properties are valid.</p>
+
+<h3 id="notes">Notes</h3>
+
+<p>To maximize system performance, Bigcommerce caps the total number of parent categories at seven. If your <code class="prettyprint">PUT</code> includes the ID of a parent category in the <code class="prettyprint">parent_id</code> field, Bigcommerce will check the parent and any children of the current category to determine the total number of parent categories. If your <code class="prettyprint">PUT</code> would cause the total number of parent categories to exceed the maximum of seven, Bigcommerce will return a 403 error.</p>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Xmen toys"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"page_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"meta_keywords"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"meta_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"layout_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parent_category_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="mi">10</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"image_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d/apiy2uz6q__69888.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"is_visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"search_keywords"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/xmen-toys/"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="delete-a-category">Delete a Category</h2>
+
+<p>Deletes a category.</p>
+
+<ul>
+<li>  <a href="#delete-a-category-oauth">OAuth</a>
+&gt;<code class="prettyprint">DELETE /stores/{store_hash}/v2/categories/{id}</code></div></li>
+<li>  <a href="#delete-a-category-basic">Basic Auth</a>
+&gt;<code class="prettyprint">DELETE /api/v2/categories/{id}</code></div></li>
+</ul>
+
+<h2 id="delete-all-categories">Delete All Categories</h2>
+
+<p>Deletes all the categories in the store.</p>
+
+<ul>
+<li>  <a href="#delete-all-categories-oauth">OAuth</a>
+&gt;<code class="prettyprint">DELETE /stores/{store_hash}/v2/categories</code></div></li>
+<li>  <a href="#delete-all-categories-basic">Basic Auth</a>
+&gt;<code class="prettyprint">DELETE /api/v2/categories</code></div></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<blockquote>
+<p>The DELETE all categories operation will not succeed unless the store has zero products. If any products in the store belong to any categories, the entire operation will fail. Therefore, if you really want to delete all the categories of the store, you must first delete all of the products in the store.</p>
+</blockquote>
 
           <h1 id="errors">Errors</h1>
 
