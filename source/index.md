@@ -1291,9 +1291,9 @@ ID | The ID of the kitten to retrieve
 
 # Message Block Samples
 
-<aside class="success">This is a `success` block.</aside>
+<aside class="success">This is a <em>success</em> block.</aside>
 
-<aside class="notice">This is a `notice` block.</aside>
+<aside class="notice">This is a <em>notice</em> block.</aside>
 
-<aside class="warning">This is a `warning` block.</aside>
+<aside class="warning">This is a <em>warning</em> block.</aside>
 
