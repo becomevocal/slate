@@ -1,4 +1,7 @@
-# AccountDownloadItemList Snippet
+# Theme Snippets
+
+
+## AccountDownloadItemList Snippet
 
 ### Available Variables
 |||
@@ -11,7 +14,8 @@
 | `%%GLOBAL_DisplayDownloadExpired%%` |
 | `%%GLOBAL_ExpiryInfo%%` |
 | `%%GLOBAL_DownloadDescription%%` |
-# AccountInboxMessage Snippet
+
+## AccountInboxMessage Snippet
 
 ### Available Variables
 |||
@@ -23,14 +27,16 @@
 | `%%GLOBAL_Sender%%` |
 | `%%LNG_MessageSaid%%` |
 | `%%GLOBAL_MessageContent%%` |
-# AccountInboxOrderItem Snippet
+
+## AccountInboxOrderItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_OrderItemMessage%%` |
 | `%%GLOBAL_OrderId%%` |
-# AccountNewReturnItem Snippet
+
+## AccountNewReturnItem Snippet
 
 ### Available Variables
 |||
@@ -42,7 +48,8 @@
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_OrderProductId%%` |
 | `%%GLOBAL_ProductQtySelect%%` |
-# AccountOrderItem Snippet
+
+## AccountOrderItem Snippet
 
 ### Available Variables
 |||
@@ -61,14 +68,16 @@
 | `%%GLOBAL_OrderDate%%` |
 | `%%LNG_YourOrderContainsTheFollowingItems2%%` |
 | `%%GLOBAL_AccountOrderItemList%%` |
-# AccountOrderItemDownloadLink Snippet
+
+## AccountOrderItemDownloadLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ShopPathSSL%%` |
 | `%%GLOBAL_DownloadItemEncrypted%%` |
-# AccountOrderItemList Snippet
+
+## AccountOrderItemList Snippet
 
 ### Available Variables
 |||
@@ -82,7 +91,8 @@
 | `%%GLOBAL_DownloadLink%%` |
 | `%%GLOBAL_HideExpectedReleaseDate%%` |
 | `%%GLOBAL_ExpectedReleaseDate%%` |
-# AccountOrderItemRow Snippet
+
+## AccountOrderItemRow Snippet
 
 ### Available Variables
 |||
@@ -110,7 +120,8 @@
 | `%%GLOBAL_ExpectedReleaseDate%%` |
 | `%%GLOBAL_ItemClass%%` |
 | `%%GLOBAL_Price%%` |
-# AccountOrderItemShippingRow Snippet
+
+## AccountOrderItemShippingRow Snippet
 
 ### Available Variables
 |||
@@ -118,7 +129,8 @@
 | `%%LNG_ItemsShippedTo%%` |
 | `%%GLOBAL_ItemShippingRow_AddressLine%%` |
 | `%%LNG_Price%%` |
-# AccountOrderShipmentRow Snippet
+
+## AccountOrderShipmentRow Snippet
 
 ### Available Variables
 |||
@@ -128,7 +140,8 @@
 | `%%GLOBAL_HideShippingMethod%%` |
 | `%%GLOBAL_ShippingMethod%%` |
 | `%%GLOBAL_TrackingLink%%` |
-# AccountOrderStatusItem Snippet
+
+## AccountOrderStatusItem Snippet
 
 ### Available Variables
 |||
@@ -151,14 +164,16 @@
 | `%%GLOBAL_OrderInstructions%%` |
 | `%%LNG_YourOrderContainsTheFollowingItems2%%` |
 | `%%GLOBAL_AccountOrderItemList%%` |
-# AccountOrderTotalRow Snippet
+
+## AccountOrderTotalRow Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_label%%` |
 | `%%GLOBAL_value%%` |  
-# AccountRecentlyViewedProducts Snippet
+
+## AccountRecentlyViewedProducts Snippet
 
 ### Available Variables
 |||
@@ -174,7 +189,8 @@
 | `%%GLOBAL_HideCompareItems%%` |
 | `%%GLOBAL_ProductId%%` |
 | `%%LNG_Compare%%` |
-# AccountReturnItem Snippet
+
+## AccountReturnItem Snippet
 
 ### Available Variables
 |||
@@ -196,14 +212,16 @@
 | `%%GLOBAL_HideReturnComment%%` |
 | `%%LNG_YourComments%%` |
 | `%%GLOBAL_ReturnComments%%` |
-# AddThisLink Snippet
+
+## AddThisLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_AddThisServiceButtonMeta%%` |
 | `%%GLOBAL_AddThisServiceButtons%%` |
-# AddressLabel Snippet
+
+## AddressLabel Snippet
 
 ### Available Variables
 |||
@@ -216,7 +234,8 @@
 | `%%GLOBAL_ShipZip%%` |
 | `%%GLOBAL_ShipCountry%%` |
 | `%%GLOBAL_ShipPhone%%` |  
-# BlogRecentPostsContentItem Snippet
+
+## BlogRecentPostsContentItem Snippet
 
 ### Available Variables
 |||
@@ -226,14 +245,16 @@
 | `%%GLOBAL_RecentPostTitle%%` |
 | `%%GLOBAL_RecentPostSummary%%` |
 | `%%LNG_ReadMoreLink%%` |
-# BlogRecentPostsItem Snippet
+
+## BlogRecentPostsItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_RecentPostUrl%%` |
 | `%%GLOBAL_RecentPostTitle%%` |
-# BrandCloudItem Snippet
+
+## BrandCloudItem Snippet
 
 ### Available Variables
 |||
@@ -243,13 +264,15 @@
 | `%%LNG_Products%%` |
 | `%%GLOBAL_TagSize%%%` |
 | `%%GLOBAL_BrandLink%%` |
-# BrandMainPageMessage Snippet
+
+## BrandMainPageMessage Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ChooseBrandFromList%%` |
-# BrandProductsItem Snippet
+
+## BrandProductsItem Snippet
 
 ### Available Variables
 |||
@@ -268,20 +291,23 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# BreadcrumbItem Snippet
+
+## BreadcrumbItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CatTrailLink%%` |
 | `%%GLOBAL_CatTrailName%%` |
-# BreadcrumbItemCurrent Snippet
+
+## BreadcrumbItemCurrent Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CatTrailName%%` |
-# CartCoupon Snippet
+
+## CartCoupon Snippet
 
 ### Available Variables
 |||
@@ -291,7 +317,8 @@
 | `%%GLOBAL_CouponId%%` |
 | `%%LNG_Remove%%` |
 | `%%GLOBAL_CouponDiscount%%` |
-# CartEditProductFieldsForm Snippet
+
+## CartEditProductFieldsForm Snippet
 
 ### Available Variables
 |||
@@ -309,7 +336,8 @@
 | `%%LNG_EnterRequiredField%%` |
 | `%%LNG_InvalidFileTypeJS%%` |
 | `%%LNG_DeleteProductFieldFileConfirmation%%` |
-# CartGiftCertificate Snippet
+
+## CartGiftCertificate Snippet
 
 ### Available Variables
 |||
@@ -321,7 +349,8 @@
 | `%%GLOBAL_GiftCertificateId%%` |
 | `%%LNG_Remove%%` |
 | `%%GLOBAL_CertificateAmountUsed%%` |
-# CartItem Snippet
+
+## CartItem Snippet
 
 ### Available Variables
 |||
@@ -353,7 +382,8 @@
 | `%%GLOBAL_CartItemId%%` |
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_ProductTotal%%` |
-# CartItemGiftCertificate Snippet
+
+## CartItemGiftCertificate Snippet
 
 ### Available Variables
 |||
@@ -369,7 +399,8 @@
 | `%%LNG_Remove%%` |
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_ProductTotal%%` |
-# CartItemQtySelect Snippet
+
+## CartItemQtySelect Snippet
 
 ### Available Variables
 |||
@@ -407,21 +438,24 @@
 | `%%GLOBAL_Quantity29%%` |
 | `%%GLOBAL_Quantity30%%` |
 | `%%GLOBAL_QtyOptionSelected%%` |
-# CartItemQtyText Snippet
+
+## CartItemQtyText Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CartItemId%%` |
 | `%%GLOBAL_ProductQuantity%%` |
-# CartProductAttribute Snippet
+
+## CartProductAttribute Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductAttributeName%%` |
 | `%%GLOBAL_ProductAttributeValue%%` |
-# CartProductAttributesList Snippet
+
+## CartProductAttributesList Snippet
 
 ### Available Variables
 |||
@@ -429,7 +463,8 @@
 | `%%GLOBAL_ProductAttributes%%` |
 | `%%GLOBAL_CartItemId%%` |
 | `%%LNG_Change%%` |
-# CartProductFieldCheckbox Snippet
+
+## CartProductFieldCheckbox Snippet
 
 ### Available Variables
 |||
@@ -441,7 +476,8 @@
 | `%%GLOBAL_ProductFieldInputSize%%` |
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldValue%%` |
-# CartProductFieldFile Snippet
+
+## CartProductFieldFile Snippet
 
 ### Available Variables
 |||
@@ -465,7 +501,8 @@
 | `%%LNG_Type%%` |
 | `%%GLOBAL_FileTypes%%` |
 | `%%GLOBAL_CurrentProductFile%%` |
-# CartProductFieldInput Snippet
+
+## CartProductFieldInput Snippet
 
 ### Available Variables
 |||
@@ -478,7 +515,8 @@
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldInputSize%%` |
 | `%%GLOBAL_ProductFieldValue%%` |
-# CartProductFieldSelect Snippet
+
+## CartProductFieldSelect Snippet
 
 ### Available Variables
 |||
@@ -489,7 +527,8 @@
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldInputSize%%` |
 | `%%GLOBAL_SelectOptions%%` |
-# CartProductFieldTextarea Snippet
+
+## CartProductFieldTextarea Snippet
 
 ### Available Variables
 |||
@@ -499,7 +538,8 @@
 | `%%GLOBAL_ProductFieldName%%` |
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldValue%%` |
-# CartProductFields Snippet
+
+## CartProductFields Snippet
 
 ### Available Variables
 |||
@@ -507,7 +547,8 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_CustomFieldName%%` |
 | `%%GLOBAL_CustomFieldValue%%` |
-# CartShippingQuoteRow Snippet
+
+## CartShippingQuoteRow Snippet
 
 ### Available Variables
 |||
@@ -516,20 +557,23 @@
 | `%%GLOBAL_ShipperName%%` |
 | `%%GLOBAL_TransitTime%%` |
 | `%%GLOBAL_ShippingPrice%%` |
-# CartShippingTransitTime Snippet
+
+## CartShippingTransitTime Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_TransitTime%%` |
-# CartTotalTaxRow Snippet
+
+## CartTotalTaxRow Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_TaxName%%` |
 | `%%GLOBAL_TaxCost%%` |
-# CategoryPaging Snippet
+
+## CategoryPaging Snippet
 
 ### Available Variables
 |||
@@ -538,34 +582,39 @@
 | `%%SNIPPET_CategoryPagingNext%%` |
 | `%%LNG_Pages%%` |
 | `%%SNIPPET_PagingData%%` |
-# CategoryPagingItem Snippet
+
+## CategoryPagingItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_PageLink%%` |
 | `%%GLOBAL_PageNumber%%` |
-# CategoryPagingItemCurrent Snippet
+
+## CategoryPagingItemCurrent Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_PageNumber%%` |
-# CategoryPagingNext Snippet
+
+## CategoryPagingNext Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_NextLink%%` |
 | `%%LNG_Next%%` |  
-# CategoryPagingPrevious Snippet
+
+## CategoryPagingPrevious Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_PrevLink%%` |
 | `%%LNG_Previous%%` |
-# CategoryProductsItem Snippet
+
+## CategoryProductsItem Snippet
 
 ### Available Variables
 |||
@@ -585,7 +634,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# CategoryProductsItemList Snippet
+
+## CategoryProductsItemList Snippet
 
 ### Available Variables
 |||
@@ -607,7 +657,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# CategorySortBox Snippet
+
+## CategorySortBox Snippet
 
 ### Available Variables
 |||
@@ -631,14 +682,16 @@
 | `%%LNG_PriceAsc%%` |
 | `%%GLOBAL_SortPriceDesc%%` |
 | `%%LNG_PriceDesc%%` |
-# CheckoutBillingAddressFields Snippet
+
+## CheckoutBillingAddressFields Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%LNG_EmailAddress%%` |
 | `%%GLOBAL_AccountEmail%%` |
-# CheckoutCartItem Snippet
+
+## CheckoutCartItem Snippet
 
 ### Available Variables
 |||
@@ -660,7 +713,8 @@
 | `%%GLOBAL_ProductQuantity%%` |
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_ProductTotal%%` |
-# CheckoutCartItemGiftCertificate Snippet
+
+## CheckoutCartItemGiftCertificate Snippet
 
 ### Available Variables
 |||
@@ -671,14 +725,16 @@
 | `%%GLOBAL_ProductQuantity%%` |
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_ProductTotal%%` |
-# CheckoutCartTotal Snippet
+
+## CheckoutCartTotal Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_label%%` |
 | `%%GLOBAL_value%%` |
-# CheckoutMailFormatPreference   Snippet
+
+## CheckoutMailFormatPreference   Snippet
 
 ### Available Variables
 |||
@@ -686,7 +742,8 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_IPreferThisEmailFormat%%` |
 | `%%GLOBAL_MailFormatPreferenceOptions%%` |
-# CheckoutProviderOption Snippet
+
+## CheckoutProviderOption Snippet
 
 ### Available Variables
 |||
@@ -697,7 +754,8 @@
 | `%%GLOBAL_ProviderType%%` |
 | `%%GLOBAL_ProviderPaymentFormClass%%` |
 | `%%GLOBAL_ProviderName%%` |
-# CheckoutShippingAddressItem Snippet
+
+## CheckoutShippingAddressItem Snippet
 
 ### Available Variables
 |||
@@ -722,14 +780,16 @@
 | `%%GLOBAL_HideAddressButton%%` |
 | `%%GLOBAL_ShippingFormAction%%` |
 | `%%GLOBAL_ShipAddressButtonText%%` |
-# CheckoutTaxLine Snippet
+
+## CheckoutTaxLine Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_TaxName%%` |
 | `%%GLOBAL_TaxCost%%` |
-# CompareButton Snippet
+
+## CompareButton Snippet
 
 ### Available Variables
 |||
@@ -738,7 +798,8 @@
 | `%%LNG_CompareSelected%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_SiteColor%%` |
-# CompareButtonList Snippet
+
+## CompareButtonList Snippet
 
 ### Available Variables
 |||
@@ -748,14 +809,16 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_SiteColor%%` |
 | `%%GLOBAL_HideAddButton%%` |
-# CompareProductCustomField Snippet
+
+## CompareProductCustomField Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CustomFieldName%%` |
 | `%%GLOBAL_CustomFieldValue%%` |
-# CompareProductTd1 Snippet
+
+## CompareProductTd1 Snippet
 
 ### Available Variables
 |||
@@ -764,7 +827,8 @@
 | `%%GLOBAL_CompareWidth%%` |
 | `%%GLOBAL_RemoveCompareLink%%` |
 | `%%LNG_Remove%%` |
-# CompareProductTd2 Snippet
+
+## CompareProductTd2 Snippet
 
 ### Available Variables
 |||
@@ -772,28 +836,32 @@
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_ProductLink%%` |
 | `%%GLOBAL_ProductName%%` |
-# CompareProductTd3 Snippet
+
+## CompareProductTd3 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_ProductThumb%%` |
-# CompareProductTd4 Snippet
+
+## CompareProductTd4 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_ProductPrice%%` |
-# CompareProductTd5 Snippet
+
+## CompareProductTd5 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_ProductAvailability%%` |
-# CompareProductTd6 Snippet
+
+## CompareProductTd6 Snippet
 
 ### Available Variables
 |||
@@ -807,28 +875,32 @@
 | `%%GLOBAL_NumReviews%%` |
 | `%%GLOBAL_ProductLink%%` |
 | `%%LNG_ReadReviews%%` |
-# CompareProductTd7 Snippet
+
+## CompareProductTd7 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_ProductSummary%%` |
-# CompareProductTd8 Snippet
+
+## CompareProductTd8 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_CustomFields%%` |
-# CompareProductTd9 Snippet
+
+## CompareProductTd9 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductNumber%%` |
 | `%%GLOBAL_ProductBrand%%` |
-# CompareProductTr1 Snippet
+
+## CompareProductTr1 Snippet
 
 ### Available Variables
 |||
@@ -836,7 +908,8 @@
 | `%%GLOBAL_CompareHeadWidth%%` |
 | `%%LNG_ProductDetails%%` |
 | `%%SNIPPET_TD1%%` |
-# CompareProductTr2 Snippet
+
+## CompareProductTr2 Snippet
 
 ### Available Variables
 |||
@@ -845,14 +918,16 @@
 | `%%LNG_SortByProductName%%` |
 | `%%LNG_Product%%` |
 | `%%SNIPPET_TD2%%` |
-# CompareProductTr3 Snippet
+
+## CompareProductTr3 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%LNG_Image%%` |
 | `%%SNIPPET_TD3%%` |
-# CompareProductTr4 Snippet
+
+## CompareProductTr4 Snippet
 
 ### Available Variables
 |||
@@ -862,14 +937,16 @@
 | `%%LNG_SortByProductPrice%%` |
 | `%%LNG_Price%%` |
 | `%%SNIPPET_TD4%%` |
-# CompareProductTr5 Snippet
+
+## CompareProductTr5 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%LNG_Availability%%` |
 | `%%SNIPPET_TD5%%` |
-# CompareProductTr6 Snippet
+
+## CompareProductTr6 Snippet
 
 ### Available Variables
 |||
@@ -879,21 +956,24 @@
 | `%%LNG_SortByProductRating%%` |
 | `%%LNG_Rating%%` |
 | `%%SNIPPET_TD6%%` |
-# CompareProductTr7 Snippet
+
+## CompareProductTr7 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%LNG_Summary%%` |
 | `%%SNIPPET_TD7%%` |
-# CompareProductTr8 Snippet
+
+## CompareProductTr8 Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%LNG_Other%%` |
 | `%%SNIPPET_TD8%%` |
-# CompareProductTr9 Snippet
+
+## CompareProductTr9 Snippet
 
 ### Available Variables
 |||
@@ -902,7 +982,8 @@
 | `%%LNG_SortByProductBrand%%` |
 | `%%LNG_Brand%%` |
 | `%%SNIPPET_TD9%%` |
-# ConfirmOrderCoupon Snippet
+
+## ConfirmOrderCoupon Snippet
 
 ### Available Variables
 |||
@@ -910,7 +991,8 @@
 | `%%LNG_Coupon%%` |
 | `%%GLOBAL_CouponCode%%` |
 | `%%GLOBAL_CouponDiscount%%` |
-# ConfirmOrderGiftCertificate Snippet
+
+## ConfirmOrderGiftCertificate Snippet
 
 ### Available Variables
 |||
@@ -920,20 +1002,23 @@
 | `%%GLOBAL_GiftCertificateRemaining%%` |
 | `%%LNG_GiftCertificateRemaining%%` |
 | `%%GLOBAL_CertificateAmountUsed%%` |
-# CookieNotification Snippet
+
+## CookieNotification Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_PrivacyCookieNotification%%` |
 | `%%LNG_HC_ok%%` |
-# CustomizeItemJavascript Snippet
+
+## CustomizeItemJavascript Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductAttributesJavascript%%` |
-# DesignModeFooter Snippet
+
+## DesignModeFooter Snippet
 
 ### Available Variables
 |||
@@ -959,7 +1044,8 @@
 | `%%LNG_Or%%` |
 | `%%LNG_DesignModeLangSaving%%` |
 | `%%LNG_DesignModeCancel%%` |
-# ESelectPlusConfirmationDetails Snippet
+
+## ESelectPlusConfirmationDetails Snippet
 
 ### Available Variables
 |||
@@ -990,7 +1076,8 @@
 | `%%GLOBAL_ReferenceNumber%%` |
 | `%%LNG_InvoiceNumber%%` |
 | `%%GLOBAL_InvoiceNumber%%` |
-# ESelectPlusDpConfirmationDetails Snippet
+
+## ESelectPlusDpConfirmationDetails Snippet
 
 ### Available Variables
 |||
@@ -1021,7 +1108,8 @@
 | `%%GLOBAL_ReferenceNumber%%` |
 | `%%LNG_InvoiceNumber%%` |
 | `%%GLOBAL_InvoiceNumber%%` |
-# ESelectPlusUsConfirmationDetails Snippet
+
+## ESelectPlusUsConfirmationDetails Snippet
 
 ### Available Variables
 |||
@@ -1048,7 +1136,8 @@
 | `%%GLOBAL_CardholderName%%` |
 | `%%LNG_InvoiceNumber%%` |
 | `%%GLOBAL_InvoiceNumber%%` |
-# EstimatedShippingQuote Snippet
+
+## EstimatedShippingQuote Snippet
 
 ### Available Variables
 |||
@@ -1056,7 +1145,8 @@
 | `%%LNG_ShippingMethod%%` |
 | `%%LNG_Price%%` |
 | `%%GLOBAL_ShippingQuoteRow%%` |
-# EstimatedShippingQuoteList Snippet
+
+## EstimatedShippingQuoteList Snippet
 
 ### Available Variables
 |||
@@ -1064,14 +1154,16 @@
 | `%%GLOBAL_ShippingQuotes%%` |
 | `%%LNG_UpdateShippingCost%%` |
 | `%%GLOBAL_DeliveryDisclaimer%%` |
-# EstimatedShippingQuoteProduct Snippet
+
+## EstimatedShippingQuoteProduct Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductQuantity%%` |
 | `%%GLOBAL_ProductName%%` |
-# EventDate Snippet
+
+## EventDate Snippet
 
 ### Available Variables
 |||
@@ -1085,7 +1177,8 @@
 | `%%GLOBAL_EventDateYearStyle%%` |
 | `%%GLOBAL_OverviewToYears%%` |
 | `%%GLOBAL_EventDateLimitations%%` |
-# ExpressCheckoutAddress Snippet
+
+## ExpressCheckoutAddress Snippet
 
 ### Available Variables
 |||
@@ -1094,7 +1187,8 @@
 | `%%GLOBAL_AddressType%%` |
 | `%%GLOBAL_AddressSelected%%` |
 | `%%GLOBAL_AddressLine%%` |
-# ExpressCheckoutChooseAddress Snippet
+
+## ExpressCheckoutChooseAddress Snippet
 
 ### Available Variables
 |||
@@ -1123,7 +1217,8 @@
 | `%%LNG_ShipToThisAddress%%` |
 | `%%LNG_BillAndShipToAddress%%` |
 | `%%LNG_BillToThisAddress%%` |
-# ExpressCheckoutChooseShipper Snippet
+
+## ExpressCheckoutChooseShipper Snippet
 
 ### Available Variables
 |||
@@ -1132,7 +1227,8 @@
 | `%%GLOBAL_ShippingQuotes%%` |
 | `%%LNG_Continue%%` |
 | `%%GLOBAL_DeliveryDisclaimer%%` |
-# ExpressCheckoutConfirmation Snippet
+
+## ExpressCheckoutConfirmation Snippet
 
 ### Available Panels
 |||
@@ -1203,7 +1299,8 @@
 | `%%GLOBAL_PaymentButtonSwitch%%` |
 | `%%GLOBAL_ExpressCheckoutLoadPaymentForm%%` |
 | `%%LNG_TickArgeeTermsAndConditions%%` |
-# ExpressCheckoutCreateAccount Snippet
+
+## ExpressCheckoutCreateAccount Snippet
 
 ### Available Variables
 |||
@@ -1212,7 +1309,8 @@
 | `%%GLOBAL_AccountEmail%%` |
 | `%%LNG_Password%%` |
 | `%%LNG_PasswordConfirm%%` |
-# ExpressCheckoutShippingMethod Snippet
+
+## ExpressCheckoutShippingMethod Snippet
 
 ### Available Variables
 |||
@@ -1222,14 +1320,16 @@
 | `%%GLOBAL_ShipperName%%` |
 | `%%GLOBAL_TransitTime%%` |
 | `%%GLOBAL_ShippingPrice%%` |
-# FacebookLikeButton Snippet
+
+## FacebookLikeButton Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_FrameWidth%%` |
 | `%%GLOBAL_FacebookButtonHref%%` |
-# FastCartThickBoxContent Snippet
+
+## FastCartThickBoxContent Snippet
 
 ### Available Variables
 |||
@@ -1260,7 +1360,8 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_SiteColor%%` |
 | `%%LNG_SuggestiveCartIntro%%` |
-# FlyoutNode Snippet
+
+## FlyoutNode Snippet
 
 ### Available Variables
 |||
@@ -1269,14 +1370,16 @@
 | `%%GLOBAL_FlyoutNodeUrl%%` |
 | `%%GLOBAL_FlyoutNodeLabel%%` |
 | `%%GLOBAL_FlyoutChildHtml%%` |
-# FlyoutTree Snippet
+
+## FlyoutTree Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_FlyoutAttributes%%` |
 | `%%GLOBAL_FlyoutChildHtml%%` |
-# GiftWrappingWrapOptions Snippet
+
+## GiftWrappingWrapOptions Snippet
 
 ### Available Variables
 |||
@@ -1294,7 +1397,8 @@
 | `%%LNG_GiftMessage%%` |
 | `%%GLOBAL_GiftWrapMessage%%` |
 | `%%GLOBAL_HideWrappingSeparator%%` |
-# HomeCurrencyFlags Snippet
+
+## HomeCurrencyFlags Snippet
 
 ### Available Variables
 |||
@@ -1303,7 +1407,8 @@
 | `%%GLOBAL_CurrencyFlagURL%%` |
 | `%%GLOBAL_CurrencyName%%` |
 | `%%GLOBAL_CurrencyClass%%` |
-# HomeFeaturedProductsFeed Snippet
+
+## HomeFeaturedProductsFeed Snippet
 
 ### Available Variables
 |||
@@ -1311,7 +1416,8 @@
 | `%%GLOBAL_ShopPath%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_FeaturedProductsFeed%%` |
-# HomeFeaturedProductsItem Snippet
+
+## HomeFeaturedProductsItem Snippet
 
 ### Available Variables
 |||
@@ -1329,7 +1435,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# HomeNewProductsFeed Snippet
+
+## HomeNewProductsFeed Snippet
 
 ### Available Variables
 |||
@@ -1337,7 +1444,8 @@
 | `%%GLOBAL_ShopPath%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_NewProductsFeed%%` |
-# HomeNewProductsItem Snippet
+
+## HomeNewProductsItem Snippet
 
 ### Available Variables
 |||
@@ -1355,7 +1463,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# HomeRecentBlogsFeed Snippet
+
+## HomeRecentBlogsFeed Snippet
 
 ### Available Variables
 |||
@@ -1363,7 +1472,8 @@
 | `%%GLOBAL_ShopPath%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_RecentBlogsFeed%%` |
-# HomeSaleProductsItem Snippet
+
+## HomeSaleProductsItem Snippet
 
 ### Available Variables
 |||
@@ -1379,7 +1489,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# InvoiceCartItem Snippet
+
+## InvoiceCartItem Snippet
 
 ### Available Variables
 |||
@@ -1392,7 +1503,8 @@
 | `%%GLOBAL_ProductQuantity%%` |
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_ProductTotal%%` |
-# InvoiceCustomerDetails Snippet
+
+## InvoiceCustomerDetails Snippet
 
 ### Available Variables
 |||
@@ -1400,7 +1512,8 @@
 | `%%GLOBAL_CustomerName%%` |
 | `%%GLOBAL_CustomerEmail%%` |
 | `%%GLOBAL_CustomerPhone%%` |
-# InvoicePendingPaymentDetails Snippet
+
+## InvoicePendingPaymentDetails Snippet
 
 ### Available Variables
 |||
@@ -1410,14 +1523,16 @@
 | `%%LNG_YourOrderTotalIs%%` |
 | `%%GLOBAL_TotalCost%%` |
 | `%%GLOBAL_PaymentMessage%%` |
-# InvoicePendingPaymentNotice Snippet
+
+## InvoicePendingPaymentNotice Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_InvoicePendingPaymentText%%` |
-# ListCheckForm Snippet
+
+## ListCheckForm Snippet
 
 ### Available Variables
 |||
@@ -1426,7 +1541,8 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_InvoicePendingPaymentText%%` |
 | `%%GLOBAL_JSCacheToken%%` |
-# LogoImage Snippet
+
+## LogoImage Snippet
 
 ### Available Variables
 |||
@@ -1436,14 +1552,16 @@
 | `%%GLOBAL_ImageDirectory%%` |
 | `%%GLOBAL_StoreLogo%%` |
 | `%%GLOBAL_StoreName%%` |
-# LogoText Snippet
+
+## LogoText Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ShopPathNormal%%` |
 | `%%GLOBAL_LogoText%%` |
-# MaintenanceNotice Snippet
+
+## MaintenanceNotice Snippet
 
 ### Available Variables
 |||
@@ -1458,21 +1576,24 @@
 | `%%GLOBAL_ImageDirectory%%` |
 | `%%GLOBAL_StoreLogo%%` |
 | `%%GLOBAL_StoreName%%` |
-# MessageBox Snippet
+
+## MessageBox Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_MsgBox_Type%%` |
 | `%%GLOBAL_MsgBox_Message%%` |
-# MobileSiteLink Snippet
+
+## MobileSiteLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_MobileSiteURL%%` |
 | `%%LNG_MobileSite%%` |
-# MultiShippingItem Snippet
+
+## MultiShippingItem Snippet
 
 ### Available Variables
 |||
@@ -1481,7 +1602,8 @@
 | `%%GLOBAL_ProductOptions%%` |
 | `%%GLOBAL_AddressFieldId%%` |
 | `%%GLOBAL_ShippingAddressSelect%%` |
-# OfflinePaymentMessage Snippet
+
+## OfflinePaymentMessage Snippet
 
 ### Available Variables
 |||
@@ -1495,7 +1617,8 @@
 | `%%GLOBAL_OrderTotal%%` |
 | `%%LNG_Outstanding%%` |
 | `%%GLOBAL_PaymentMessage%%` |
-# PageMenu Snippet
+
+## PageMenu Snippet
 
 ### Available Variables
 |||
@@ -1505,13 +1628,15 @@
 | `%%GLOBAL_PageLink%%` |
 | `%%GLOBAL_PageName%%` |
 | `%%GLOBAL_SubMenu%%` |
-# PageMenuDropDown Snippet
+
+## PageMenuDropDown Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_SubMenuLinks%%` |
-# PageRssItem Snippet
+
+## PageRssItem Snippet
 
 ### Available Variables
 |||
@@ -1519,14 +1644,16 @@
 | `%%GLOBAL_RSSLink%%` |
 | `%%GLOBAL_RSSTitle%%` |
 | `%%GLOBAL_RSSDescription%%` |
-# PageSubMenu Snippet
+
+## PageSubMenu Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_sPageLink%%` |
 | `%%GLOBAL_sPageName%%` |
-# PinterestButton Snippet
+
+## PinterestButton Snippet
 
 ### Available Variables
 |||
@@ -1534,20 +1661,23 @@
 | `%%GLOBAL_CurrentProductLink%%` |
 | `%%GLOBAL_InitialZoomImage%%` |
 | `%%GLOBAL_PinterestButtonDescription%%` |
-# PostTag Snippet
+
+## PostTag Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_TagUrl%%` |
 | `%%GLOBAL_TagName%%` |
-# PostTags Snippet
+
+## PostTags Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%SNIPPET_PostTag%%` |
-# PrintableInvoice Snippet
+
+## PrintableInvoice Snippet
 
 ### Available Variables
 |||
@@ -1591,7 +1721,8 @@
 | `%%GLOBAL_HideComments%%` |
 | `%%LNG_Comments%%` |
 | `%%GLOBAL_Comments%%` |
-# PrintableInvoiceItem Snippet
+
+## PrintableInvoiceItem Snippet
 
 ### Available Variables
 |||
@@ -1617,7 +1748,8 @@
 | `%%GLOBAL_ProductPreOrder%%` |
 | `%%GLOBAL_ProductCost%%` |
 | `%%GLOBAL_ProductTotalCost%%` |
-# PrintableInvoiceItemConfigurableField Snippet
+
+## PrintableInvoiceItemConfigurableField Snippet
 
 ### Available Variables
 |||
@@ -1625,7 +1757,8 @@
 | `%%GLOBAL_FieldName%%` |
 | `%%GLOBAL_SKUValue%%` |
 | `%%GLOBAL_FieldValue%%` |
-# PrintablePackingSlipItem Snippet
+
+## PrintablePackingSlipItem Snippet
 
 ### Available Variables
 |||
@@ -1644,7 +1777,8 @@
 | `%%GLOBAL_HideEventDate%%` |
 | `%%GLOBAL_ProductEventDate%%` |
 | `%%GLOBAL_ProductBinNumber%%` |
-# ProductAddToCart Snippet
+
+## ProductAddToCart Snippet
 
 ### Available Variables
 |||
@@ -1715,13 +1849,15 @@
 | `%%GLOBAL_HidePurchasingOptions%%` |
 | `%%LNG_AddToWishList%%` |
 | `%%GLOBAL_ShopPath%%` |
-# ProductBreadCrumb Snippet
+
+## ProductBreadCrumb Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_BreadcrumbItems%%` |
-# ProductBulkDiscountThickBox Snippet
+
+## ProductBulkDiscountThickBox Snippet
 
 ### Available Variables
 |||
@@ -1732,20 +1868,23 @@
 | `%%LNG_CloseWindow%%` |
 | `%%GLOBAL_CdnAppPath%%` |
 | `%%GLOBAL_JSCacheToken%%` |
-# ProductCustomFieldItem Snippet
+
+## ProductCustomFieldItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CustomFieldName%%` |
 | `%%GLOBAL_CustomFieldValue%%` |
-# ProductExpectedReleaseDate Snippet
+
+## ProductExpectedReleaseDate Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ReleaseDate%%` |
-# ProductFieldCheckbox Snippet
+
+## ProductFieldCheckbox Snippet
 
 ### Available Variables
 |||
@@ -1758,7 +1897,8 @@
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldValue%%` |
 | `%%GLOBAL_CheckboxFieldNameRight%%` |
-# ProductFieldInput Snippet
+
+## ProductFieldInput Snippet
 
 ### Available Variables
 |||
@@ -1783,7 +1923,8 @@
 | `%%LNG_Type%%` |
 | `%%GLOBAL_FileTypes%%` |
 | `%%GLOBAL_CurrentProductFile%%` |
-# ProductFieldSelect Snippet
+
+## ProductFieldSelect Snippet
 
 ### Available Variables
 |||
@@ -1794,7 +1935,8 @@
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldInputSize%%` |
 | `%%GLOBAL_SelectOptions%%` |
-# ProductFieldTextarea Snippet
+
+## ProductFieldTextarea Snippet
 
 ### Available Variables
 |||
@@ -1804,20 +1946,23 @@
 | `%%GLOBAL_ProductFieldId%%` |
 | `%%GLOBAL_FieldRequiredClass%%` |
 | `%%GLOBAL_ProductFieldValue%%` |
-# ProductFindByCategory Snippet
+
+## ProductFindByCategory Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_FindByCategoryItems%%` |
-# ProductFindByCategoryItem Snippet
+
+## ProductFindByCategoryItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CatTrailLink%%` |
 | `%%GLOBAL_CatTrailName%%` |
-# ProductImageZoomer Snippet
+
+## ProductImageZoomer Snippet
 
 ### Available Variables
 |||
@@ -1826,7 +1971,8 @@
 | `%%GLOBAL_JSCacheToken%%` |
 | `%%GLOBAL_ProdImageZoomJavascript%%` |
 | `%%GLOBAL_TPL_PATH%%` |
-# ProductImagesLightBox Snippet
+
+## ProductImagesLightBox Snippet
 
 ### Available Variables
 |||
@@ -1840,27 +1986,31 @@
 | `%%GLOBAL_VisibleImageTotal%%` |
 | `%%GLOBAL_ZoomImageMaxWidth%%` |
 | `%%GLOBAL_ZoomImageMaxHeight%%` |
-# ProductOptionList Snippet
+
+## ProductOptionList Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_OptionChooseText%%` |
 | `%%SNIPPET_OptionList%%` |
-# ProductOptionListItem Snippet
+
+## ProductOptionListItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_OptionChooseText%%` |
 | `%%SNIPPET_OptionList%%` |
-# ProductReviewBadCaptcha Snippet
+
+## ProductReviewBadCaptcha Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ReviewError%%` |
-# ProductReviewItem Snippet
+
+## ProductReviewItem Snippet
 
 ### Available Variables
 |||
@@ -1874,21 +2024,24 @@
 | `%%LNG_xOn%%` |
 | `%%GLOBAL_ReviewDate%%` |
 | `%%GLOBAL_ReviewText%%` |
-# ProductReviewList Snippet
+
+## ProductReviewList Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ReviewStart%%` |
 | `%%GLOBAL_ProductReviews%%` |
-# ProductReviewNextLink Snippet
+
+## ProductReviewNextLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ReviewLink%%` |
 | `%%LNG_Next%%` |
-# ProductReviewPaging Snippet
+
+## ProductReviewPaging Snippet
 
 ### Available Variables
 |||
@@ -1900,14 +2053,16 @@
 | `%%LNG_Of%%` |
 | `%%GLOBAL_ProductNumReviews%%` |
 | `%%GLOBAL_NextRevLink%%` |
-# ProductReviewPreviousLink Snippet
+
+## ProductReviewPreviousLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ReviewLink%%` |
 | `%%LNG_Previous%%` |
-# ProductTagCloudItem Snippet
+
+## ProductTagCloudItem Snippet
 
 ### Available Variables
 |||
@@ -1916,7 +2071,8 @@
 | `%%GLOBAL_TagLink%%` |
 | `%%GLOBAL_TagProductCount%%` |
 | `%%GLOBAL_TagName%%` |
-# ProductThumbImage Snippet
+
+## ProductThumbImage Snippet
 
 ### Available Variables
 |||
@@ -1927,7 +2083,8 @@
 | `%%GLOBAL_TinyImageClickJavascript%%` |
 | `%%GLOBAL_ThumbImageURL%%` |
 | `%%GLOBAL_ImageDescription%%` |
-# ProductThumbImagePlaceholder Snippet
+
+## ProductThumbImagePlaceholder Snippet
 
 ### Available Variables
 |||
@@ -1936,7 +2093,8 @@
 | `%%GLOBAL_ProductThumbHeight%%` |
 | `%%GLOBAL_ThumbImageURL%%` |
 | `%%GLOBAL_ImageDescription%%` |
-# ProductTinyImage Snippet
+
+## ProductTinyImage Snippet
 
 ### Available Variables
 |||
@@ -1955,14 +2113,16 @@
 | `%%GLOBAL_TinyImageHeight%%` |
 | `%%GLOBAL_ProductTinyImageURL%%` |
 | `%%GLOBAL_ImageDescription%%` |
-# ProductUpdatesRadio Snippet
+
+## ProductUpdatesRadio Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ProductId%%` |
 | `%%GLOBAL_ProductName%%` |
-# ProductVariationListMultiple Snippet
+
+## ProductVariationListMultiple Snippet
 
 ### Available Variables
 |||
@@ -1971,21 +2131,24 @@
 | `%%GLOBAL_VariationNumber%%` |
 | `%%GLOBAL_VariationChooseText%%` |
 | `%%SNIPPET_OptionList%%` |
-# ProductVariationListMultipleItem Snippet
+
+## ProductVariationListMultipleItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_OptionId%%` |
 | `%%GLOBAL_OptionValue%%` |
-# ProductVariationListSingle Snippet
+
+## ProductVariationListSingle Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_VariationName%%` |
 | `%%SNIPPET_OptionList%%` |
-# ProductVariationListSingleItem Snippet
+
+## ProductVariationListSingleItem Snippet
 
 ### Available Variables
 |||
@@ -1994,14 +2157,16 @@
 | `%%GLOBAL_OptionId%%` |
 | `%%GLOBAL_OptionChecked%%` |
 | `%%GLOBAL_OptionValue%%` |
-# QuickSearchJs Snippet
+
+## QuickSearchJs Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CdnAppPath%%` |
 | `%%GLOBAL_JSCacheToken%%` |
-# QuickViewJs Snippet
+
+## QuickViewJs Snippet
 
 ### Available Variables
 |||
@@ -2010,7 +2175,8 @@
 | `%%GLOBAL_QuickViewButtonColor%%` |
 | `%%GLOBAL_QuickViewGradientColor%%` |
 | `%%GLOBAL_QuickViewTextColor%%` |
-# RecentBlog Snippet
+
+## RecentBlog Snippet
 
 ### Available Variables
 |||
@@ -2018,7 +2184,8 @@
 | `%%GLOBAL_BlogLink%%` |
 | `%%GLOBAL_BlogText%%` |
 | `%%GLOBAL_BlogPreview%%` |
-# RelatedSearchItem Snippet
+
+## RelatedSearchItem Snippet
 
 ### Available Variables
 |||
@@ -2027,7 +2194,8 @@
 | `%%GLOBAL_ShopPath%%` |
 | `%%GLOBAL_RelatedSearchQuery%%` |
 | `%%GLOBAL_RelatedSearchText%%` |
-# SearchResultAjaxNews Snippet
+
+## SearchResultAjaxNews Snippet
 
 ### Available Variables
 |||
@@ -2035,7 +2203,8 @@
 | `%%GLOBAL_NewsURL%%` |
 | `%%GLOBAL_NewsTitle%%` |
 | `%%LNG_SearchTypeNewsItem%%` |
-# SearchResultAjaxPage Snippet
+
+## SearchResultAjaxPage Snippet
 
 ### Available Variables
 |||
@@ -2044,7 +2213,8 @@
 | `%%GLOBAL_PageTitle%%` |
 | `%%LNG_SearchTypeWebPage%%` |
 | `%%GLOBAL_PageSmallContent%%` |
-# SearchResultAjaxProduct Snippet
+
+## SearchResultAjaxProduct Snippet
 
 ### Available Variables
 |||
@@ -2055,7 +2225,8 @@
 | `%%GLOBAL_ProductName%%` |
 | `%%GLOBAL_ProductPrice%%` |
 | `%%GLOBAL_ProductRatingImage%%` |
-# SearchResultGrid Snippet
+
+## SearchResultGrid Snippet
 
 ### Available Variables
 |||
@@ -2071,7 +2242,8 @@
 | `%%GLOBAL_SectionType%%` |
 | `%%GLOBAL_SectionExtraClass%%` |
 | `%%GLOBAL_SectionResults%%` |
-# SearchResultNews Snippet
+
+## SearchResultNews Snippet
 
 ### Available Variables
 |||
@@ -2080,7 +2252,8 @@
 | `%%GLOBAL_NewsTitle%%` |
 | `%%LNG_SearchTypeNewsItem%%` |
 | `%%GLOBAL_NewsSmallContent%%` |
-# SearchResultPage Snippet
+
+## SearchResultPage Snippet
 
 ### Available Variables
 |||
@@ -2089,7 +2262,8 @@
 | `%%GLOBAL_PageTitle%%` |
 | `%%LNG_SearchTypeWebPage%%` |
 | `%%GLOBAL_PageSmallContent%%` |
-# SearchResultProductGrid Snippet
+
+## SearchResultProductGrid Snippet
 
 ### Available Variables
 |||
@@ -2108,7 +2282,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SearchResultProductList Snippet
+
+## SearchResultProductList Snippet
 
 ### Available Variables
 |||
@@ -2130,13 +2305,15 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SearchResultSectionContent Snippet
+
+## SearchResultSectionContent Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_SectionSearchResults%%` |
-# SearchResultSectionProduct Snippet
+
+## SearchResultSectionProduct Snippet
 
 ### Available Variables
 |||
@@ -2149,7 +2326,8 @@
 | `%%GLOBAL_CompareButtonTop%%` |
 | `%%GLOBAL_SectionSearchResults%%` |
 | `%%GLOBAL_CompareButton%%` |
-# SearchResultsFeed Snippet
+
+## SearchResultsFeed Snippet
 
 ### Available Variables
 |||
@@ -2159,7 +2337,8 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_CategoryPopularProductsFeed%%` |
 | `%%LNG_SearchFeed%%` |
-# SelectGiftWrapping Snippet
+
+## SelectGiftWrapping Snippet
 
 ### Available Variables
 |||
@@ -2175,14 +2354,16 @@
 | `%%SNIPPET_GiftWrappingOptions%%` |
 | `%%LNG_Cancel%%` |
 | `%%LNG_Save%%` |
-# SelectedTag Snippet
+
+## SelectedTag Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_TagName%%` |
 | `%%GLOBAL_BlogUrl%%` |
-# ShippingProviderItem Snippet
+
+## ShippingProviderItem Snippet
 
 ### Available Variables
 |||
@@ -2193,7 +2374,8 @@
 | `%%GLOBAL_ShippingProvider%%` |
 | `%%GLOBAL_ShippingPrice%%` |
 | `%%GLOBAL_TransitTime%%` |
-# ShippingQuote Snippet
+
+## ShippingQuote Snippet
 
 ### Available Variables
 |||
@@ -2207,7 +2389,8 @@
 | `%%LNG_ShippingProvider%%` |
 | `%%GLOBAL_ShippingProviders%%` |
 | `%%GLOBAL_HideHorizontalRule%%` |
-# ShippingQuoteProduct Snippet
+
+## ShippingQuoteProduct Snippet
 
 ### Available Variables
 |||
@@ -2220,21 +2403,24 @@
 | `%%GLOBAL_HideGiftMessagePreview%%` |
 | `%%LNG_GiftMessage%%` |
 | `%%GLOBAL_GiftMessagePreview%%` |
-# ShopByBrandAllItem Snippet
+
+## ShopByBrandAllItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_AllBrandsLink%%` |
 | `%%LNG_SeeAllBrands%%` |
-# ShopByBrandItem Snippet
+
+## ShopByBrandItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_BrandName%%` |
 | `%%GLOBAL_BrandLink%%` |
-# ShopByPriceItem Snippet
+
+## ShopByPriceItem Snippet
 
 ### Available Variables
 |||
@@ -2242,7 +2428,8 @@
 | `%%GLOBAL_PriceLink%%` |
 | `%%GLOBAL_PriceLow%%` |
 | `%%GLOBAL_PriceHigh%%` |
-# SideAddItemSoldOut Snippet
+
+## SideAddItemSoldOut Snippet
 
 ### Available Variables
 |||
@@ -2250,14 +2437,16 @@
 | `%%LNG_CurrentlySoldOut1%%` |
 | `%%LNG_CurrentlySoldOut2%%` |
 | `%%LNG_HC_outofstock%%` |
-# SideCartContentsCheckoutLink Snippet
+
+## SideCartContentsCheckoutLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_CheckoutLink%%` |
 | `%%LNG_Checkout%%` |
-# SideCartItem Snippet
+
+## SideCartItem Snippet
 
 ### Available Variables
 |||
@@ -2267,7 +2456,8 @@
 | `%%GLOBAL_ProductOptions%%` |
 | `%%GLOBAL_ProductAttributes%%` |
 | `%%GLOBAL_ProductPrice%%` |
-# SideCategoryList Snippet
+
+## SideCategoryList Snippet
 
 ### Available Variables
 |||
@@ -2276,7 +2466,8 @@
 | `%%GLOBAL_CategoryLink%%` |
 | `%%GLOBAL_CategoryName%%` |
 | `%%GLOBAL_SubCategoryList%%` |
-# SideCategoryNewProducts Snippet
+
+## SideCategoryNewProducts Snippet
 
 ### Available Variables
 |||
@@ -2292,7 +2483,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SideCategoryNewProductsFeed Snippet
+
+## SideCategoryNewProductsFeed Snippet
 
 ### Available Variables
 |||
@@ -2301,7 +2493,8 @@
 | `%%GLOBAL_CatId%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_CategoryNewProductsFeed%%` |
-# SideCategoryPopularProducts Snippet
+
+## SideCategoryPopularProducts Snippet
 
 ### Available Variables
 |||
@@ -2317,7 +2510,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SideCategoryPopularProductsFeed Snippet
+
+## SideCategoryPopularProductsFeed Snippet
 
 ### Available Variables
 |||
@@ -2326,7 +2520,8 @@
 | `%%GLOBAL_CatId%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_CategoryPopularProductsFeed%%` |
-# SideCategoryTopSellers Snippet
+
+## SideCategoryTopSellers Snippet
 
 ### Available Variables
 |||
@@ -2339,7 +2534,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SideCurrencySelectorCurrency Snippet
+
+## SideCurrencySelectorCurrency Snippet
 
 ### Available Variables
 |||
@@ -2349,14 +2545,16 @@
 | `%%GLOBAL_CurrencySelected%%` |
 | `%%GLOBAL_CurrencyFlag%%` |
 | `%%GLOBAL_CurrencyName%%` |
-# SideCustomCategoryList Snippet
+
+## SideCustomCategoryList Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_RootCatName%%` |
 | `%%GLOBAL_RootCatList%%` |
-# SideNewProducts Snippet
+
+## SideNewProducts Snippet
 
 ### Available Variables
 |||
@@ -2372,7 +2570,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SideNewProductsFeed Snippet
+
+## SideNewProductsFeed Snippet
 
 ### Available Variables
 |||
@@ -2381,14 +2580,16 @@
 | `%%GLOBAL_CatId%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_CategoryNewProductsFeed%%` |
-# SidePageLink Snippet
+
+## SidePageLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_PageLink%%` |
 | `%%GLOBAL_PageName%%` |
-# SidePopularProducts Snippet
+
+## SidePopularProducts Snippet
 
 ### Available Variables
 |||
@@ -2405,7 +2606,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SidePopularProductsFeed Snippet
+
+## SidePopularProductsFeed Snippet
 
 ### Available Variables
 |||
@@ -2413,7 +2615,8 @@
 | `%%GLOBAL_ShopPath%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%LNG_PopularProductsFeed%%` |
-# SideProductAlsoBoughtItem Snippet
+
+## SideProductAlsoBoughtItem Snippet
 
 ### Available Variables
 |||
@@ -2426,7 +2629,8 @@
 | `%%GLOBAL_ProductRating%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_HideProductRating%%` |
-# SideRecentlyViewedProducts Snippet
+
+## SideRecentlyViewedProducts Snippet
 
 ### Available Variables
 |||
@@ -2444,7 +2648,8 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SideRelatedProducts Snippet
+
+## SideRelatedProducts Snippet
 
 ### Available Variables
 |||
@@ -2457,25 +2662,8 @@
 | `%%GLOBAL_ProductRating%%` |
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_HideProductRating%%` |
-# SideTopSellers Snippet
 
-### Available Variables
-|||
-|---|---|
-| `%%GLOBAL_AlternateClass%%` |
-| `%%GLOBAL_ProductId%%` |
-| `%%GLOBAL_ProductNumber%%` |
-| `%%GLOBAL_ProductThumb%%` |
-| `%%GLOBAL_ProductLink%%` |
-| `%%GLOBAL_ProductName%%` |
-| `%%GLOBAL_ProductPrice%%` |
-| `%%GLOBAL_ProductRating%%` |
-| `%%GLOBAL_IMG_PATH%%` |
-| `%%GLOBAL_HideProductRating%%` |
-| `%%GLOBAL_HideActionAdd%%` |
-| `%%GLOBAL_ProductURL%%` |
-| `%%GLOBAL_ProductAddText%%` |
-# SideTopSellersFirst Snippet
+## SideTopSellers Snippet
 
 ### Available Variables
 |||
@@ -2493,7 +2681,27 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# SimilarProductsByCustomerViewsItem Snippet
+
+## SideTopSellersFirst Snippet
+
+### Available Variables
+|||
+|---|---|
+| `%%GLOBAL_AlternateClass%%` |
+| `%%GLOBAL_ProductId%%` |
+| `%%GLOBAL_ProductNumber%%` |
+| `%%GLOBAL_ProductThumb%%` |
+| `%%GLOBAL_ProductLink%%` |
+| `%%GLOBAL_ProductName%%` |
+| `%%GLOBAL_ProductPrice%%` |
+| `%%GLOBAL_ProductRating%%` |
+| `%%GLOBAL_IMG_PATH%%` |
+| `%%GLOBAL_HideProductRating%%` |
+| `%%GLOBAL_HideActionAdd%%` |
+| `%%GLOBAL_ProductURL%%` |
+| `%%GLOBAL_ProductAddText%%` |
+
+## SimilarProductsByCustomerViewsItem Snippet
 
 ### Available Variables
 |||
@@ -2513,7 +2721,8 @@
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
 | `%%LNG_ProductAddToCartLink%%` |
-# SimilarProductsByTagTag Snippet
+
+## SimilarProductsByTagTag Snippet
 
 ### Available Variables
 |||
@@ -2522,14 +2731,16 @@
 | `%%GLOBAL_TagLink%%` |
 | `%%GLOBAL_TagProductCount%%` |
 | `%%GLOBAL_TagName%%` |
-# SitemapLink Snippet
+
+## SitemapLink Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_SitemapURL_HTML%%` |
 | `%%LNG_Sitemap%%` |
-# SitemapSection Snippet
+
+## SitemapSection Snippet
 
 ### Available Variables
 |||
@@ -2540,7 +2751,8 @@
 | `%%GLOBAL_ModelHideAllLink%%` |
 | `%%GLOBAL_ModelSubsectionURL%%` |
 | `%%LNG_SitemapSeeAll%%` |
-# SlideList Snippet
+
+## SlideList Snippet
 
 ### Available Variables
 |||
@@ -2555,7 +2767,8 @@
 | `%%GLOBAL_Slide_Button_Text%%` |
 | `%%GLOBAL_Slide_Image_Url%%` |
 | `%%GLOBAL_Slide_Image_AlternateText%%` |
-# SocialLink Snippet
+
+## SocialLink Snippet
 
 ### Available Variables
 |||
@@ -2564,7 +2777,8 @@
 | `%%GLOBAL_UseThemeSettingsClass%%` |
 | `%%GLOBAL_SocialMedia_Service_Class%%` |
 | `%%GLOBAL_SocialMedia_Service_Name%%` |
-# SocialSharingTabsItem Snippet
+
+## SocialSharingTabsItem Snippet
 
 ### Available Variables
 |||
@@ -2573,14 +2787,16 @@
 | `%%GLOBAL_SharingName%%` |
 | `%%GLOBAL_SharingIcon%%` |
 | `%%GLOBAL_SharingDisplay%%` |
-# SubBrandItem Snippet
+
+## SubBrandItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_SubBrandLink%%` |
 | `%%GLOBAL_SubBrandName%%` |
-# SubBrandItemImage Snippet
+
+## SubBrandItemImage Snippet
 
 ### Available Variables
 |||
@@ -2590,14 +2806,16 @@
 | `%%GLOBAL_SubBrandLink%%` |
 | `%%GLOBAL_SubBrandImage%%` |
 | `%%GLOBAL_SubBrandName%%` |
-# SubCatItem Snippet
+
+## SubCatItem Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_SubCatLink%%` |
 | `%%GLOBAL_SubCatName%%` |
-# SubCatItemImage Snippet
+
+## SubCatItemImage Snippet
 
 ### Available Variables
 |||
@@ -2607,7 +2825,8 @@
 | `%%GLOBAL_SubCatLink%%` |
 | `%%GLOBAL_SubCatImage%%` |
 | `%%GLOBAL_SubCatName%%` |
-# TagProductsItem Snippet
+
+## TagProductsItem Snippet
 
 ### Available Variables
 |||
@@ -2627,14 +2846,16 @@
 | `%%GLOBAL_HideActionAdd%%` |
 | `%%GLOBAL_ProductURL%%` |
 | `%%GLOBAL_ProductAddText%%` |
-# TopMenuGiftCertificates Snippet
+
+## TopMenuGiftCertificates Snippet
 
 ### Available Variables
 |||
 |---|---|
 | `%%GLOBAL_ShopPathNormal%%` |
 | `%%LNG_GiftCertificates%%` |
-# UnformattedAddressLabel Snippet
+
+## UnformattedAddressLabel Snippet
 
 ### Available Variables
 |||
@@ -2645,7 +2866,8 @@
 | `%%GLOBAL_ShipState%%` |
 | `%%GLOBAL_ShipZip%%` |
 | `%%GLOBAL_ShipCountry%%` |
-# VideoList Snippet
+
+## VideoList Snippet
 
 ### Available Variables
 |||
@@ -2655,7 +2877,8 @@
 | `%%GLOBAL_VideoTitleShort%%` |
 | `%%GLOBAL_VideoDescriptionLong%%` |
 | `%%GLOBAL_VideoDescriptionShort%%` |
-# VideoListSide Snippet
+
+## VideoListSide Snippet
 
 ### Available Variables
 |||
@@ -2664,7 +2887,8 @@
 | `%%GLOBAL_IMG_PATH%%` |
 | `%%GLOBAL_VideoTitleLong%%` |
 | `%%GLOBAL_VideoLength%%` |
-# WishList Snippet
+
+## WishList Snippet
 
 ### Available Variables
 |||
@@ -2676,7 +2900,8 @@
 | `%%LNG_Edit%%` |
 | `%%LNG_Delete%%` |
 | `%%GLOBAL_ShareWishListLink%%` |
-# WishListItem Snippet
+
+## WishListItem Snippet
 
 ### Available Variables
 |||
