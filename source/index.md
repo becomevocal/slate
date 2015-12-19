@@ -16,7 +16,6 @@ includes:
 search: true
 ---
 
-<<<<<<< HEAD
 # Brands
 
 Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
@@ -1295,5 +1294,5 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
->>>>>>> tripit/master
+
 
