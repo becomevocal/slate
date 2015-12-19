@@ -1146,7 +1146,6 @@ Deletes all orders in the store.
 *   [Basic Auth](#delete-all-orders-basic)
 >`DELETE /api/v2/orders`
 
-=======
 
 # Authentication
 
@@ -1290,4 +1289,11 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
 
+# Message Block Samples
+
+<aside class="success">This is a `success` block.</aside>
+
+<aside class="notice">This is a `notice` block.</aside>
+
+<aside class="warning">This is a `warning` block.</aside>
 
