@@ -659,6 +659,793 @@
 <p>The DELETE all categories operation will not succeed unless the store has zero products. If any products in the store belong to any categories, the entire operation will fail. Therefore, if you really want to delete all the categories of the store, you must first delete all of the products in the store.</p>
 </blockquote>
 
+<h1 id="orders">Orders</h1>
+
+<p>Purchases from a store.</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Manages</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>OAuth Scopes</strong></td>
+<td><code class="prettyprint">store_v2_orders</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code class="prettyprint">store_v2_orders_read_only</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="operations">Operations</h2>
+
+<ul>
+<li>  <a href="#list-orders">List Orders</a></li>
+<li>  <a href="#get-an-order">Get an Order</a></li>
+<li>  <a href="#get-a-count-of-orders">Get a Count of Orders</a></li>
+<li>  <a href="#create-an-order">Create an Order</a></li>
+<li>  <a href="#update-an-order">Update an Order</a></li>
+<li>  <a href="#delete-an-order">Delete an Order</a></li>
+<li>  <a href="#delete-all-orders">Delete All Orders</a></li>
+</ul>
+
+<h2 id="list-orders">List Orders</h2>
+
+<p>Gets the collection of orders. (The default sort is by order id, from lowest to highest.)</p>
+
+<ul>
+<li>  <a href="#list-orders-oauth">OAuth</a>
+&gt;<code class="prettyprint">GET /stores/{store_hash}/v2/orders</code></li>
+<li>  <a href="#list-orders-basic">Basic Auth</a>
+&gt;<code class="prettyprint">GET /api/v2/orders</code></li>
+</ul>
+
+<h3 id="filters">Filters</h3>
+
+<p>Filter parameters can be added to the URL query string to select specific orders in the collection.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">min_id</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/orders?min_id={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">max_id</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/orders?max_id={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">min_total</code></td>
+<td>decimal</td>
+<td><code class="prettyprint">/api/v2/orders?min_total={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">max_total</code></td>
+<td>decimal</td>
+<td><code class="prettyprint">/api/v2/orders?max_total={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">customer_id</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/orders?customer_id={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">status_id</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/orders?status_id={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">is_deleted</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/orders?is_deleted={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">payment_method</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/orders?payment_method={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">min_date_created</code></td>
+<td>dateTime or date</td>
+<td><code class="prettyprint">/api/v2/orders?min_date_created={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">max_date_created</code></td>
+<td>dateTime or date</td>
+<td><code class="prettyprint">/api/v2/orders?max_date_created={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">min_date_modified</code></td>
+<td>dateTime or date</td>
+<td><code class="prettyprint">/api/v2/orders?min_date_modified={value}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">max_date_modified</code></td>
+<td>dateTime or date</td>
+<td><code class="prettyprint">/api/v2/orders?max_date_modified={value}</code></td>
+</tr>
+</tbody></table>
+
+<h3 id="pagination">Pagination</h3>
+
+<p>Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 orders are returned by default.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">page</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/orders?page={number}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">limit</code></td>
+<td>int</td>
+<td><code class="prettyprint">/api/v2/orders?limit={count}</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">sort</code></td>
+<td>string</td>
+<td><code class="prettyprint">/api/v2/orders?sort=date_created:desc</code></td>
+</tr>
+</tbody></table>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight plaintext"><code>[
+  {
+    "id": 100,
+    "customer_id": 10,
+    "date_created": "Wed, 14 Nov 2012 19:26:23 +0000",
+    "date_modified": "Wed, 14 Nov 2012 19:26:23 +0000",
+    "date_shipped": "",
+    "status_id": 11,
+    "status": "Awaiting Fulfillment",
+    "subtotal_ex_tax": "79.0000",
+    "subtotal_inc_tax": "79.0000",
+    "subtotal_tax": "0.0000",
+    "base_shipping_cost": "0.0000",
+    "shipping_cost_ex_tax": "0.0000",
+    "shipping_cost_inc_tax": "0.0000",
+    "shipping_cost_tax": "0.0000",
+    "shipping_cost_tax_class_id": 2,
+    "base_handling_cost": "0.0000",
+    "handling_cost_ex_tax": "0.0000",
+    "handling_cost_inc_tax": "0.0000",
+    "handling_cost_tax": "0.0000",
+    "handling_cost_tax_class_id": 2,
+    "base_wrapping_cost": "0.0000",
+    "wrapping_cost_ex_tax": "0.0000",
+    "wrapping_cost_inc_tax": "0.0000",
+    "wrapping_cost_tax": "0.0000",
+    "wrapping_cost_tax_class_id": 3,
+    "total_ex_tax": "79.0000",
+    "total_inc_tax": "79.0000",
+    "total_tax": "0.0000",
+    "items_total": 1,
+    "items_shipped": 0,
+    "payment_method": "cash",
+    "payment_provider_id": null,
+    "payment_status": "",
+    "refunded_amount": "0.0000",
+    "order_is_digital": false,
+    "store_credit_amount": "0.0000",
+    "gift_certificate_amount": "0.0000",
+    "ip_address": "50.58.18.2",
+    "geoip_country": "",
+    "geoip_country_iso2": "",
+    "currency_id": 1,
+    "currency_code": "USD",
+    "currency_exchange_rate": "1.0000000000",
+    "default_currency_id": 1,
+    "default_currency_code": "USD",
+    "staff_notes": "",
+    "customer_message": "",
+    "discount_amount": "0.0000",
+    "coupon_discount": "0.0000",
+    "shipping_address_count": 1,
+    "is_deleted": false,
+    "billing_address": {
+      "first_name": "Trisha",
+      "last_name": "McLaughlin",
+      "company": "",
+      "street_1": "12345 W Anderson Ln",
+      "street_2": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": "78757",
+      "country": "United States",
+      "country_iso2": "US",
+      "phone": "",
+      "email": "elsie@example.com"
+    },
+    "products": {
+      "url": "https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/products.json",
+      "resource": "/orders/100/products"
+    },
+    "shipping_addresses": {
+      "url": "https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/shippingaddresses.json",
+      "resource": "/orders/100/shippingaddresses"
+    },
+    "coupons": {
+      "url": "https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/coupons.json",
+      "resource": "/orders/100/coupons"
+    }
+  }
+]
+</code></pre>
+
+<h2 id="get-an-order">Get an Order</h2>
+
+<p>Gets an order.</p>
+
+<ul>
+<li>  <a href="#get-an-order-oauth">OAuth</a>
+&gt;<code class="prettyprint">GET /stores/{store_hash}/v2/orders/{id}</code></li>
+<li>  <a href="#get-an-order-basic">Basic Auth</a>
+&gt;<code class="prettyprint">GET /api/v2/orders/{id}</code></li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed, 14 Nov 2012 19:26:23 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wed, 14 Nov 2012 19:26:23 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_shipped"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awaiting Fulfillment"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_shipping_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_handling_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_wrapping_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"items_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"items_shipped"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cash"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_provider_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refunded_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"order_is_digital"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"store_credit_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"gift_certificate_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50.58.18.2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"geoip_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"geoip_country_iso2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency_exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0000000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_currency_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"staff_notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customer_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"coupon_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_address_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"is_deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"billing_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trisha"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"McLaughlin"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345 W Anderson Ln"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Austin"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Texas"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78757"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country_iso2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elsie@example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/products.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/orders/100/products"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"shipping_addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/shippingaddresses.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/orders/100/shippingaddresses"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"coupons"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/coupons.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/orders/100/coupons"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="get-a-count-of-orders">Get a Count of Orders</h2>
+
+<p>Gets a count of the number of orders in the store.</p>
+
+<ul>
+<li>  <a href="#get-a-count-of-orders-oauth">OAuth</a>
+&gt;<code class="prettyprint">GET /stores/{store_hash}/v2/orders/count</code></li>
+<li>  <a href="#get-a-count-of-orders-basic">Basic Auth</a>
+&gt;<code class="prettyprint">GET /api/v2/orders/count</code></li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="create-an-order">Create an Order</h2>
+
+<p>Manually create and submit an order.</p>
+
+<ul>
+<li>  <a href="#create-an-order-oauth">OAuth</a>
+&gt;<code class="prettyprint">POST /stores/{store_hash}/v2/orders</code></li>
+<li>  <a href="#create-an-order-basic">Basic Auth</a>
+<code class="prettyprint">POST /api/v2/orders</code></li>
+</ul>
+
+<h3 id="read-only-properties">Read-only Properties</h3>
+
+<p>The following properties of the order are read-only. If one or more of these properties are included in the request, it will be rejected.</p>
+
+<ul>
+<li>  <code class="prettyprint">id</code></li>
+<li>  <code class="prettyprint">date_modified</code></li>
+<li>  <code class="prettyprint">date_shipped</code></li>
+<li>  <code class="prettyprint">status</code></li>
+<li>  <code class="prettyprint">order_source</code></li>
+<li>  <code class="prettyprint">subtotal_tax</code></li>
+<li>  <code class="prettyprint">shipping_cost_tax</code></li>
+<li>  <code class="prettyprint">shipping_cost_tax_class_id</code></li>
+<li>  <code class="prettyprint">handling_cost_tax</code></li>
+<li>  <code class="prettyprint">handling_cost_tax_class_id</code></li>
+<li>  <code class="prettyprint">wrapping_cost_tax</code></li>
+<li>  <code class="prettyprint">wrapping_cost_tax_class_id</code></li>
+<li>  <code class="prettyprint">total_tax</code></li>
+<li>  <code class="prettyprint">payment_status</code></li>
+<li>  <code class="prettyprint">currency_id</code></li>
+<li>  <code class="prettyprint">currency_code</code></li>
+<li>  <code class="prettyprint">currency_exchange_rate</code></li>
+<li>  <code class="prettyprint">default_currency_id</code></li>
+<li>  <code class="prettyprint">default_currency_code</code></li>
+<li>  <code class="prettyprint">coupon_discount</code></li>
+<li>  <code class="prettyprint">store_credit_amount</code></li>
+<li>  <code class="prettyprint">gift_certificate_amount</code></li>
+<li>  <code class="prettyprint">shipping_address_count</code></li>
+<li>  <code class="prettyprint">is_deleted</code></li>
+<li>  <code class="prettyprint">coupons</code></li>
+</ul>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>The following properties of the order are required. The request won’t be fulfilled unless these properties are valid.</p>
+
+<ul>
+<li>  <code class="prettyprint">products</code></li>
+<li>  <code class="prettyprint">billing_address</code></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<blockquote>
+<p>KNOWN ISSUE: Bigcommerce does not compute sales tax to orders created via the API if the store has automatic tax enabled.</span></p>
+
+<p>PRO TIP: Abbreviated state names in shipping and billing addresses will prevent tax documents from being submitted to Avalara. Spell state names out in full to ensure successful Avalara tax document submissions. For example, supplying <code class="prettyprint">**CA**</code> as a state name results in no tax document submission. Supplying <code class="prettyprint">**California**</code> as a state name results in a successful submission.</span></p>
+</blockquote>
+
+<h4 id="overriding-pre-set-values">Overriding Pre-set Values</h4>
+
+<p>You can create overrides for calculated values such as product prices, subtotal and totals by sending a fixed value in the request. If values are not supplied for these properties, they will be automatically calculated based on the pre-set store values and tax rules.</p>
+
+<h4 id="order-products">Order Products</h4>
+
+<ul>
+<li>  Existing products can be added to the order with a reference to their <code class="prettyprint">product_id</code>.</li>
+<li>  Custom products can be added to the order using the <a title="products object/array" href="/api/orders/order/products">products array</a>.</li>
+<li>  If price is not specified, it will automatically pick up the price from the store’s product catalog, however you can override it via <code class="prettyprint">price_inc_tax</code> and <code class="prettyprint">price_ex_tax</code>.</li>
+<li>  If <code class="prettyprint">price_inc_tax</code> and <code class="prettyprint">price_ex_tax</code> is specified, price and rulesets are ignored and the <code class="prettyprint">**price_inc_tax**</code> or <code class="prettyprint">**price_ex_tax**</code> are written to <code class="prettyprint">**base_price**</code>, according to the store settings.</li>
+<li>  When the store is subscribed to Avalara Premium, a value of <code class="prettyprint">**API Tax Override**</code> is written to the <code class="prettyprint">**name**</code> field of the order tax object.</li>
+<li>  Tax will be calculated based on the tax rules specified in the store except in the case of automatic taxes, however you can optionally override the tax values by specifying <code class="prettyprint">price_inc_tax</code> and <code class="prettyprint">price_ex_tax</code> in both cases.</li>
+<li>  For products which are configured to track stock, the quantity specified on the order will reduce the stock on hand. When there is not enough inventory to fulfill the order, it will be rejected with an ‘out of stock’ error code.</li>
+<li>  For products which have min and max quantities specified in their settings, the API will honor these and reject orders appropriately.</li>
+<li>  For products where product options are required, the API will validate these requirements to ensure the product options are specified.</li>
+<li>  Product quantity must be specified.</li>
+</ul>
+
+<h4 id="calculation-of-totals">Calculation of Totals</h4>
+
+<ul>
+<li>  When not specified, order subtotal and total are automatically calculated.</li>
+<li>  You can override order subtotal and/or total. If you choose to override one, we strongly recommend that override both as the system will not be able to accurately calculate the other.</li>
+</ul>
+
+<h4 id="order-properties">Order Properties</h4>
+
+<ul>
+<li>  Billing address is mandatory.</li>
+<li>  Shipping address is not mandatory and can optionally be specified as composite records.
+
+<ul>
+<li>  When the shipping address is not specified, the system will fall back to using the billing address as the shipping address</li>
+<li>  Multiple shipments are not supported so it will assume the first address in the collection</li>
+</ul></li>
+<li>  In the shipping and billing address, their is no requirement to specify ‘country’ when ‘country_ISO2’ is specified.
+
+<ul>
+<li>  The value specified for ‘country_ISO2’ will always override any value specified for ‘country’</li>
+</ul></li>
+<li>  Coupon redemption is not supported at this time.</li>
+<li>  Set customer_id to 0 to specify a guest checkout.</li>
+<li>  order_source cannot be specified and it will be set to ‘external’.
+
+<ul>
+<li>  You can optionally specify a value for external_source to specify which external source the order is coming from - i.e., POS system X, accounting system Y, etc</li>
+</ul></li>
+</ul>
+
+<h4 id="changing-the-order-status">Changing the Order Status</h4>
+
+<p><a name="paid-status"></a></p>
+
+<ul>
+<li><p>status_id can be specified resulting in the the corresponding ‘status’ to automatically be set. When not specified, status_id will be automatically set to 1 resulting in ‘status’ to be set to ‘Pending’.</p></li>
+<li><p>POST or PUT Orders on stores with Avalara Premium causes tax documents to be submitted. If a store has subscribed to Avalara Premium, Bigcommerce automatically submits tax documents to Avalara when the order achieves a paid status. The following statuses are of the paid type:</p>
+
+<ul>
+<li>  <code class="prettyprint">Shipped</code></li>
+<li>  <code class="prettyprint">Partially Shipped</code></li>
+<li>  <code class="prettyprint">Awaiting Pickup</code></li>
+<li>  <code class="prettyprint">Awaiting Shipment</code></li>
+<li>  <code class="prettyprint">Completed</code></li>
+<li>  <code class="prettyprint">Awaiting Fulfillment</code></li>
+</ul></li>
+<li><p>Bigcommerce considers all statuses other than the above to be of the unpaid type, except <code class="prettyprint">**Refunded**</code>, which is considered neither paid or unpaid. Orders created using the <code class="prettyprint">**POST**</code> method that include a status of the paid type result in the submission of tax documents to Avalara.</p></li>
+</ul>
+
+<h3 id="request">Request</h3>
+
+<p>Example request object:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thu, 04 Oct 2012 03:24:40 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">1705</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">1915</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_shipping_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_handling_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_wrapping_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">1705</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">1915</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refunded_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"order_is_digital"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"staff_notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customer_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"billing_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trisha"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"McLaughlin"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345 W Anderson Ln"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Austin"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Texas"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78757"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country_iso2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elsie@example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"shipping_addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trisha"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"McLaughlin"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Pty Ltd"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"street_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"566 Sussex St"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Austin"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Texas"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78757"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"country_iso2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elsie@example.com"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"product_options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">87</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My custom product"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"price_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.8</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"price_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"external_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POS"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="response">Response</h3>
+
+<p>Example JSON returned in the response:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thu, 04 Oct 2012 03:24:40 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thu, 30 May 2013 01:48:39 +0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"date_shipped"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pending"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1705.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1915.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subtotal_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"210.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_shipping_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_cost_tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_handling_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"handling_cost_tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"base_wrapping_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"wrapping_cost_tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_ex_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1705.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_inc_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1915.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_tax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"210.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"items_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"items_shipped"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manual"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_provider_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refunded_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"order_is_digital"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"store_credit_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"gift_certificate_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"geoip_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"geoip_country_iso2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency_exchange_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000000000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_currency_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_currency_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"staff_notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"customer_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"coupon_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0000"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"shipping_address_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"is_deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"billing_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trisha"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"McLaughlin"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street_1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345 W Anderson Ln"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Austin"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Texas"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78757"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country_iso2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elsie@example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"order_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"external"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"external_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POS"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/products.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/orders/100/products"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"shipping_addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/shippingaddresses.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/orders/100/shippingaddresses"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"coupons"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://store-bwvr466.mybigcommerce.com/api/v2/orders/100/coupons.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/orders/100/coupons"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="update-an-order">Update an Order</h2>
+
+<p>Updates an existing order.</p>
+
+<ul>
+<li>  <a href="#update-an-order-oauth">OAuth</a>
+&gt;<code class="prettyprint">PUT /stores/{store_hash}/v2/orders/{id}</code></li>
+<li>  <a href="#update-an-order-basic">Basic Auth</a>
+&gt;<code class="prettyprint">PUT /api/v2/orders/{id}</code></li>
+</ul>
+
+<h3 id="read-only-properties">Read-only Properties</h3>
+
+<p>The following properties of the order are read-only. If one or more of these properties are included in the request, it will be rejected.</p>
+
+<ul>
+<li>  <code class="prettyprint">id</code></li>
+<li>  <code class="prettyprint">date_modified</code></li>
+<li>  <code class="prettyprint">date_shipped</code></li>
+<li>  <code class="prettyprint">status</code></li>
+<li>  <code class="prettyprint">order_source</code></li>
+<li>  <code class="prettyprint">subtotal_tax</code></li>
+<li>  <code class="prettyprint">shipping_cost_tax</code></li>
+<li>  <code class="prettyprint">shipping_cost_tax_class_id</code></li>
+<li>  <code class="prettyprint">handling_cost_tax</code></li>
+<li>  <code class="prettyprint">handling_cost_tax_class_id</code></li>
+<li>  <code class="prettyprint">wrapping_cost_tax</code></li>
+<li>  <code class="prettyprint">wrapping_cost_tax_class_id</code></li>
+<li>  <code class="prettyprint">total_tax</code></li>
+<li>  <code class="prettyprint">payment_status</code></li>
+<li>  <code class="prettyprint">currency_id</code></li>
+<li>  <code class="prettyprint">currency_code</code></li>
+<li>  <code class="prettyprint">currency_exchange_rate</code></li>
+<li>  <code class="prettyprint">default_currency_id</code></li>
+<li>  <code class="prettyprint">default_currency_code</code></li>
+<li>  <code class="prettyprint">coupon_discount</code></li>
+<li>  <code class="prettyprint">store_credit_amount</code></li>
+<li>  <code class="prettyprint">gift_certificate_amount</code></li>
+<li>  <code class="prettyprint">shipping_address_count</code></li>
+<li>  <code class="prettyprint">coupons</code></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<blockquote>
+<p>KNOWN ISSUE: Bigcommerce does not compute sales tax to orders updated via the API if the store has automatic tax enabled.</span></p>
+</blockquote>
+
+<h3 id="changing-the-order-status">Changing the Order Status</h3>
+
+<p>The <code class="prettyprint">status</code> property cannot be edited directly as it is generated based on the <code class="prettyprint">status_id</code>.</p>
+
+<p>Use the <code class="prettyprint">status_id</code> property to set the order to a specific state. The list of available statuses is provided by the <a href="/api/stores/v2/order_statuses">Order Statuses</a> resource. If the store has subscribed to Avalara Premium, tax documents are submitted when the <code class="prettyprint">status_id</code> property changes. The following table details the behavior for <code class="prettyprint">**PUT**</code> operations. See also the list of <a href="#paid-status">Paid Statuses</a>.</p>
+
+<table><thead>
+<tr>
+<th>Existing Status</th>
+<th>Status Passed</th>
+<th>Resultant Status</th>
+<th>Avalara tax document submission</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Any</td>
+<td>None</td>
+<td><code class="prettyprint">**Pending**</code></td>
+<td>None</td>
+</tr>
+<tr>
+<td>Paid or <code class="prettyprint">**Refunded**</code></td>
+<td>Paid</td>
+<td>Paid</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Unpaid or <code class="prettyprint">**Refunded**</code></td>
+<td>Unpaid</td>
+<td>Unpaid</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Paid or <code class="prettyprint">**Refunded**</code></td>
+<td>Unpaid</td>
+<td>Unpaid</td>
+<td>Tax document voided</td>
+</tr>
+<tr>
+<td>Unpaid or <code class="prettyprint">**Refunded**</code></td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Tax document submitted</td>
+</tr>
+</tbody></table>
+
+<h3 id="calculated-fields">Calculated Fields</h3>
+
+<p>Edits to the following properties will trigger a recalculation of the subtotal and total:</p>
+
+<ul>
+<li>  <code class="prettyprint">products</code></li>
+<li>  <code class="prettyprint">discount_amount</code></li>
+<li>  <code class="prettyprint">shipping_cost_ex_tax</code></li>
+<li>  <code class="prettyprint">shipping_cost_inc_tax</code></li>
+<li>  <code class="prettyprint">handling_cost_ex_tax</code></li>
+<li>  <code class="prettyprint">handling_cost_inc_tax</code></li>
+<li>  <code class="prettyprint">wrapping_cost_ex_tax</code></li>
+<li>  <code class="prettyprint">wrapping_cost_inc_tax</code></li>
+<li>  <code class="prettyprint">billing_address</code></li>
+<li>  <code class="prettyprint">shipping_addresses</code></li>
+</ul>
+
+<blockquote>
+<p>NOTE: The Orders resource currently does not support coupon redemptions and discounts apart from manual discount. You should only modify the above fields if you have created the order via the POST operation or you intend to override the subtotals and totals manually.</span></p>
+</blockquote>
+
+<h2 id="delete-an-order">Delete an Order</h2>
+
+<p>Deletes an order.</p>
+
+<ul>
+<li>  <a href="#delete-an-order-oauth">OAuth</a>
+&gt;<code class="prettyprint">DELETE /stores/{store_hash}/v2/orders/{id}</code></li>
+<li>  <a href="#delete-an-order-basic">Basic Auth</a>
+&gt;<code class="prettyprint">DELETE /api/v2/orders/{id}</code></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<blockquote>
+<p>NOTE: Attempts to <code class="prettyprint">DELETE</code> an order on a store with automatic tax enabled will fail and return <code class="prettyprint">405 Method not allowed</code>.</span></p>
+</blockquote>
+
+<h2 id="delete-all-orders">Delete All Orders</h2>
+
+<p>Deletes all orders in the store.</p>
+
+<ul>
+<li>  <a href="#delete-all-orders-oauth">OAuth</a>
+&gt;<code class="prettyprint">DELETE /stores/{store_hash}/v2/orders</code></li>
+<li>  <a href="#delete-all-orders-basic">Basic Auth</a>
+&gt;<code class="prettyprint">DELETE /api/v2/orders</code></li>
+</ul>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
