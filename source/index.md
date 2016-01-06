@@ -19,7 +19,7 @@ search: true
 
 # Brands
 
-Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
+Hi there. Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
 
 |||
 |---|---|
@@ -1280,7 +1280,7 @@ This endpoint retrieves a specific kitten.
 <aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
 
 ### HTTP Request
-
+c
 `GET http://example.com/kittens/<ID>`
 
 ### URL Parameters
