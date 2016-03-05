@@ -1,14 +1,18 @@
 ---
-title: API Reference
+title: Bigcommerce API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
+  - Basic Auth
+  - OAuth
 
 toc_footers:
+  - <a href='/api/'>API Acceuil et Concierge – Bienvenue!</a>
+  - <a href='/api/v2/'> &nbsp;  API version Part Deux</a>
+  - <a href='/themes/'>Les Themes</a>
+  - <a href='/themes/blueprint/'> &nbsp; Blueprint Themes</a>
+  - <a href='https://stencil.bigcommerce.com/docs'> &nbsp;  Stencil Themes</a>
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='http://github.com/tripit/slate'>Documentation Underpowered by Slate</a>
 
 includes:
   - snippets
@@ -19,7 +23,24 @@ search: true
 
 # Brands
 
-Hi there. Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
+> Greetings Earthlings!
+```  _          _ _             
+ | |__   ___| | | ___        
+ | '_ \ / _ \ | |/ _ \       
+ | | | |  __/ | | (_) |      
+ |_| |_|\___|_|_|\___/     _ 
+ __      _____  _ __| | __| |
+ \ \ /\ / / _ \| '__| |/ _` |
+  \ V  V / (_) | |  | | (_| |
+   \_/\_/ \___/|_|  |_|\__,_|
+Welcome to our API v2 documentation.
+Sample requests and responses are shown (for Basic Auth and Oauth) in the dark area to the right.```
+
+Hi there. Welcome to our amazing new API site – same vintage wine, yet now in this new automagic, synecdochical, supercalifragilistic incarnation! 
+
+But we digress. Let's start with:
+
+Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
 
 |||
 |---|---|
@@ -1180,8 +1201,6 @@ Kittn expects for the API key to be included in all API requests to the server i
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-
-# Kittens
 
 ## Get All Kittens
 

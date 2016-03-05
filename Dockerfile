@@ -1,12 +1,9 @@
-FROM ubuntu:trusty
-
-RUN apt-get update
-RUN apt-get install -yq ruby ruby-dev build-essential git
-RUN gem install --no-ri --no-rdoc bundler
-ADD Gemfile /app/Gemfile
-ADD Gemfile.lock /app/Gemfile.lock
-RUN cd /app; bundle install
-ADD . /app
+FROM ruby:onbuild
+MAINTAINER Adrian Perez <adrian@adrianperez.org>
+VOLUME /usr/src/app/source
 EXPOSE 4567
-WORKDIR /app
-CMD ["bundle", "exec", "middleman", "server"]
+
+RUN apt-get update && apt-get install -y nodejs \
+&& apt-get clean && rm -rf /var/lib/apt/lists/*
+
+CMD ["bundle", "exec", "middleman", "server", "--force-polling"]
