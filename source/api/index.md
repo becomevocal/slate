@@ -19,5 +19,3 @@ search: true
 
 Hello, you have reached the /api subdirectory! 
 
-This bud's for Nate.
-
