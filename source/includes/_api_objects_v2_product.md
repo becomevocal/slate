@@ -1,4 +1,6 @@
-# Product Object
+# Products
+
+## Product Object
 
 A saleable item in the catalog
 
@@ -7,7 +9,7 @@ A saleable item in the catalog
 | Managed by | [Products Resource](/api/stores/v2/products)
 
 
-## Properties
+#### Properties
 
 | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -93,9 +95,9 @@ A saleable item in the catalog
 | `tax_class` | `resource` |
 | `avalara_product_tax_code` | `resource` | Accepts AvaTax system codes that identify products and services that fall into special sales tax categories. Allows merchants that subscribe to Avalara Premium to achieve increased accuracy in sales tax calculations. Stores without Avalara Premium will ignore the code when calculating sales tax. Do not pass more than one code. The codes are case-sensitive. Refer to the "AvaTax System tax codes" section of the following page for further information and the full list of codes: https://help.avalara.com/000_AvaTax_Calc/000AvaTaxCalc_User_Guide/040_Managing_Tax_Profiles/050_Tax_Codes/001_What_is_a_Tax_Code |
 
-## Events
+### Webhook Events
 
-### Product Created
+#### Product Created
 
 ```
 store/product/created
@@ -103,7 +105,7 @@ store/product/created
 
 Occurs when a product is created from the control panel, bulk import or via the API.
 
-### Product Updated
+#### Product Updated
 
 ```
 store/product/updated
@@ -112,7 +114,7 @@ store/product/updated
 Occurs when a product is updated from the control panel or via the API.
 
 
-### Product Deleted
+#### Product Deleted
 
 ```
 store/product/deleted

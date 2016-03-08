@@ -1,6 +1,6 @@
-# Products Resource
+## Products Resource
 
-## Catalog of saleable items in the store.
+Catalog of saleable items in the store.
 
 |||
 |---|---|
@@ -8,7 +8,7 @@
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-## Operations
+**Operations**
 
 *   [List Products](#list-products)
 *   [Get a Product](#get-a-product)
