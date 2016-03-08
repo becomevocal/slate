@@ -1,6 +1,6 @@
-# Product Images Resource
+## Product Images Resource
 
-## Images associated with a product.
+Images associated with a product.
 
 |||
 |---|---|
@@ -8,7 +8,7 @@
 | OAuth Scopes | `store_v2_products`
 ||`store_v2_products_read_only`
 
-## Operations
+**Operations**
 
 *   [List Product Images](#list-product-images)
 *   [Get a Product Image](#get-a-product-image)
