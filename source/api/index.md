@@ -6,11 +6,10 @@ language_tabs:
   - OAuth
 
 includes:
-  - api
-  - api_req-headers
-  - api_response-headers
-  - api_media-types
-  - api_webhooks-getting-started
+  - api_objects_v2_product
+  - api_stores_v2_products
+  - api_objects_v2_product_image
+  - api_stores_v2_products_images
 
 search: true
 ---
