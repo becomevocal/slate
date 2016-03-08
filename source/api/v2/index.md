@@ -2,6 +2,11 @@
 title: Bigcommerce APIs, v.2
 
 includes:
+  - api
+  - api_req-headers
+  - api_response-headers
+  - api_media-types
+  - api_webhooks-getting-started
   - api_clients
   - api_using-oauth-intro
   - api_registration

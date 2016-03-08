@@ -20,3 +20,8 @@ build/
 _yardoc
 doc/
 .idea/
+config.rb
+
+Gemfile
+
+Gemfile.lock
