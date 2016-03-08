@@ -618,3 +618,7 @@ html, body {
     margin-top: $main-padding;
   }
 }
+
+.themes .dark-box { display:none }
+
+.themes .content > h1,.themes .content > h2,.themes .content > h3,.themes .content > h4,.themes .content > h5, .themes .content > h6, .themes .content > p, .themes .content > table, .themes .content > ul, .themes .content > ol, .themes .content > aside, .themes .content > dl { margin-right: 0; }
