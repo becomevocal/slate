@@ -1,6 +1,15 @@
 ---
 title: Bigcommerce APIs, v.2
 
+language_tabs:
+  - javascript: Request (Example)
+  - json: Response (Example)
+
+<!--- language_tabs:
+  - BasicAuth: Basic Auth
+  - OAuth
+  - json: JSON Response -->
+
 includes:
   - api
   - api_req-headers

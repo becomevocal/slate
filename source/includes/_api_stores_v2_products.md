@@ -1,12 +1,12 @@
-## Products Resource
+## Products Resource – Operations
 
 Catalog of saleable items in the store.
 
 |||
 |---|---|
-| **Manages** |
-| **OAuth Scopes** | `store_v2_products`
-||`store_v2_products_read_only`
+| **Manages** | [Product Object](/api/?BasicAuth#product-properties) |
+| **OAuth Scopes** | `store_v2_products` |
+| |`store_v2_products_read_only`
 
 **Operations**
 
@@ -22,58 +22,31 @@ Catalog of saleable items in the store.
 
 Gets the collection of products. (Default sorting is by product id, from lowest to highest.)
 
-*   [OAuth](#list-products-oauth)
->`GET /stores/{store_hash}/v2/products`
-*   [Basic Auth](#list-products-basic)
->`GET /api/v2/products`
 
-### Filters
+<!--- ```html
+GET /api/v2/products
+```
 
-Filter parameters can be added to the URL query string to select specific products in the collection.
+```xml
+GET /stores/{store_hash}/v2/products
+```
 
-| Parameter | Type | Example |
-| --- | --- | --- |
-| `min_id` | int | `/api/v2/products?min_id={value}` |
-| `max_id` | int | `/api/v2/products?max_id={value}` |
-| `name` | string | `/api/v2/products?name={value}` |
-| `keyword_filter` | string | `/api/v2/products?keyword_filter={value}` |
-| `description` | string | `/api/v2/products?description={value}` |
-| `sku` | string | `/api/v2/products?sku={value}` |
-| `condition` | string | `/api/v2/products?condition={value}` |
-| `availability` | string | `/api/v2/products?availability={value}` |
-| `brand_id` | string | `/api/v2/products?brand_id={value}` |
-| `min_date_created` | dateTime or date | `/api/v2/products?min_date_created={value}` |
-| `max_date_created` | dateTime or date | `/api/v2/products?max_date_created={value}` |
-| `min_date_modified` | dateTime or date | `/api/v2/products?min_date_modified={value}` |
-| `max_date_modified` | dateTime or date | `/api/v2/products?max_date_modified={value}` |
-| `min_date_last_imported` | date | `/api/v2/products?min_date_last_imported={value}` |
-| `max_date_last_imported` | date | `/api/v2/products?max_date_last_imported={value}` |
-| `min_price` | decimal | `/api/v2/products?min_price={value}` |
-| `max_price` | decimal | `/api/v2/products?max_price={value}` |
-| `min_number_sold` | int | `/api/v2/products?min_number_sold={value}` |
-| `max_number_sold` | int | `/api/v2/products?max_number_sold={value}` |
-| `is_visible` | string | `/api/v2/products?is_visible={value}` |
-| `is_featured` | string | `/api/v2/products?is_featured={value}` |
-| `min_inventory_level` | int | `/api/v2/products?min_inventory_level={value}` |
-| `max_inventory_level` | int | `/api/v2/products?max_inventory_level={value}` |
-| `include_sku` | boolean | `/api/v2/products?include_sku={value}` |
-| `category` | string | `/api/v2/products?category={value}` |
-| `product_tax_code` | string | `/api/v2/products?product_tax_code={value}` |
-
-### Pagination
-
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 products are returned by default.
-
-| Parameter | Type | Example |
-| --- | --- | --- |
-| `Page` | int | `/api/v2/products?page={number}` |
-| `Limit` | int | `/api/v2/products?limit={count}` |
-
+```BasicAuth
+GET /api/v2/products
+```
+```OAuth
+GET /stores/{store_hash}/v2/products
+```
 ### Response
 
-Example JSON returned in the response:
+Example JSON returned in the response: 
+-->
 
+```javascript
+[Request would be here.]
 ```
+
+```json
 [
   {
     "id": 32,
@@ -322,21 +295,70 @@ Example JSON returned in the response:
   }
 ]
 ```
+
+|||
+|---|---|
+| Basic Auth: | `GET /api/v2/products` |
+| OAuth: | `GET /stores/{store_hash}/v2/products` |
+
+
+### Filters
+
+Filter parameters can be added to the URL query string to select specific products in the collection.
+
+| Parameter | Type | Example |
+| --- | --- | --- |
+| `min_id` | int | `/api/v2/products?min_id={value}` |
+| `max_id` | int | `/api/v2/products?max_id={value}` |
+| `name` | string | `/api/v2/products?name={value}` |
+| `keyword_filter` | string | `/api/v2/products?keyword_filter={value}` |
+| `description` | string | `/api/v2/products?description={value}` |
+| `sku` | string | `/api/v2/products?sku={value}` |
+| `condition` | string | `/api/v2/products?condition={value}` |
+| `availability` | string | `/api/v2/products?availability={value}` |
+| `brand_id` | string | `/api/v2/products?brand_id={value}` |
+| `min_date_created` | dateTime or date | `/api/v2/products?min_date_created={value}` |
+| `max_date_created` | dateTime or date | `/api/v2/products?max_date_created={value}` |
+| `min_date_modified` | dateTime or date | `/api/v2/products?min_date_modified={value}` |
+| `max_date_modified` | dateTime or date | `/api/v2/products?max_date_modified={value}` |
+| `min_date_last_imported` | date | `/api/v2/products?min_date_last_imported={value}` |
+| `max_date_last_imported` | date | `/api/v2/products?max_date_last_imported={value}` |
+| `min_price` | decimal | `/api/v2/products?min_price={value}` |
+| `max_price` | decimal | `/api/v2/products?max_price={value}` |
+| `min_number_sold` | int | `/api/v2/products?min_number_sold={value}` |
+| `max_number_sold` | int | `/api/v2/products?max_number_sold={value}` |
+| `is_visible` | string | `/api/v2/products?is_visible={value}` |
+| `is_featured` | string | `/api/v2/products?is_featured={value}` |
+| `min_inventory_level` | int | `/api/v2/products?min_inventory_level={value}` |
+| `max_inventory_level` | int | `/api/v2/products?max_inventory_level={value}` |
+| `include_sku` | boolean | `/api/v2/products?include_sku={value}` |
+| `category` | string | `/api/v2/products?category={value}` |
+| `product_tax_code` | string | `/api/v2/products?product_tax_code={value}` |
+
+### Pagination
+
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 products are returned by default.
+
+| Parameter | Type | Example |
+| --- | --- | --- |
+| `Page` | int | `/api/v2/products?page={number}` |
+| `Limit` | int | `/api/v2/products?limit={count}` |
+
+
 ## Get a Product
 
 Gets a product.
 
-*   [OAuth](#get-a-product-oauth)
->`GET /stores/{store_hash}/v2/products/{id}`
-*   [Basic Auth](#get-a-product-basic)
->`GET /api/v2/products/{id}`
 
-
-### Response
-
-Example JSON returned in the response:
-
+```javascript
+[Request would be here.]
 ```
+
+<!--- ### Response
+
+Example JSON returned in the response: -->
+
+```json
 {
   "id": 32,
   "keyword_filter": null,
@@ -460,14 +482,38 @@ Example JSON returned in the response:
 }
 ```
 
+
+|||
+|---|---|
+| Basic Auth: | `GET /api/v2/products/{id}` |
+| OAuth: | `GET /stores/{store_hash}/v2/products/{id}` |
+
+
 ## Get a Product Count
 
 Gets a count of products.
 
-*   [OAuth](#get-a-product-count-oauth)
->`GET /stores/{store_hash}/v2/products/count`
-*   [Basic Auth](#get-a-product-count-basic)
->`GET /api/v2/products/count`
+
+```javascript
+[Request would be here.]
+```
+
+<!-- ### Response
+
+Example JSON returned in the response: -->
+
+```json
+{
+  "count": 44
+}
+```
+
+
+|||
+|---|---|
+| Basic Auth: | `GET /api/v2/products/count` |
+| OAuth: | `GET /stores/{store_hash}/v2/products/count` |
+
 
 ### Filters
 
@@ -506,24 +552,27 @@ Filter parameters can be added to the URL query string to select specific produc
 
 If no filters are applied, the total number of products is returned.
 
-### Response
-
-Example JSON returned in the response:
-
-```
-{
-  "count": 44
-}
-```
 
 ## Create a Product
 
-Creates a new product.
+Creates a new product. The example request shows how to create a basic product by sending a [product object](/api/?javascript#product-properties) with the minimum required properties.
 
-*   [OAuth](#create-a-product-oauth)
->`POST /stores/{store_hash}/v2/products`
-*   [Basic Auth](#create-a-product-basic)
->`POST /api/v2/products`
+```javascript
+{
+    "name": "Plain T-Shirt",
+    "type": "physical",
+    "description": "This timeless fashion staple will never go out of style!",
+    "price": "29.99",
+    "categories": [18],
+    "availability": "available",
+    "weight": "0.5"
+}
+```
+
+|||
+|---|---|
+| Basic Auth: | `POST /api/v2/products` |
+| OAuth: | `POST /stores/{store_hash}/v2/products` |
 
 ### Read-only Properties
 
@@ -555,36 +604,28 @@ The following properties of the product are required. The request won’t be ful
 
 ### Notes
 
-Create a basic product by sending a [product object](/api/products/product) with the minimum required properties:
-
-```
-{
-    "name": "Plain T-Shirt",
-    "type": "physical",
-    "description": "This timeless fashion staple will never go out of style!",
-    "price": "29.99",
-    "categories": [18],
-    "availability": "available",
-    "weight": "0.5"
-}
-```
-
 When the `is_visible` property is not provided, the product visibility is `false` by default.
 
 To make newly created products immediately visible on the storefront, you must set `is_visible` to `true` when you create the product.
 
 To maximize system performance, Bigcommerce caps the number of categories that a product can belong to at 1,000\. If your `POST` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
 
+```json
+403 Access Denied/Forbidden
+```
+
 If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
+
 
 ## Update a Product
 
 Updates an existing product.
 
-*   [OAuth](#update-a-product-oauth)
->`PUT /stores/{store_hash}/v2/products/{id}`
-*   [Basic Auth](#update-a-product-basic)
->`PUT /api/v2/products/{id}`
+
+|||
+|---|---|
+| Basic Auth: | `PUT /api/v2/products/{id}` |
+| OAuth: | `PUT /stores/{store_hash}/v2/products/{id}` |
 
 
 ### Read-only Properties
@@ -617,65 +658,91 @@ The following properties of the product are required. The request won’t be ful
 
 ### Notes
 
-To update a product, set one or more [product properties](/api/products/product) in the `PUT` request:
+To update a product, set one or more [product properties](/api/?javascript#product-properties) in the `PUT` request:
 
-```
+```javascript
 {
     "custom_url": "/plain-tshirt/",
     "is_visible": true
 }
 ```
 
-For example, you can use a `PUT` to link a product to an option set:
-```
+<br><br><br><br><br>For example, you can use a `PUT` to link a product to an option set:
+
+```javascript
 {
     "option_set_id": 14
 }
 ```
 
-Invalid property values will result in a `400 Bad Request` error response:
+<br><br><br><br><br>Invalid property values will produce a `400 Bad Request` error response:
 
-```
+```javascript
 {
     "condition": "Worn"
 }
 ```
 
-Trying to set read-only properties will also result in a `400 Bad Request` error response:
-
+```json
+400 Bad Request
 ```
+
+<br><br><br><br><br>Trying to set read-only properties will also produce a `400 Bad Request` error response:
+
+```javascript
 {
     "number_sold": 99
 }
 ```
 
-To maximize system performance, Bigcommerce caps the maximum number of categories that a product can belong to at 1,000\. If your `PUT` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
+```json
+400 Bad Request
+```
+<br><br><br><br><br>To maximize system performance, Bigcommerce caps the maximum number of categories to which a product can belong, at 1,000. If your `PUT` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
 
-If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
+
+```json
+403 Access Denied/Forbidden
+```
+
+<br><br><br>If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
+
 
 ## Delete a Product
 
 Deletes a product.
 
 
-*   [OAuth](#delete-a-product-oauth)
->`DELETE /stores/{store_hash}/v2/products/{id}`
-*   [Basic Auth](#delete-a-product-basic)
->`DELETE /api/v2/products/{id}`
+|||
+|---|---|
+| Basic Auth: | `DELETE /api/v2/products/{id}` |
+| OAuth: | `DELETE /stores/{store_hash}/v2/products/{id}` |
+
 
 ### Notes
 
 Successful deletion of a product results in a `204 No Content` response.
 
+```json
+204 No Content
+```
+
+
 ## Delete All Products
 
 Deletes all products from the store.
 
-*   [OAuth](#delete-all-products-oauth)
->`DELETE /stores/{store_hash}/v2/products`
-*   [Basic Auth](#delete-all-products-basic)
->`DELETE /api/v2/products`
+|||
+|---|---|
+| Basic Auth: | `DELETE /api/v2/products` |
+| OAuth: | `DELETE /stores/{store_hash}/v2/products` |
+
 
 ### Notes
 
 Successful deletion of all products returns a `204 No Content` response.
+
+```json
+204 No Content
+```
+

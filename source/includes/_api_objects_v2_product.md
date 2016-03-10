@@ -1,15 +1,12 @@
 # Products
 
-## Product Object
+## Product Object – Properties
 
-A saleable item in the catalog
+Properties for a saleable item in the catalog
 
 |||
 |---|---|
-| Managed by | [Products Resource](/api/stores/v2/products)
-
-
-#### Properties
+| Managed by | [Products Resource](/api/?BasicAuth#products-resource)
 
 | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -62,7 +59,7 @@ A saleable item in the catalog
 | `myob_income_account` | `string` | MYOB Income Account. |
 | `myob_expense_account` | `string` | MYOB Expense/COS Account. |
 | `peachtree_gl_account` | `string` | Peachtree General Ledger Account. |
-| `condition` | `enum` | The product condition, will be shown on the product page if the value of the "is_condition_shown" field is true. Possible values: New Used Refurbished |
+| `condition` | `enum` | The product condition, will be shown on the product page if the value of the "is_condition_shown" field is true. Possible values: `New`, `Used`, `Refurbished` |
 | `is_condition_shown` | `boolean` | Flag used to determine if the product condition is shown to the customer on the product page. |
 | `preorder_release_date` | `date` | Pre-order release date. See availability field for details on setting a products availability to accept pre-orders. |
 | `is_preorder_only` | `boolean` | If set to false, the product will not change its availability from preorder to available on the release date. Otherwise on the release date the products availability/status will change to available. |
@@ -95,28 +92,28 @@ A saleable item in the catalog
 | `tax_class` | `resource` |
 | `avalara_product_tax_code` | `resource` | Accepts AvaTax system codes that identify products and services that fall into special sales tax categories. Allows merchants that subscribe to Avalara Premium to achieve increased accuracy in sales tax calculations. Stores without Avalara Premium will ignore the code when calculating sales tax. Do not pass more than one code. The codes are case-sensitive. Refer to the "AvaTax System tax codes" section of the following page for further information and the full list of codes: https://help.avalara.com/000_AvaTax_Calc/000AvaTaxCalc_User_Guide/040_Managing_Tax_Profiles/050_Tax_Codes/001_What_is_a_Tax_Code |
 
-### Webhook Events
+## Webhook Events
 
-#### Product Created
+### Product Created
 
-```
+```js
 store/product/created
 ```
 
 Occurs when a product is created from the control panel, bulk import or via the API.
 
-#### Product Updated
+### Product Updated
 
-```
+```js
 store/product/updated
 ```
 
 Occurs when a product is updated from the control panel or via the API.
 
 
-#### Product Deleted
+### Product Deleted
 
-```
+```js
 store/product/deleted
 ```
 
