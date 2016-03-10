@@ -2,8 +2,13 @@
 title: Bigcommerce API Reference
 
 language_tabs:
-  - Basic Auth
+  - javascript: Request (Example)
+  - json: Response (Example)
+
+<!--- language_tabs:
+  - BasicAuth: Basic Auth
   - OAuth
+  - json: JSON Response -->
 
 toc_footers:
   - <a href='/api/'>API Acceuil et Concierge – Bienvenue!</a>
@@ -23,8 +28,8 @@ search: true
 
 # Brands
 
-> Greetings Earthlings!
-```  _          _ _             
+```
+  _          _ _             
  | |__   ___| | | ___        
  | '_ \ / _ \ | |/ _ \       
  | | | |  __/ | | (_) |      
@@ -33,8 +38,15 @@ search: true
  \ \ /\ / / _ \| '__| |/ _` |
   \ V  V / (_) | |  | | (_| |
    \_/\_/ \___/|_|  |_|\__,_|
+
 Welcome to our API v2 documentation.
-Sample requests and responses are shown (for Basic Auth and Oauth) in the dark area to the right.```
+
+We show example requests and responses in this dark
+right-hand column.
+
+Use the tabs at the upper right to select between 
+displaying requests and responses.
+```
 
 Hi there. Welcome to our amazing new API site – same vintage wine, yet now in this new automagic, synecdochical, supercalifragilistic incarnation! 
 

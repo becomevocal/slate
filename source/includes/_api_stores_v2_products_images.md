@@ -1,10 +1,10 @@
-## Product Images Resource
+## Product Images Resource – Operations
 
 Images associated with a product.
 
 |||
 |---|---|
-| Manages |
+| Manages | [Product Image Object](/api/?BasicAuth#product-image-properties) |
 | OAuth Scopes | `store_v2_products`
 ||`store_v2_products_read_only`
 

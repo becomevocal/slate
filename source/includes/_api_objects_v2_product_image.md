@@ -1,13 +1,13 @@
 # Product Images
 
-## Product Image Object
+## Product Image Object – Properties
+
+Properties for a product image
 
 |||
 |---|---|
-| Managed by | [Product Images Resource](/api/stores/v2/products/images)
+| Managed by | [Product Images Resource](/api/?BasicAuth#product-images-resource)
 
-
-#### Properties
 
 | Name | Type | Description |
 | --- | --- | --- | --- |
