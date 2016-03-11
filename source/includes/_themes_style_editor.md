@@ -33,9 +33,9 @@ There are some syntax patterns involved that Style Editor will understand to hel
 
 e.g.
 
-```
+`
 @color-header-background: #FFFFFF;
-```
+`
 
 This will generate a color picker with the label “Header Background”, set to #FFFFFF (white) by default.
 
@@ -79,11 +79,9 @@ This will add a shade of orange and a shade of purple to the end of the list of 
 
 e.g.
 
-```
-//! @section: Header
-@color-header-background: #FFF;
-//! @endsection
-```
+`//! @section: Header`  
+`@color-header-background: #FFF;`  
+`//! @endsection`  of
 
 This will create a section in the left navigation with the title “Header”, which will house the “Header Background” variable.
 
