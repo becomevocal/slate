@@ -188,6 +188,22 @@ html, body {
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
       font-size: 12px;
+      // Nested for nested 3rd level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
+        .tocify-subheader {
+          .tocify-item>a {
+            // Styling here for a level 2 nesting. For example -> 
+            padding-left: $nav-padding + calc($nav-indent * 2);
+            font-size: 12px;
+          }
+        }
+          // Nested for nested 4th level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
+            .tocify-subheader {
+              .tocify-item>a {
+                // Styling here for a level 3 nesting. For example -> 
+                padding-left: $nav-padding + calc($nav-indent * 3);
+                font-size: 12px;
+              }
+            }
     }
 
     // for embossed look:
@@ -621,4 +637,6 @@ html, body {
 
 .themes .dark-box { display:none }
 
-.themes .content > h1,.themes .content > h2,.themes .content > h3,.themes .content > h4,.themes .content > h5, .themes .content > h6, .themes .content > p, .themes .content > table, .themes .content > ul, .themes .content > ol, .themes .content > aside, .themes .content > dl { margin-right: 0; }
+.themes .content > h1,.themes .content > h2,.themes .content > h3,.themes .content > h4,.themes .content > h5, .themes .content > h6, .themes .content > p, .themes .content > table, .themes .content > ul, .themes .content > ol, .themes .content > aside, .themes .content > dl, .themes .content > code, .themes .content > pre, .themes .content pre > code, .themes .content > blockquote { margin-right: 0; }
+
+/* .themes .content > pre, .themes .content > code, .themes .content pre > code, .themes .content > blockquote { width: 0%; padding: 0; float: none; clear: both; } */
