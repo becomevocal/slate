@@ -15,6 +15,7 @@ includes:
   - api_stores_v2_products
   - api_objects_v2_product_image
   - api_stores_v2_products_images
+  - video_test
 
 search: true
 ---
