@@ -635,8 +635,31 @@ html, body {
   }
 }
 
+/* Added 3/17/16, to indent h3 + h4 in nav pane: */
+.tocify-wrapper .tocify-subheader:nth-child(3) {
+    text-indent: 15px;
+}
+.tocify-wrapper .tocify-subheader:nth-child(4) {
+    text-indent: 30px;
+} 
+
+
+/* Added 3/17/16, to indent embedded video players: */
+iframe {padding-left: 2.5em; }
+
+
+/* Added 3/4/16, to force themes subdirectory to 2-column layout: */
 .themes .dark-box { display:none }
 
 .themes .content > h1,.themes .content > h2,.themes .content > h3,.themes .content > h4,.themes .content > h5, .themes .content > h6, .themes .content > p, .themes .content > table, .themes .content > ul, .themes .content > ol, .themes .content > aside, .themes .content > dl, .themes .content > code, .themes .content > pre, .themes .content pre > code, .themes .content > blockquote { margin-right: 0; }
 
 /* .themes .content > pre, .themes .content > code, .themes .content pre > code, .themes .content > blockquote { width: 0%; padding: 0; float: none; clear: both; } */
+
+
+/* Added 3/17/16, to prevent <pre>'s in themes subdirectory from bustin' out a 3rd, black column: */
+.themes .content > pre {
+    margin-left: 28px !important;
+    padding-right: 0 !important;
+    float: none;
+    width: 100%; }
+
