@@ -11,6 +11,7 @@ language_tabs:
   - json: JSON Response -->
 
 toc_footers:
+  - <a href="http://localhost:4567/">This Is Your Home</a>
   - <a href='/api/'>API Acceuil et Concierge – Bienvenue!</a>
   - <a href='/api/v2/'> &nbsp;  API version Part Deux</a>
   - <a href='/themes/'>Les Themes</a>
