@@ -1,8 +1,4 @@
-## Embedded Video Test
-
-<style type="text/css">
-iframe {padding-left: 2.5em; }
-</style>
+# Embedded Video Test
 
 Watch Engineer Rick demonstrate how to chillax with BigCommerce's calming, aromatherapeutic APIs.
 
