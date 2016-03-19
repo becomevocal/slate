@@ -47,8 +47,22 @@ under the License.
         <%= image_tag('navbar.png') %>
       </span>
     </a>
+    <div class="page-header">
+	<div class="logo"><%= link_to image_tag("newlogo.png"), "http://localhost:4567/" %></div>
+	<div class="splitter"></div>
+	<div class="links">
+		<a href="#">API</a>
+		<a href="#">Themes</a>
+		<a href="#">Changelog</a>
+		<a href="#">Support</a>
+	</div>
+	<div class="actions">
+		<a href="#">Log in</a>
+		<a href="#">Register</a>
+	</div>
+    </div>
     <div class="tocify-wrapper">
-      <%= link_to image_tag("logo.png"), "http://localhost:4567/" %>
+      <!-- <%= link_to image_tag("logo.png"), "http://localhost:4567/" %>//-->
       <% if language_tabs %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>

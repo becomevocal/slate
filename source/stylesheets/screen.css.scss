@@ -64,7 +64,7 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 0;
+  top: 78px;
   left: 0;
   bottom: 0;
   width: $nav-width;
@@ -663,3 +663,82 @@ iframe {padding-left: 2.5em; }
     float: none;
     width: 100%; }
 
+
+/* Added 3/18/16, to mock up top nav bar: */
+
+.page-header {
+    height: 58px;
+    /* z-index: 999; */
+    /* position:fixed;
+    top:0; */
+    width: 100%;
+    background-color: #5754ff;
+    padding: 10px;
+}
+
+.page-header div {
+    float: left;
+    height: 78px;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+page-header a {
+    font-variant: all-small-caps;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+a {
+    background-color: transparent;
+}
+
+.page-header .logo img {
+    height: 60px;
+}
+
+img {
+    border: 0;
+}
+
+.page-header .splitter {
+    border-right: 1px solid white;
+    height: 20px;
+    top: 22px;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.page-header .links a {
+    margin-right: 30px;
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-family: default-font;
+    /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
+}
+
+.page-header .actions {
+    float: right;
+}
+
+.page-header .actions a {
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-family: default-font;
+    /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
+}
+
+.page-header .actions .register {
+    /* background-color: #7a97fe; */
+    background-color: #4e75f8;
+    /* background-color: #4e75f8; */
+    border-radius: 30px;
+    padding: 10px 25px;
+}
