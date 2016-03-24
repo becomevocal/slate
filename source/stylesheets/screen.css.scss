@@ -69,8 +69,10 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
-  font-weight: bold;
+  /* font-size: 13px; */
+  font-size: 14px;
+  /* font-weight: bold; */
+  font-weight: 600;  /* SemiBold to avoid bloat */
 
   // language selector for mobile devices
   .lang-selector {
@@ -184,17 +186,20 @@ html, body {
   .tocify-subheader {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
-    font-weight: bold;
     /* font-weight: 500; */
+    /* font-weight: bold; */
+    font-weight: 600;  /* SemiBold to avoid bloat */
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
-      font-size: 12px;
+      /* font-size: 12px; */
+      font-size: 13px;
       // Nested for nested 3rd level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
         .tocify-subheader {
           .tocify-item>a {
             // Styling here for a level 2 nesting. For example -> 
             padding-left: $nav-padding + calc($nav-indent * 2);
-            font-size: 12px;
+      /* font-size: 12px; */
+      font-size: 12px;
           }
         }
           // Nested for nested 4th level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
@@ -202,6 +207,7 @@ html, body {
               .tocify-item>a {
                 // Styling here for a level 3 nesting. For example -> 
                 padding-left: $nav-padding + calc($nav-indent * 3);
+                /* font-size: 12px; */
                 font-size: 12px;
               }
             }
@@ -256,7 +262,7 @@ html, body {
   z-index: 100;
   color: #000;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bold;  /* Should probably change to SemiBold = 600 */
   opacity: 0.7;
   line-height: 16px;
   img {
@@ -308,7 +314,8 @@ html, body {
 .lang-selector {
   background-color: $lang-select-bg;
   width: 100%;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: 600;  /* SemiBold to avoid bloat */
   a {
     display: block;
     float:left;
@@ -409,13 +416,15 @@ html, body {
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 18px;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
 
   h4, h5, h6 {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 16px;
   }
 
   hr {
@@ -693,7 +702,7 @@ iframe {padding-left: 2.5em; }
 page-header a {
     font-variant: all-small-caps;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold;  /* Should probably change to SemiBold = 600 */
     color: white;
 }
 
@@ -722,10 +731,11 @@ img {
     margin-right: 30px;
     color: white;
     text-decoration: none;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-family: default-font;
     /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
+    font-family: default-font;
+    font-variant: small-caps;
+    /* font-weight: bold; */
+    font-weight: 600;  /* SemiBold to avoid bloat */
 }
 
 .page-header .actions {
@@ -736,10 +746,11 @@ img {
     margin-right: 50px;
     color: white;
     text-decoration: none;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-family: default-font;
     /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
+    font-family: default-font;
+    font-variant: small-caps;
+    /* font-weight: bold; */
+    font-weight: 600;  /* SemiBold to avoid bloat */
 }
 
 .page-header .actions .register {
