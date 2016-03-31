@@ -704,11 +704,12 @@ iframe {padding-left: 2.5em; }
     height: 40px;
     /* line-height: 60px; */
     line-height: 30px;
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 16px;
 }
 
 page-header a {
-    font-variant: all-small-caps;
+    /* font-variant: all-small-caps; */
     text-decoration: none;
     font-weight: bold;  /* Should probably change to SemiBold = 600 */
     color: white;
@@ -745,7 +746,7 @@ img {
     text-decoration: none;
     /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
     font-family: default-font;
-    font-variant: small-caps;
+    /* font-variant: small-caps; */
     /* font-weight: bold; */
     font-weight: 600;  /* SemiBold to avoid bloat */
 }
@@ -760,7 +761,7 @@ img {
     text-decoration: none;
     /* font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; */
     font-family: default-font;
-    font-variant: small-caps;
+    /* font-variant: small-caps; */
     /* font-weight: bold; */
     font-weight: 600;  /* SemiBold to avoid bloat */
 }
