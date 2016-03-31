@@ -64,13 +64,15 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 78px;
+  /* top: 78px; */
+  top: 40px;
   left: 0;
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
   /* font-size: 13px; */
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 16px;
   /* font-weight: bold; */
   font-weight: 600;  /* SemiBold to avoid bloat */
 
@@ -192,14 +194,15 @@ html, body {
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
       /* font-size: 12px; */
-      font-size: 13px;
+      /* font-size: 13px; */
+      font-size: 14px;
       // Nested for nested 3rd level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
         .tocify-subheader {
           .tocify-item>a {
             // Styling here for a level 2 nesting. For example -> 
             padding-left: $nav-padding + calc($nav-indent * 2);
       /* font-size: 12px; */
-      font-size: 12px;
+      font-size: 13px;
           }
         }
           // Nested for nested 4th level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
@@ -300,7 +303,8 @@ html, body {
     background-color: $examples-bg;
     position: absolute;
     right: 0;
-    top: 78px;
+    /* top: 78px; */
+    top: 40px;
     bottom: 0;
   }
 
@@ -352,7 +356,8 @@ html, body {
   // to place content above the dark box
   position: relative;
   z-index: 30;
-  top: 78px;
+  /* top: 78px; */
+  top: 40px;
 
   &:after {
     content: '';
@@ -683,7 +688,8 @@ iframe {padding-left: 2.5em; }
 /* Added 3/18/16, to mock up top nav bar: */
 
 .page-header {
-    height: 58px;
+    /* height: 58px; */
+    height: 20px;
     z-index: 999;
     position: fixed /* !important */;
     top:0;
@@ -694,8 +700,10 @@ iframe {padding-left: 2.5em; }
 
 .page-header div {
     float: left;
-    height: 78px;
-    line-height: 60px;
+    /* height: 78px; */
+    height: 40px;
+    /* line-height: 60px; */
+    line-height: 30px;
     font-size: 18px;
 }
 
@@ -711,7 +719,8 @@ a {
 }
 
 .page-header .logo img {
-    height: 60px;
+    /* height: 60px; */
+    height: 30px;
 }
 
 img {
@@ -720,10 +729,13 @@ img {
 
 .page-header .splitter {
     border-right: 1px solid white;
-    height: 20px;
-    top: 22px;
+    /* height: 20px; */
+    height: 18px;
+    /* top: 22px; */
+    top: 6px;
     position: relative;
-    margin-left: 40px;
+    /* margin-left: 40px; */
+    margin-left: 66px;
     margin-right: 40px;
 }
 
@@ -756,7 +768,8 @@ img {
 .page-header .actions .register {
     /* background-color: #7a97fe; */
     background-color: #4e75f8;
-    /* background-color: #4e75f8; */
+    /* border-radius: 30px; */
     border-radius: 30px;
-    padding: 10px 25px;
+    /* padding: 10px 25px; */
+    padding: 3px 18px;
 }
