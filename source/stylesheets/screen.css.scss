@@ -50,8 +50,8 @@ html, body {
 
 @mixin embossed-bg {
   background:
-    linear-gradient(to bottom, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
+    linear-gradient(to bottom, rgba(#34313F, 0.2), rgba(#34313F, 0) 8px),
+    linear-gradient(to top, rgba(#34313F, 0.2), rgba(#34313F, 0) 8px),
     linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
     linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
     $nav-subitem-bg;
@@ -88,6 +88,9 @@ html, body {
   // This is the logo at the top of the ToC
   &>img {
     display: block;
+    max-width:90%;
+    margin-left: 3%;
+    margin-top: 1%;
   }
 
   &>.search {
@@ -263,7 +266,7 @@ html, body {
   top: 0;
   left: 0;
   z-index: 100;
-  color: #000;
+  color: #34313F;
   text-decoration: none;
   font-weight: bold;  /* Should probably change to SemiBold = 600 */
   opacity: 0.7;
@@ -393,7 +396,7 @@ html, body {
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
     border-top: 1px solid #ddd;
-    background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+    background-image: linear-gradient(to bottom, #F7F7F7, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -409,7 +412,7 @@ html, body {
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
-    background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
+    background-image: linear-gradient(to bottom, rgba(#F7F7F7, 0.4), rgba(#F7F7F7, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -556,7 +559,7 @@ html, body {
 .content {
   pre, blockquote {
     background-color: $code-bg;
-    color: #fff;
+    color: #F7F7F7;
 
     padding: 2em $main-padding;
     margin: 0;
@@ -573,7 +576,7 @@ html, body {
     &>p { margin: 0; }
 
     a {
-      color: #fff;
+      color: #F7F7F7;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
@@ -589,7 +592,7 @@ html, body {
       border-radius: 5px;
       padding: $code-annotation-padding;
       color: #ccc;
-      border-top: 1px solid #000;
+      border-top: 1px solid #34313F;
       border-bottom: 1px solid #404040;
     }
   }
