@@ -35,6 +35,12 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -62,14 +68,13 @@ html, body {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  /* top: 78px; */
   top: 40px;
   left: 0;
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
   font-size: 16px;
-  font-weight: 600;  /* SemiBold to avoid bloat */
+  padding: 25px;
 
   // language selector for mobile devices
   .lang-selector {
@@ -90,17 +95,20 @@ html, body {
 
   &>.search {
     position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     input {
       background: $nav-bg;
       border-width: 0 0 1px 0;
       border-color: $search-box-border-color;
-      padding: 6px 0 6px 20px;
+      padding: 7px 0 7px 20px;
       box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
-      width: $nav-width - 30;
+      width: $nav-width - 75;
       outline: none;
-      color: $nav-text;
+      color: $nav-active-text;
+      font-size: 14px;
       border-radius: 0; /* ios has a default border radius */
     }
 
@@ -108,7 +116,7 @@ html, body {
       position: absolute;
       top: 17px;
       left: $nav-padding;
-      color: $nav-text;
+      color: $nav-active-text;
       @extend %icon-search;
     }
   }
@@ -131,16 +139,17 @@ html, body {
       margin-bottom: 1em;
     }
 
-    @include embossed-bg;
-
     li {
-      margin: 1em $nav-padding;
+      margin: .5em $nav-padding;
       line-height: 1;
+      font-size: 14px;
+      color: $nav-active-text;
     }
 
     a {
-      color: $nav-text;
+      color: $nav-active-text;
       text-decoration: none;
+      font-size: 14px;
 
       &:hover {
         text-decoration: underline;
@@ -174,11 +183,25 @@ html, body {
     transition-duration: 230ms;
   }
 
+  a {
+    color: $nav-text;
+  }
+
+  ul.tocify-header {
+    a {
+      font-size: 14px;
+      font-weight: $tocify-focus-font-weight;
+      color: $nav-active-text;
+    }
+  }
+
   // This is the currently selected ToC entry
   .tocify-focus {
-    box-shadow: 0px 1px 0px $nav-active-shadow;
     background-color: $nav-active-bg;
-    color: $nav-active-text;
+
+    a {
+      color: $nav-active-text !important;
+    }
   }
 
   // Subheaders are the submenus that slide open
@@ -186,44 +209,59 @@ html, body {
   .tocify-subheader {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
-    font-weight: 600;  /* SemiBold to avoid bloat */
-    .tocify-item>a {
-      padding-left: $nav-padding + $nav-indent;
-      font-size: 14px;
-      // Nested for nested 3rd level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
-        .tocify-subheader {
-          .tocify-item>a {
-            // Styling here for a level 2 nesting. For example -> 
-            padding-left: $nav-padding + calc($nav-indent * 2);
-      font-size: 13px;
-          }
-        }
-          // Nested for nested 4th level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
-            .tocify-subheader {
-              .tocify-item>a {
-                // Styling here for a level 3 nesting. For example -> 
-                padding-left: $nav-padding + calc($nav-indent * 3);
-                /* font-size: 12px; */
-                font-size: 12px;
-              }
-            }
+    font-weight: $tocify-font-weight;
+    text-indent: 15px;
+
+    .tocify-focus {
+      a {
+        background: url('../images/slash.svg') no-repeat;
+        background-position: 13px 8px;
+        background-size: 10px;
+      }
     }
 
-    // for embossed look:
-    @include embossed-bg;
+    .tocify-item>a {
+      color: $nav-text;
+      font-size: 13px;
+      font-weight: $tocify-font-weight;
+
+      // Nested for nested 3rd level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
+      .tocify-subheader {
+        .tocify-item>a {
+          font-size: 13px;
+          font-weight: $tocify-font-weight;
+        }
+      }
+      // Nested for nested 4th level, from: https://github.com/tripit/slate/wiki/Deeper-Nesting:
+      .tocify-subheader {
+        .tocify-item>a {
+          font-size: 13px;
+          font-weight: $tocify-font-weight;
+        }
+      }
+    }
+
     &>li:last-child {
       box-shadow: none; // otherwise it'll overflow out of the subheader
     }
   }
 
+  .tocify-subheader .tocify-subheader {
+    text-indent: 30px;
+  }
+
+  .tocify-subheader .tocify-subheader .tocify-subheader {
+    text-indent: 45px;
+  }
+
   .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
-    border-top: 1px dashed $nav-footer-border-color;
 
     li,a {
       color: $nav-text;
       text-decoration: none;
+      font-size: 13px;
     }
 
     a:hover {
@@ -296,38 +334,47 @@ html, body {
     background-color: $examples-bg;
     position: absolute;
     right: 0;
-    top: 40px;
+    top: 0;
     bottom: 0;
   }
 
 .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid $lang-select-active-bg;
+    padding: 0 2rem;
   }
 }
 
 .lang-selector {
   background-color: $lang-select-bg;
   width: 100%;
-  font-weight: 600;  /* SemiBold to avoid bloat */
+
   a {
     display: block;
     float:left;
     color: $lang-select-text;
     text-decoration: none;
     padding: 0 10px;
-    line-height: 30px;
+    line-height: 48px;
     outline: 0;
+    margin-right: .5rem;
 
-    &:active, &:focus {
-      background-color: $lang-select-pressed-bg;
-      color: $lang-select-pressed-text;
+    &:active, &:focus, &:hover {
+      background-color: $lang-select-active-bg;
+      color: $lang-select-text;
     }
 
     &.active {
       background-color: $lang-select-active-bg;
       color: $lang-select-active-text;
+      border-bottom: 2px solid $lang-select-active-text;
+    }
+  }
+
+  a.active {
+    &:active, &:focus {
+      background-color: $lang-select-pressed-bg;
+      color: $lang-select-pressed-text;
     }
   }
 
@@ -347,7 +394,6 @@ html, body {
   // to place content above the dark box
   position: relative;
   z-index: 30;
-  top: 40px;
 
   &:after {
     content: '';
@@ -379,11 +425,8 @@ html, body {
     font-size: 30px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ddd;
-    background-image: linear-gradient(to bottom, #F7F7F7, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -396,10 +439,8 @@ html, body {
     font-size: 20px;
     margin-top: 4em;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
-    background-image: linear-gradient(to bottom, rgba(#F7F7F7, 0.4), rgba(#F7F7F7, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -469,6 +510,11 @@ html, body {
   p, li, dt, dd {
     line-height: 1.6;
     margin-top: 0;
+    font-size: .8rem;
+
+    a {
+      font-size: .8rem;
+    }
   }
 
   img {
@@ -639,13 +685,6 @@ html, body {
   }
 }
 
-.tocify-wrapper .tocify-subheader:nth-child(3) {
-    text-indent: 15px;
-}
-.tocify-wrapper .tocify-subheader:nth-child(4) {
-    text-indent: 30px;
-} 
-
 iframe {
     padding-left: 2.5em;
 }
@@ -659,7 +698,8 @@ iframe {
     max-width: 80%;
 }
 
-.themes .content > h1,.themes .content > h2,.themes .content > h3,.themes .content > h4,.themes .content > h5, .themes .content > h6, .themes .content > p, .themes .content > table, .themes .content > ul, .themes .content > ol, .themes .content > aside, .themes .content > dl, .themes .content > code, .themes .content > pre, .themes .content pre > code, .themes .content > blockquote { margin-right: 0; }
+.themes .content > h1,.themes .content > h2,.themes .content > h3,.themes .content > h4,.themes .content > h5, .themes .content > h6, .themes .content > p, .themes .content > table, .themes .content > ul, .themes .content > ol, .themes .content > aside, .themes .content > dl, .themes .content > code, .themes .content > pre, .themes .content pre > code, .themes .content > blockquote 
+{ margin-right: 0; }
 
 
 .themes .content > pre {
@@ -667,74 +707,15 @@ iframe {
     padding-right: 0 !important;
     float: none;
     max-width: 90%;
-    width: 100%; }
-
-.page-header {
-    height: 20px;
-    z-index: 999;
-    position: fixed;
-    top:0;
-    width: 100%;
-    background-color: #5754ff;
-    padding: 10px;
-}
-
-.page-header div {
-    float: left;
-    height: 40px;
-    line-height: 30px;
-    font-size: 16px;
-}
-
-page-header a {
-    text-decoration: none;
-    font-weight: bold;  /* Should probably change to SemiBold = 600 */
-    color: white;
+    width: 100%; 
 }
 
 a {
     background-color: transparent;
 }
 
-.page-header .logo img {
-    height: 30px;
-}
-
 img {
     border: 0;
-}
-
-.page-header .splitter {
-    height: 18px;
-    top: 6px;
-    position: relative;
-    margin-left: 7%;
-}
-
-.page-header .links a {
-    margin-right: 30px;
-    color: white;
-    text-decoration: none;
-    @extend %default-font;
-    font-weight: 600;  /* SemiBold to avoid bloat */
-}
-
-.page-header .actions {
-    float: right;
-}
-
-.page-header .actions a {
-    margin-right: 50px;
-    color: white;
-    text-decoration: none;
-    @extend %default-font;
-    font-weight: 600;  /* SemiBold to avoid bloat */
-}
-
-.page-header .actions .register {
-    background-color: #4e75f8;
-    border-radius: 30px;
-    padding: 3px 18px;
 }
 
 .highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
@@ -744,3 +725,30 @@ img {
 .highlight, .highlight .w {
   background-color: $code-bg;
 }
+
+@import 'page';
+@import 'buttons';
+@import 'navbar';
+
+.topBar-container {
+  background-color: #4f75f8;
+
+  a {
+    color: #ffffff;
+
+    &:hover, &:focus {
+      color: #E5E5E5 !important;
+    }
+  }
+
+  .button--action {
+    background-color: #41539b;
+    border-color: #41539b;
+
+    &:hover, &:focus {
+      background-color: #3a426e;
+      border-color: #3a426e;
+    }
+  }
+}
+
