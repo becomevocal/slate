@@ -1,5 +1,6 @@
 ---
 title: Bigcommerce Blueprint Themes
+layout: "twocolumn"
 
 toc_footers:
   - <a href="/">Home</a>
