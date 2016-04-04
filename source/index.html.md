@@ -1,10 +1,10 @@
 ---
-layout: "home"
+
 title: Bigcommerce API Reference
 
 language_tabs:
-  - javascript: Request (Example)
-  - json: Response (Example)
+  - json: Request
+  - curl: Response
 
 toc_footers:
   - <a href="/">Home</a>
