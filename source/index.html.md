@@ -18,7 +18,7 @@ toc_footers:
   - <a href='/themes/blueprint/'> &nbsp; Blueprint Themes</a>
   - <a href='https://stencil.bigcommerce.com/docs'> &nbsp;  Stencil Themes</a>
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Underpowered by Slate</a>
+  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
   - snippets
@@ -1180,6 +1180,8 @@ Deletes all orders in the store.
 *   [Basic Auth](#delete-all-orders-basic)
 >`DELETE /api/v2/orders`
 
+=======
+This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Authentication
 
@@ -1249,7 +1251,7 @@ curl "http://example.com/api/kittens"
   },
   {
     "id": 2,
-    "name": "Isis",
+    "name": "Max",
     "breed": "unknown",
     "fluffiness": 5,
     "cuteness": 10
@@ -1300,7 +1302,7 @@ curl "http://example.com/api/kittens/2"
 ```json
 {
   "id": 2,
-  "name": "Isis",
+  "name": "Max",
   "breed": "unknown",
   "fluffiness": 5,
   "cuteness": 10
@@ -1309,7 +1311,7 @@ curl "http://example.com/api/kittens/2"
 
 This endpoint retrieves a specific kitten.
 
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 c
