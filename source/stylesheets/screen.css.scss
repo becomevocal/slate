@@ -676,14 +676,24 @@ iframe {padding-left: 2.5em; }
 /* .themes .content > pre, .themes .content > code, .themes .content pre > code, .themes .content > blockquote { width: 0%; padding: 0; float: none; clear: both; } */
 
 
-/* Added 3/17/16, to prevent <pre>'s in themes subdirectory from bustin' out a 3rd, black column: */
+/* Added 3/17/16, to prevent <pre>'s in .../themes/ subdirectory from bustin' out a 3rd, black column: */
 .themes .content > pre {
     margin-left: 28px !important;
     padding-right: 0 !important;
     float: none;
     max-width: 90%;
-    width: 100%; }
+    width: 100%; 
+}
 
+/* Added 4/4/16, to allow inline code blocks within /api/ subdirectories' 3-column layout – needs more work!: */
+/* .api .content > qed {
+    background-color: $examples-bg;
+    margin-left: 28px !important;
+    padding-right: 0 !important;
+    float: none;
+    max-width: 90%;
+    width: 100%; 
+} */
 
 /* Added 3/18/16, to mock up top nav bar: */
 
@@ -692,7 +702,7 @@ iframe {padding-left: 2.5em; }
     height: 20px;
     z-index: 999;
     position: fixed /* !important */;
-    top:0;
+    top: 0;
     width: 100%;
     background-color: #5754ff;
     padding: 10px;
