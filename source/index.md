@@ -1,14 +1,24 @@
 ---
-title: API Reference
+title: Bigcommerce API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
+  - javascript: Request (Example)
+  - json: Response (Example)
+
+<!--- language_tabs:
+  - BasicAuth: Basic Auth
+  - OAuth
+  - json: JSON Response -->
 
 toc_footers:
+  - <a href="http://localhost:4567/">This Is Your Home</a>
+  - <a href='/api/'>API Acceuil et Concierge – Bienvenue!</a>
+  - <a href='/api/v2/'> &nbsp;  API version Part Deux</a>
+  - <a href='/themes/'>Les Themes</a>
+  - <a href='/themes/blueprint/'> &nbsp; Blueprint Themes</a>
+  - <a href='https://stencil.bigcommerce.com/docs'> &nbsp;  Stencil Themes</a>
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='http://github.com/tripit/slate'>Documentation Underpowered by Slate</a>
 
 includes:
   - snippets
@@ -19,7 +29,31 @@ search: true
 
 # Brands
 
-Hi there. Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
+```
+  _          _ _             
+ | |__   ___| | | ___        
+ | '_ \ / _ \ | |/ _ \       
+ | | | |  __/ | | (_) |      
+ |_| |_|\___|_|_|\___/     _ 
+ __      _____  _ __| | __| |
+ \ \ /\ / / _ \| '__| |/ _` |
+  \ V  V / (_) | |  | | (_| |
+   \_/\_/ \___/|_|  |_|\__,_|
+
+Welcome to our API v2 documentation.
+
+We show example requests and responses in this dark
+right-hand column.
+
+Use the tabs at the upper right to select between 
+displaying requests and responses.
+```
+
+Hi there. Welcome to our amazing new API site – same vintage wine, yet now in this new automagic, synecdochical, supercalifragilistic incarnation! 
+
+But we digress. Let's start with:
+
+Brand facets for identifying and categorizing products according to their manufacturer or company metonym.
 
 |||
 |---|---|
@@ -62,7 +96,7 @@ Filter parameters can be added to the URL query string to select specific brands
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 brands are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, Bigcommerce returns up to 50 brands by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |
@@ -1180,8 +1214,6 @@ Kittn expects for the API key to be included in all API requests to the server i
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-
-# Kittens
 
 ## Get All Kittens
 
