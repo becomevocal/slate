@@ -10,7 +10,6 @@ Bigcommerce provides and maintains the following full-featured SDKs in a variety
 |[**Python**](https://github.com/bigcommerce/bigcommerce-api-python)|| 
 |The official Bigcommerce Python client, available as a PyPi package. Uses either OAuth or Basic Authentication.||
 
-</div>
 
 ## Official Bigcommerce OAuth Hello World Apps
 
@@ -26,7 +25,6 @@ Bigcommerce provides and maintains the following hello world apps in a variety o
 |`Python`|`Ruby`|
 |A sample app written in Python, using [Flask](http://flask.pocoo.org/).|A Ruby gem that allows you to authenticate using [OmniAuth](https://github.com/intridea/omniauth/wiki).|
 
-</div>
 
 ## Community Contributed Libraries
 
@@ -40,6 +38,3 @@ The following libraries and tools have been contributed by our community. Theyâ€
 ||*   [bigcommercerestapi](https://github.com/jmawebtech/bigcommercerestapi)|
 
 
-</div>
-
-</div>

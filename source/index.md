@@ -1,6 +1,10 @@
 ---
-title: Bigcommerce Themes
-layout: "twocolumn"
+
+title: Bigcommerce API Reference
+
+language_tabs:
+  - json: Request
+  - curl: Response
 
 toc_footers:
   - <a href="/">Home</a>
@@ -9,17 +13,6 @@ toc_footers:
   - <a href='/themes/blueprint/'> &nbsp; Blueprint Themes</a>
   - <a href='https://stencil.bigcommerce.com/docs'> &nbsp;  Stencil Themes</a>
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation by Slate</a>
-
-includes:
-  - themes_anatomy
-  - themes_blueprint
-  - themes_style_editor
-  - themes_product_filtering_toolkit
 
 search: true
 ---
-
-# Themes
-
-Getting Started with Themes

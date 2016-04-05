@@ -4,8 +4,7 @@ layout: "twocolumn"
 
 toc_footers:
   - <a href="/">Home</a>
-  - <a href='/api/'>API - Getting Started</a>
-  - <a href='/api/v2/'> &nbsp;  API V2</a>
+  - <a href='/api/v2/'>API</a>
   - <a href='/themes/'>Themes</a>
   - <a href='/themes/blueprint/'> &nbsp; Blueprint Themes</a>
   - <a href='https://stencil.bigcommerce.com/docs'> &nbsp;  Stencil Themes</a>

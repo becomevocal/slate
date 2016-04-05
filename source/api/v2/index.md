@@ -1,15 +1,14 @@
 ---
-title: Bigcommerce APIs, v.2
+title: Bigcommerce APIs
 
 language_tabs:
-  - javascript: Request (Example)
-  - json: Response (Example)
+  - curl: Request
+  - json: Response
 
 
 toc_footers:
   - <a href="/">Home</a>
   - <a href='/api/'>API - Getting Started</a>
-  - <a href='/api/v2/'> &nbsp;  API V2</a>
   - <a href='/themes/'>Themes</a>
   - <a href='/themes/blueprint/'> &nbsp; Blueprint Themes</a>
   - <a href='https://stencil.bigcommerce.com/docs'> &nbsp;  Stencil Themes</a>
@@ -17,20 +16,22 @@ toc_footers:
   - <a href='http://github.com/tripit/slate'>Documentation by Slate</a>
 
 includes:
-  - api
-  - api_req-headers
-  - api_response-headers
-  - api_media-types
-  - api_webhooks-getting-started
   - api_clients
-  - api_using-oauth-intro
-  - api_registration
-  - api_callback
+  - api_errors
+  - api_object_product
+  - api_products
+  - api_object_product_image
+  - api_products_images
+  - api_categories
+  - api_brands
+  - api_object_order
+  - api_orders
+  - video_test
 
 search: true
 ---
 
-# API Version 2
+# API Home
 
-Hello, you have reached the /api/v2 subdirectory! 
+Hello, you have reached the /api subdirectory! 
 
