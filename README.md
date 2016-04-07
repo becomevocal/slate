@@ -58,12 +58,7 @@ bundle exec middleman server
 vagrant up
 ```
 
-<<<<<<< HEAD
-*Note: if you're using the Docker setup on OSX, the docs will be
-available at the output of `docker-machine ip` (allegedly but not really `boot2docker ip`) instead of `localhost:4567`.*
-=======
 You can now see the docs at http://localhost:4567. Whoa! That was fast!
->>>>>>> 19d651a65aa822f3777f71635cf21cde737070ee
 
 Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
 
