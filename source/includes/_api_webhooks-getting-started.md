@@ -16,11 +16,10 @@ For example, you might build an app that needs to know when:
 *   Self-signed certificates are not supported.
 *   JSON is required; XML is not supported.
 
-</span></div>
 
 All webhooks requests must include the following in their HTTP headers:
 
-<pre>   **Accept: application/json
+ 		 **Accept: application/json
      Content-Type: application/json
      X-Auth-Client: _the OAuth client id_
      X-Auth-Token: _the OAuth token_**</pre>
@@ -39,7 +38,6 @@ Before you can send any requests or receive any responses, you will need the fol
 *   Self-signed certificate
 *   Intermediate certificates not loaded
 
-</span></div>
 
 ## Creating webhooks
 
@@ -129,7 +127,7 @@ The dispatcher will then attempt several retries (at increasing intervals) until
 10.  50400 seconds after the most recent failure
 11.  86400 seconds (24 hours) after the most recent failure
 
-After the final retry attempt above (cumulatively, 48 hours after the first delivery attempt), the webhook will automatically be deactivated, and we will send an email to the developer's email address registered on the subscribing app. Should you wish to reactivate the hook, you can set the **is_active** flag back to **true** via a <nobr>[PUT request](/api/stores/v2/webhooks#update-a-hook)</nobr> to the **hooks** resource.
+After the final retry attempt above (cumulatively, 48 hours after the first delivery attempt), the webhook will automatically be deactivated, and we will send an email to the developer's email address registered on the subscribing app. Should you wish to reactivate the hook, you can set the **is_active** flag back to **true** via a [PUT request](/api/stores/v2/webhooks#update-a-hook) to the **hooks** resource.
 
 ## Updating a webhook
 
@@ -176,6 +174,3 @@ We suggest using [ngrok](https://ngrok.com/), which can be used to easily set up
 
 This enables our webhooks to be sent to your localhost environments via a public URL. No production push required.
 
-</div>
-
-</div>
