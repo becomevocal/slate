@@ -1,6 +1,7 @@
 ---
 
 title: Bigcommerce API Reference
+layout: "home"
 
 language_tabs:
   - json: Request

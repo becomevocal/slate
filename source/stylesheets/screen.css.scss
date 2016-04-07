@@ -729,6 +729,7 @@ img {
 @import 'page';
 @import 'buttons';
 @import 'navbar';
+@import 'blocks';
 
 .topBar-container {
   background-color: #4f75f8;
@@ -750,5 +751,14 @@ img {
       border-color: #3a426e;
     }
   }
+}
+
+.block-container {
+    padding-top: 0 !important;
+}
+
+.home-block {
+    background: url('/images/hero.svg') no-repeat 100%;
+    background-size: 575px;
 }
 

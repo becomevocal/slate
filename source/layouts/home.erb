@@ -62,81 +62,136 @@ under the License.
       </span>
     </a>
 
-<header role="banner">
-  <div class="topBar-container topBar-container--fixed">
-    <nav class="top-bar ng-isolate-scope" ng-transclude="" top-bar="" style="height: 81px;">
-      <ul class="title-area ng-scope">
-        <li class="name"><%= link_to image_tag("BigCommerce_logo_white.svg"), "/" %></li>
-        <li class="menu-icon toggle-topbar menu-icon ng-isolate-scope" ng-transclude="" toggle-top-bar=""><a href="#mobile-nav" class="ng-scope"><span></span>Menu</a></li>
-      </ul>
-      <section class="top-bar-section ng-scope">
-        <ul class="menuItems">
-          <li><a href="" title="API">API</a></li>
-          <li><a href="" title="Themes">Themes</a></li>
-          <li><a href="" title="Changelog">Changelog</a></li>
-          <li><a href="" title="Help and Support">Support</a></li>
-          <li><a href="" title="Send Feedback and Edits">Send Feedback/Edits</a></li>
-        </ul>
-      </section>
-      <div class="top-bar-actions ng-scope">
-        <div class="optional"><a href="https://login.bigcommerce.com/login">Log In</a></div>
-        <div class="optional">
-          <button class="button button--action button--small" trial-modal="standard-free-trial-modal">Get Started</button>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
-
-    <div class="tocify-wrapper">
-      <% if language_tabs %>
-        <div class="lang-selector">
-          <% language_tabs.each do |lang| %>
-            <% if lang.is_a? Hash %>
-              <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
-            <% else %>
-              <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
-            <% end %>
-          <% end %>
-        </div>
-      <% end %>
-      <% if current_page.data.search %>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <% end %>
-      <div id="toc">
-      </div>
-      <% if current_page.data.toc_footers %>
-        <ul class="toc-footer">
-          <% current_page.data.toc_footers.each do |footer| %>
-            <li><%= footer %></li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        <%= yield %>
-        <% current_page.data.includes && current_page.data.includes.each do |include| %>
-          <%= partial "includes/#{include}" %>
-        <% end %>
-      </div>
-      <div class="dark-box">
-        <% if language_tabs %>
-          <div class="lang-selector">
-            <% language_tabs.each do |lang| %>
-              <% if lang.is_a? Hash %>
-                <a href="#" data-language-name="<%= lang.keys.first %>"><%= lang.values.first %></a>
-              <% else %>
-                <a href="#" data-language-name="<%= lang %>"><%= lang %></a>
-              <% end %>
-            <% end %>
+    <header role="banner">
+      <div class="topBar-container topBar-container--fixed">
+        <nav class="top-bar ng-isolate-scope" ng-transclude="" top-bar="" style="height: 81px;">
+          <ul class="title-area ng-scope">
+            <li class="name"><%= link_to image_tag("BigCommerce_logo_white.svg"), "/" %></li>
+            <li class="menu-icon toggle-topbar menu-icon ng-isolate-scope" ng-transclude="" toggle-top-bar=""><a href="#mobile-nav" class="ng-scope"><span></span>Menu</a></li>
+          </ul>
+          <section class="top-bar-section ng-scope">
+            <ul class="menuItems">
+              <li><a href="" title="API">API</a></li>
+              <li><a href="" title="Themes">Themes</a></li>
+              <li><a href="" title="Changelog">Changelog</a></li>
+              <li><a href="" title="Help and Support">Support</a></li>
+              <li><a href="" title="Send Feedback and Edits">Send Feedback/Edits</a></li>
+            </ul>
+          </section>
+          <div class="top-bar-actions ng-scope">
+            <div class="optional"><a href="https://login.bigcommerce.com/login">Log In</a></div>
+            <div class="optional">
+              <button class="button button--action button--small" trial-modal="standard-free-trial-modal">Get Started</button>
+            </div>
           </div>
-        <% end %>
+        </nav>
       </div>
-    </div>
+    </header>
+
+    <section class=
+    "block block--defaultScheme block--desktopViewport block--paddingTopBottom block--twoColAbsolute home-block">
+        <div class="block-container">
+            <div class="block-container-inner">
+                <div class=
+                "block--twoColAbsolute-row block--twoColAbsolute-row--split7">
+                    <div class="block--twoColAbsolute-column">
+                        <div class="block-text">
+                            <h1><br>
+                            Think Big</h1>
+                            <p><span class="type-large">Build apps and themes
+                            for thousands of successful merchants.</span></p>
+                            <p><span class="type-large"><br></span><a class=
+                            "button button--action" href="/">Get Started</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=
+    "block block--defaultScheme block--allViewport block--paddingTopBottom block--twoColTextOverBg">
+    <div class="block-container">
+            <div class="block-container-inner">
+                <div class=
+                "block--twoColTextOverBg-row block--twoColTextOverBg-row--split6">
+                <div class=
+                "block--twoColTextOverBg-column block--twoColTextOverBg-column--centerImageAlign">
+                    <div class="block-text">
+                            <p class="rt-scheme--lightestGrey" style=
+                            "text-align: center;"><strong class=
+                            "rt-scheme-headline">API</strong><span class="type-large"><br>
+                            Develop a custom integration or build an<br>
+                            app to sell in the App Store.</span><span class=
+                            "type-large"><br>
+                            <br>
+                            <a class="button button--action" href=
+                            "/api/v2">
+                            View API Docs</a><br></span></p>
+                        </div>
+                    </div>
+                    <div class=
+                    "block--twoColTextOverBg-column block--twoColTextOverBg-column--centerImageAlign">
+                    <div class="block-text">
+                            <p class="rt-scheme--lightestGrey" rel=
+                            "text-align: center;" style="text-align: center;">
+                            <span class="type-large"><strong class=
+                            "rt-scheme-headline">Themes</strong><br>
+                            Design and develop custom BigCommerce<br>
+                            storefront themes.</span><span class=
+                            "type-large"><br>
+                            <br>
+                            <a class="button button--action" href=
+                            "/themes">
+                            View Themes Docs</a><br></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=
+    "block block--defaultScheme block--allViewport block--paddingTopBottom block--twoColTextOverBg">
+    <div class="block-container">
+            <div class="block-container-inner">
+                <div class=
+                "block--twoColTextOverBg-row block--twoColTextOverBg-row--split6">
+                <div class=
+                "block--twoColTextOverBg-column block--twoColTextOverBg-column--centerImageAlign">
+                    <div class="block-text">
+                            <p class="rt-scheme--lightestGrey" style=
+                            "text-align: center;"><strong class=
+                            "rt-scheme-headline">Changelog</strong><span class="type-large"><br>
+                            View the most recent updates made<br>
+                            to the APIs and Theme frameworks.</span><span class=
+                            "type-large"><br>
+                            <br>
+                            <a class="button button--action" href=
+                            "/changelog">
+                            View Changelog</a><br></span></p>
+                        </div>
+                    </div>
+                    <div class=
+                    "block--twoColTextOverBg-column block--twoColTextOverBg-column--centerImageAlign">
+                    <div class="block-text">
+                            <p class="rt-scheme--lightestGrey" rel=
+                            "text-align: center;" style="text-align: center;">
+                            <span class="type-large"><strong class=
+                            "rt-scheme-headline">Support</strong><br>
+                            Head here for help bulding apps<br>
+                            and developing themes.</span><span class=
+                            "type-large"><br>
+                            <br>
+                            <a class="button button--action" href=
+                            "/support">
+                            Get Support</a><br></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
   </body>
 </html>
