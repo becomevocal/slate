@@ -67,7 +67,6 @@ under the License.
     <nav class="top-bar ng-isolate-scope" ng-transclude="" top-bar="" style="height: 81px;">
       <ul class="title-area ng-scope">
         <li class="name"><%= link_to image_tag("BigCommerce_logo_white.svg"), "/" %></li>
-        <li class="menu-icon toggle-topbar menu-icon ng-isolate-scope" ng-transclude="" toggle-top-bar=""><a href="#mobile-nav" class="ng-scope"><span></span>Menu</a></li>
       </ul>
       <section class="top-bar-section ng-scope">
         <ul class="menuItems">
@@ -75,7 +74,7 @@ under the License.
           <li><a href="" title="Themes">Themes</a></li>
           <li><a href="" title="Changelog">Changelog</a></li>
           <li><a href="" title="Help and Support">Support</a></li>
-          <li><a href="" title="Send Feedback and Edits">Send Feedback/Edits</a></li>
+          <li class="hideOnTablet"><a href="" title="Send Feedback and Edits">Send Feedback/Edits</a></li>
         </ul>
       </section>
       <div class="top-bar-actions ng-scope">
