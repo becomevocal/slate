@@ -43,18 +43,14 @@ Filter parameters can be added to the URL query string to select specific catego
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 categories are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 categories are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |
 | `Page` | int | `/api/v2/categories?page={number}` |
 | `Limit` | int | `/api/v2/categories?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -86,11 +82,7 @@ Gets a single category.
 *   [Basic Auth](#get-a-category-basic)
 >`GET /api/v2/categories/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "parent_id": 1,
@@ -121,11 +113,7 @@ Gets a count of the total number of categories in the store.
 *   [Basic Auth](#get-a-count-of-categories-basic)
 >`GET /api/v2/categories/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 10
 }
@@ -155,25 +143,17 @@ The following properties of the category are required. The request won’t be fu
 
 ### Notes
 
-To maximize system performance, Bigcommerce caps the number of categories that can be added to a store at 16,000\. If your POST causes the store to exceed the maximum of 16,000 categories, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the number of categories that can be added to a store at 16,000. If your POST causes the store to exceed the maximum of 16,000 categories, Bigcommerce will return a 403 error.
 
 In addition, Bigcommerce caps the total number of parent categories at seven. If your `POST` includes the ID of a parent category in the `parent_id` field, Bigcommerce will check that parent category and its parent and so on to determine the total number of parent categories. If your `POST` would cause the total number of parent categories to exceed seven, Bigcommerce will return a 403 error.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "Xmen toys"
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "parent_id": 1,
@@ -218,11 +198,7 @@ The following properties of the category are required. The request won’t be fu
 
 To maximize system performance, Bigcommerce caps the total number of parent categories at seven. If your `PUT` includes the ID of a parent category in the `parent_id` field, Bigcommerce will check the parent and any children of the current category to determine the total number of parent categories. If your `PUT` would cause the total number of parent categories to exceed the maximum of seven, Bigcommerce will return a 403 error.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "parent_id": 1,

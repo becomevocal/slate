@@ -23,7 +23,7 @@ Catalog of saleable items in the store.
 Gets the collection of products. (Default sorting is by product id, from lowest to highest.)
 
 ```curl
-[Request would be here.]
+
 ```
 
 ```json
