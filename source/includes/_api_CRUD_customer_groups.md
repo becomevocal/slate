@@ -44,11 +44,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/customer_groups?page={number}` |
 | `Limit` | int | `/api/v2/customer_groups?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -83,11 +79,7 @@ Gets a customer group.
 *   [Basic Auth](#get-a-customer-group-basic)
 >`GET /api/v2/customer_groups/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 3,
   "name": "Student Discounts",
@@ -114,11 +106,7 @@ Gets a count of customer groups.
 *   [Basic Auth](#get-a-count-of-customer-groups-basic)
 >`GET /api/v2/customer_groups/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 3
 }
@@ -146,7 +134,7 @@ The following properties of the customer group are required. The request won’t
 ### Notes
 
 A minimal request requires only the customer group name:
-```
+```curl
 {
     "name": "Wholesale Customers"
 }
@@ -154,7 +142,7 @@ A minimal request requires only the customer group name:
 
 To assign all new customers to the group by default, set **is default** to true:
 
-```
+```curl
 {
     "name": "Retail Customers",
     "is_default": true
@@ -163,7 +151,7 @@ To assign all new customers to the group by default, set **is default** to true:
 
 To restrict customers in the group to only view and order products from a specific set of categories, provide a **category access** type:
 
-```
+```curl
 {
     "name": "Bulk Purchasers",
     "category_access": {
@@ -175,7 +163,7 @@ To restrict customers in the group to only view and order products from a specif
 
 To provide a 5% store-wide discount for customers in the group, provide a **discount rule** of type **all**:
 
-```
+```curl
 {
     "name": "Student Discounts",
     "discount_rules": 
@@ -209,7 +197,7 @@ The following properties of the customer group are required. The request won’t
 Any combination of fields can be updated at once. Discount rules are treated in bulk. The entire set of rules is overwritten when a request is sent.
 
 The following request will remove any existing rules, and apply the new ones:
-```
+```curl
 {
         "discount_rules": [
             {

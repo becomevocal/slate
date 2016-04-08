@@ -6,8 +6,6 @@
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-
-
 ## Operations
 
 *   [List Options](#list-options)
@@ -46,11 +44,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/options?page={number}` |
 | `Limit` | int | `/api/v2/options?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 3,
@@ -84,11 +78,7 @@ Gets an option.
 *   [Basic Auth](#get-an-option-basic)
 >`GET /api/v2/options/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 3,
   "name": "Colors",
@@ -110,11 +100,7 @@ Gets a count of the number of options in the store.
 *   [Basic Auth](#get-a-count-of-options-basic)
 >`GET /api/v2/options/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 4
 }
@@ -143,11 +129,7 @@ The following properties of the option are required. The request won’t be fulf
 *   `name`
 *   `type`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "Color",
   "display_name": "Color",
@@ -155,11 +137,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "name": "Color",
@@ -192,11 +170,7 @@ The following properties of the option are read-only. If one or more of these pr
 
 The following properties of the option are required. The request won’t be fulfilled unless these properties are valid.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "Xmen toys",
   "display_name": "xmen extreme toys",
@@ -204,11 +178,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 18,
   "name": "Xmen toys",

@@ -34,11 +34,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/customers/{customer_id}/addresses?page={number}` |
 | `Limit` | int | `/api/v2/customers/{customer_id}/addresses?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -68,11 +64,7 @@ Gets a customer address.
 >`GET /api/v2/customers/{customer_id}/addresses/{id}`
 </div>
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "customer_id": 10,
@@ -100,11 +92,7 @@ Gets a count of customer addresses.
 >`GET /api/v2/customers/{customer_id}/addresses/count`
 </div>
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 4
 }
@@ -140,10 +128,7 @@ The following properties of the customer address are required. The request wonâ€
 *   `zip`
 *   `country`
 
-### Request
-
-Example request object:
-```
+```curl
 {
   "first_name": "Trisha",
   "last_name": "McLaughlin",
@@ -158,11 +143,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "customer_id": 1,
@@ -200,11 +181,7 @@ The following properties of the customer address are read-only. If one or more o
 
 The following properties of the customer address are required. The request wonâ€™t be fulfilled unless these properties are valid.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "first_name": "Trisha",
   "last_name": "McLaughlin",
@@ -218,11 +195,8 @@ Example request object:
   "phone": ""
 }
 ```
-### Response
 
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "customer_id": 1,

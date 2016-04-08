@@ -19,11 +19,7 @@ List of tags with associated blog posts.
 *   [Basic Auth](#list-tags-basic)
 >`GET /api/blog/tags`
 
-
-### Response
-
-Example JSON returned in the response:
-```
+```json
 [
   {
     "tag": "Blog",

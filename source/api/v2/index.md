@@ -22,10 +22,12 @@ includes:
   - api_CRUD_products
   - api_objects_product_image
   - api_CRUD_products_images
+  - api_objects_category
   - api_CRUD_categories
+  - api_objects_brand
   - api_CRUD_brands
   - api_objects_order
-  - api_landing_orders
+  - api_CRUD_orders
 
   - video_test
 

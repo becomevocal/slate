@@ -38,11 +38,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/countries/{country_id}/states?page={number}` |
 | `Limit` | int | `/api/v2/countries/{country_id}/states?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -68,11 +64,7 @@ Gets a state belonging to a country.
 *   [Basic Auth](#get-a-state-basic)
 >`GET /api/v2/countries/{country_id}/states/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "state": "Alabama",
@@ -90,10 +82,7 @@ Gets a count of the number of states within a specified country.
 *   [Basic Auth](#get-a-count-of-states-basic)
 >`GET /api/v2/countries/{country_id}/states/count`
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "count": 65
 }

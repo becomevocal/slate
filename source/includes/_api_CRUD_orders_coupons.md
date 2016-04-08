@@ -6,9 +6,6 @@
 | OAuth Scopes | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
-
 ## Operations
 
 *   [List Order Coupons](#list-order-coupons)
@@ -39,11 +36,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/orders/{order_id}/coupons?page={number}` |
 | `Limit` | int | `/api/v2/orders/{order_id}/coupons?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -66,11 +59,7 @@ Gets a coupon code associated with an order.
 *   [Basic Auth](#get-an-order-coupon-basic)
 >`GET /api/v2/orders/{order_id}/coupons/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "coupon_id": 1,

@@ -49,11 +49,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/coupons?page={number}` |
 | `Limit` | int | `/api/v2/coupons?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -186,16 +182,12 @@ Example JSON returned in the response:
 
 Gets a coupon.
 
-
 *   [OAuth](#get-a-coupon-oauth)
 >`GET /stores/{store_hash}/v2/coupons/{id}`
 *   [Basic Auth](#get-a-coupon-basic)
 ">`GET /api/v2/coupons/{id}`
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "id": 1,
   "name": "5% off order total",
@@ -228,10 +220,7 @@ Gets a count of the number of coupons in the store.
 *   [Basic Auth](#get-a-count-of-coupons-basic)
 >`GET /api/v2/coupons/count`
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "count": 65
 }
@@ -273,11 +262,7 @@ The coupon type can be one of the following:
 *   free_shipping
 *   percentage_discount
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "5% off order total",
   "type": "per_item_discount",
@@ -293,11 +278,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "name": "5% off order total",
@@ -341,11 +322,7 @@ The following properties of the coupon are read-only. If one or more of these pr
 
 The following properties of the coupon are required. The request won’t be fulfilled unless these properties are valid.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "name": "5% off order total",

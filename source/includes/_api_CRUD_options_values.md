@@ -35,11 +35,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/options/{option_id}/values?page={number}` |
 | `Limit` | int | `/api/v2/options/{option_id}/values?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -69,10 +65,7 @@ Gets an option value.
 *   [Basic Auth](#get-an-option-value-basic)
 >`GET /api/v2/options/{option_id}/values/{id}`
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "id": 9,
   "option_id": 3,
@@ -109,15 +102,11 @@ The following properties of the option value are required. The request won’t b
 
 ### Notes
 
-To maximize system performance, Bigcommerce caps the total number of values per option at 250\. IF the option has 250 values and you try to create another one, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the total number of values per option at 250. IF the option has 250 values and you try to create another one, Bigcommerce will return a 403 error.
 
 When you POST an **_is_default_** property of _true_, all other option values on the parent option will have their **_is_default_** property set to _false_.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "label": "white",
   "sort_order": 0,
@@ -126,11 +115,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 68,
   "option_id": 3,
@@ -165,11 +150,7 @@ The following properties of the option value are required. The request won’t b
 
 When you PUT an **_is_default_** property of _true_, all other option values on the parent option will have their **_is_default_** property set to _false_.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "label": "whitish",
   "sort_order": 1,
@@ -178,11 +159,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 68,
   "option_id": 3,
@@ -213,7 +190,7 @@ Deletes multiple values belonging to an option.
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 option_values are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 option_values are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |

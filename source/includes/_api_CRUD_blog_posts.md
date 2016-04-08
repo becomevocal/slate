@@ -49,11 +49,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/stores/{store_hash}/v2/blog/posts?page={number}` |
 | `Limit` | int | `/stores/{store_hash}/v2/blog/posts?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-````
+```json
   {
     "id": 2,
     "title": "Ten Great New Products",
@@ -93,7 +89,7 @@ Example JSON returned in the response:
     "thumbnail_path": ""
   }
 ]
-````
+```
 ## Get a Blog Post
 
 Gets a blog post.
@@ -103,11 +99,7 @@ Gets a blog post.
 *   [Basic Auth](#get-a-blog-post-basic)
 >`GET /api/v2/blog/posts/{id}
 
-
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "id": 1,
   "title": "Your first blog post!",
@@ -139,10 +131,7 @@ Gets a count of blog posts.
 >`GET /api/v2/blog/posts/count
 
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "count": 6
 }
@@ -177,10 +166,7 @@ Blog posts default to draft status. Set `is_published` to true to publish posts 
 
 If a custom `url` is not provided, the post’s URL will be generated based on the value of `title`.
 
-### Request
-
-Example request object:
-```
+```curl
 {
   "title": "A Sample Blog Post",
   "body": "<p>This is a blog post.</p>",
@@ -216,10 +202,7 @@ The following properties of the blog post are read-only. If one or more of these
 
 The following properties of the blog post are required. The request won’t be fulfilled unless these properties are valid.
 
-### Request
-
-Example request object:
-```
+```curl
 {
   "title": "New: A Sample Blog Post",
   "url": "/blog/sample-post"

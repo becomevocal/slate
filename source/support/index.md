@@ -1,6 +1,6 @@
 ---
 
-title: Bigcommerce API Reference
+title: BigCommerce API & Themes Developer Support
 layout: "support"
 
 language_tabs:

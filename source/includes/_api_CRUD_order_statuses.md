@@ -6,8 +6,6 @@
 | **OAuth Scopes** | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
 ## Operations
 
 *   [List Order Statuses](#list-order-statuses)
@@ -38,11 +36,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/order_statuses?page={number}` |
 | `Limit` | int | `/api/v2/order_statuses?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 0,
@@ -126,11 +120,7 @@ Gets a single order status.
 *   [Basic Auth](#get-an-order-status-basic)
 >`GET /api/v2/order_statuses/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": "12",
   "name": "Manual Verification Required",

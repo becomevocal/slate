@@ -9,9 +9,6 @@ Brand facets for identifying and categorizing products according to their manufa
 ||`store_v2_products_read_only`
 
 
-
-
-
 ## Operations
 
 *   [List Brands](#list-brands)
@@ -50,11 +47,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/brands?page={number}` |
 | `Limit` | int | `/api/v2/brands?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -86,11 +79,7 @@ Gets a brand.
 *   [Basic Auth](#get-a-brand-basic)
 >`GET /api/v2/brands/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "name": "Apple",
@@ -111,11 +100,7 @@ Returns the total number of brands in the store.
 *   [Basic Auth](#get-a-count-of-brands-basic)
 >`GET /api/v2/brands/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 25
 }
@@ -145,24 +130,16 @@ The following properties of the brand are required. The request won’t be fulfi
 
 ### Notes
 
-To maximize system performance, Bigcommerce caps the number of brands that can be added to a store at 30,000\. If your POST causes the store to exceed the maximum of 30,000 brands, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the number of brands that can be added to a store at 30,000. If your POST causes the store to exceed the maximum of 30,000 brands, Bigcommerce will return a 403 error.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "Xmen",
   "page_title": "X men brand"
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "name": "Xmen",
@@ -193,11 +170,7 @@ The following properties of the brand are read-only. If one or more of these pro
 
 The following properties of the brand are required. The request won’t be fulfilled unless these properties are valid.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "name": "Xmen",

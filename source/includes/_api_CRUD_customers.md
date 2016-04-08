@@ -7,7 +7,6 @@
 ||`store_v2_customers_read_only`
  |
 
-
 ## Operations
 
 *   [List Customers](#list-customers)
@@ -59,11 +58,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/customers?page={number}` |
 | `Limit` | int | `/api/v2/customers?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -114,13 +109,7 @@ Gets a customer.
 *   [Basic Auth](#get-a-customer-basic)
 >`GET /api/v2/customers/{id}`
 
-
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "company": "",
@@ -151,13 +140,7 @@ Gets a count of customers.
 *   [Basic Auth](#get-a-count-of-customers-basic)
 >`GET /api/v2/customers/count`
 
-
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 3
 }
@@ -170,7 +153,6 @@ Creates a new customer.
 >`POST /stores/{store_hash}/v2/customers`
 *   [Basic Auth](#create-a-customer-basic)
 >`POST /api/v2/customers`
-
 
 
 ### Read-only Properties
@@ -199,7 +181,7 @@ When the `_authentication` object is not supplied with a create request, then a 
 ### Updating Passwords
 
 To manually update a customer password in the same way as the Control Panel, supply a value for the `password` field:
-```
+```curl
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
@@ -211,7 +193,7 @@ To manually update a customer password in the same way as the Control Panel, sup
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
 
-```
+```curl
 {
     "_authentication": {
        "password": "12w69Y217PYR96J",
@@ -224,7 +206,7 @@ An additional optional `password_confirmation` field can also be sent, providing
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of `true`, as shown here:
 
-```
+```curl
 {
     "_authentication": {
         "force_reset": true
@@ -236,12 +218,10 @@ To force a customer to reset their password upon their next login attempt, give 
 
 Updates an existing customer.
 
-
 *   [OAuth](#update-a-customer-oauth)
 >`PUT /stores/{store_hash}/v2/customers/{id}`
 *   [Basic Auth](#update-a-customer-basic)
 >`PUT /api/v2/customers/{id}`
-
 
 
 ### Read-only Properties
@@ -267,7 +247,7 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the Control Panel, supply a value for the `password` field:
 
-```
+```curl
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
@@ -279,7 +259,7 @@ To manually update a customer password in the same way as the Control Panel, sup
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
 
-```
+```curl
 {
     "_authentication": {
        "password": "12w69Y217PYR96J"
@@ -292,7 +272,7 @@ An additional optional `password_confirmation` field can also be sent, providing
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of `true`, as shown here:
 
-```
+```curl
 {
     "_authentication": {
         "force_reset": true
@@ -304,12 +284,10 @@ To force a customer to reset their password upon their next login attempt, give 
 
 Deletes a customer.
 
-
 *   [OAuth](#delete-a-customer-oauth)
 >`DELETE /stores/{store_hash}/v2/customers/{id}`
 *   [Basic Auth](#delete-a-customer-basic)
 >`DELETE /api/v2/customers/{id}`
-
 
 
 ## Delete All Customers
@@ -320,5 +298,3 @@ Deletes all customer objects from the store.
 >`DELETE /stores/{store_hash}/v2/customers`
 *   [Basic Auth](#delete-all-customers-basic)
 >`DELETE /api/v2/customers`
-
-</div

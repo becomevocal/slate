@@ -1,6 +1,6 @@
 ---
 
-title: Bigcommerce API Reference
+title: BigCommerce API Reference
 layout: "home"
 
 language_tabs:

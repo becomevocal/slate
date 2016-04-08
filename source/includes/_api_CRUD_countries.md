@@ -39,11 +39,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/countries?page={number}` |
 | `Limit` | int | `/api/v2/countries?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -77,12 +73,7 @@ Gets a country.
 *   [Basic Auth](#get-a-country-basic)
 >`GET /api/v2/countries/{id}`
 
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 226,
   "country": "United States",
@@ -103,11 +94,7 @@ Gets a count of countries.
 *   [Basic Auth](#get-a-count-of-countries-basic)
 >`GET /api/v2/countries/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 243
 }

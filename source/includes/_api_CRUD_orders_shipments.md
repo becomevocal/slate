@@ -6,10 +6,6 @@
 | **OAuth Scopes** | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
-
-
 ## Operations
 
 *   [List Shipments](#list-shipments)
@@ -39,11 +35,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `page` | int | `/api/v2/orders/{order_id}/shipments?page={number}` |
 | `limit` | int | `/api/v2/orders/{order_id}/shipments?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -102,11 +94,7 @@ Gets a shipment associated with an order.
 *   [Basic Auth](#get-a-shipment-basic)
 >`GET /api/v2/orders/{order_id}/shipments/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 12,
   "order_id": 114,
@@ -158,16 +146,12 @@ Example JSON returned in the response:
 
 Gets a count of the number of orders that have shipped.
 
-
 *   [OAuth](#get-a-count-of-shipments-oauth)
 >`GET /stores/{store_hash}/v2/orders/shipments/count`
 *   [Basic Auth](#get-a-count-of-shipments-basic)
 >`GET /api/v2/orders/shipments/count`
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "count": 6
 }
@@ -182,11 +166,7 @@ Gets a count of the number of shipments that have been made for a single order.
 *   [Basic Auth](#get-a-count-of-shipments-per-order-basic)
 >`GET /api/v2/orders/{order_id}/shipments/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 6
 }
@@ -219,11 +199,7 @@ The following properties of the shipment are required. The request won’t be fu
 *   `order_address_id`
 *   `items`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "tracking_number": "EJ958083578US",
   "comments": "Ready to go...",
@@ -237,11 +213,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 18,
   "order_id": 113,
@@ -315,22 +287,15 @@ The following properties of the shipment are read-only. If one or more of these 
 
 The following properties of the shipment are required. The request won’t be fulfilled unless these properties are valid.
 
-### Request
-
-Example request object:
-
-```{
+```curl
+{
   "tracking_number": "fedex1245",
   "comments": "Notes about the shipment",
   "order_address_id": 1
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 12,
   "order_id": 114,
@@ -398,7 +363,7 @@ Deletes multiple shipments associated with an order.
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 shipments are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 shipments are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |

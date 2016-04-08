@@ -42,11 +42,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/option_sets?page={number}` |
 | `Limit` | int | `/api/v2/option_sets?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -76,11 +72,7 @@ Gets an option set.
 *   [Basic Auth](#get-an-option-set-basic)
 >`GET /api/v2/option_sets/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "name": "T-Shirt Facets",
@@ -100,11 +92,7 @@ Gets a count of the number of option sets in the store.
 *   [Basic Auth](#get-a-count-of-option-sets-basic)
 >`GET /api/v2/option_sets/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 4
 }
@@ -132,21 +120,13 @@ The following properties of the option set are required. The request won’t be 
 
 *   `name`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "T-Shirts"
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "name": "T-Shirts",
@@ -180,21 +160,13 @@ The following properties of the option set are required. The request won’t be 
 
 *   `name`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "T-shirt Facets"
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "name": "T-shirt Facets",
@@ -213,7 +185,6 @@ Deletes an option set.
 >`DELETE /stores/{store_hash}/v2/option_sets/{id}`
 *   [Basic Auth](#delete-an-option-set-basic)
 >`DELETE /api/v2/option_sets/{id}`
-
 
 ## Delete All Option Sets
 

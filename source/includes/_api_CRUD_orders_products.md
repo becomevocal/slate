@@ -6,9 +6,6 @@
 | **OAuth Scopes** | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
-
 ## Operations
 
 *   [List Order Products](#list-order-products)
@@ -33,10 +30,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/orders/{order_id}/products?page={number}` |
 | `Limit` | int | `/api/v2/orders/{order_id}/products?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 [
   {
     "id": 16,
@@ -105,11 +99,7 @@ Gets a product line item associated with the order.
 *   [Basic Auth](#get-an-order-product-basic)
 >`GET /api/v2/orders/{order_id}/products/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 15,
   "order_id": 114,
@@ -152,11 +142,7 @@ Gets a count of order product line items.
 *   [Basic Auth](#get-a-count-of-order-products-basic)
 >`GET /api/v2/orders/products/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 17
 }

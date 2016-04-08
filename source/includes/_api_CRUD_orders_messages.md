@@ -16,8 +16,6 @@
 
 Gets the messages associated with an order.
 
-
-
 *   [OAuth](#list-order-messages-oauth)
 >`GET /stores/{store_hash}/v2/orders/{order_id}/messages`
 *   [Basic Auth](#list-order-messages-basic)

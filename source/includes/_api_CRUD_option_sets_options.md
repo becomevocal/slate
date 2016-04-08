@@ -33,11 +33,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/option_sets/{option_set_id}/options?page={number}` |
 | `Limit` | int | `/api/v2/option_sets/{option_set_id}/options?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 43,
@@ -128,11 +124,7 @@ Gets an option set option.
 *   [Basic Auth](#get-an-option-set-option-basic)
 >`GET /api/v2/option_sets/{option_set_id}/options/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 4,
   "option_id": 5,
@@ -171,11 +163,7 @@ The following properties of the option set option are required. The request won�
 
 *   `option_id`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "option_id": 10,
   "display_name": "Choose a color",
@@ -184,11 +172,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 2,
   "option_id": 10,
@@ -226,11 +210,7 @@ The following properties of the option set option are read-only. If one or more 
 
 The following properties of the option set option are required. The request won’t be fulfilled unless these properties are valid.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "display_name": "Pick a color...",
   "sort_order": 2,
@@ -238,11 +218,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 2,
   "option_id": 10,
@@ -277,7 +253,7 @@ Deletes multiple options associated with an option set.
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 option_set_options are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 option_set_options are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |

@@ -1,5 +1,5 @@
 ---
-title: Bigcommerce Themes
+title: BigCommerce Themes
 layout: "twocolumn"
 
 toc_footers:
