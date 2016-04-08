@@ -6,10 +6,6 @@
 | OAuth Scopes | `store_v2_products`
 ||`store_v2_products_read_only`
 
-
-
-
-
 ## Operations
 
 *   [List Bulk Pricing Rules](#list-bulk-pricing-rules)
@@ -38,11 +34,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `page` | int | `/api/v2/products/{product_id}/discount_rules?page={number}` |
 | `limit` | int | `/api/v2/products/{product_id}/discount_rules?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": "1",
@@ -64,11 +56,7 @@ Gets a product bulk pricing rule.
 *   [Basic Auth](#get-a-product-bulk-pricing-rule-basic)
 >`GET /api/v2/products/{product_id}/discount_rules/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": "1",
   "product_id": 30,
@@ -88,11 +76,7 @@ Gets a count of the number of bulk pricing rules in the store.
 *   [Basic Auth](#get-a-count-of-bulk-pricing-rules-basic)
 >`GET /api/v2/products/discount_rules/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 9
 }
@@ -126,11 +110,7 @@ To specify that a `min` or `max` value is unbounded, these properties must be ex
 
 The range of the `min` and `max` values must not overlap an existing rule associated with the same product.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "min": 100,
   "max": 500,
@@ -139,11 +119,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": "1",
   "product_id": 30,
@@ -182,11 +158,7 @@ To specify that a `min` or `max` value is unbounded, these properties must be ex
 
 The range of the `min` and `max` values must not overlap an existing rule associated with the same product.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "min": 200,
   "max": 300,
@@ -195,11 +167,7 @@ Example request object:
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": "1",
   "product_id": 30,

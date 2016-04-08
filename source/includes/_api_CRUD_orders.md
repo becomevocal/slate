@@ -6,9 +6,6 @@
 | **OAuth Scopes** | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
-
 ## Operations
 
 *   [List Orders](#list-orders)
@@ -57,11 +54,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `limit` | int | `/api/v2/orders?limit={count}` |
 | `sort` | string | `/api/v2/orders?sort=date_created:desc` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 100,
@@ -153,11 +146,7 @@ Gets an order.
 *   [Basic Auth](#get-an-order-basic)
 >`GET /api/v2/orders/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 100,
   "customer_id": 10,
@@ -248,11 +237,7 @@ Gets a count of the number of orders in the store.
 *   [Basic Auth](#get-a-count-of-orders-basic)
 >`GET /api/v2/orders/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 9
 }
@@ -346,8 +331,6 @@ You can create overrides for calculated values such as product prices, subtotal 
 
 #### Changing the Order Status
 
-<a name="paid-status"></a>
-
 *   status_id can be specified resulting in the the corresponding ‘status’ to automatically be set. When not specified, status_id will be automatically set to 1 resulting in ‘status’ to be set to ‘Pending’.
 
 *   POST or PUT Orders on stores with Avalara Premium causes tax documents to be submitted. If a store has subscribed to Avalara Premium, Bigcommerce automatically submits tax documents to Avalara when the order achieves a paid status. The following statuses are of the paid type:
@@ -359,11 +342,7 @@ You can create overrides for calculated values such as product prices, subtotal 
     *   `Awaiting Fulfillment`
 *   Bigcommerce considers all statuses other than the above to be of the unpaid type, except `**Refunded**`, which is considered neither paid or unpaid. Orders created using the `**POST**` method that include a status of the paid type result in the submission of tax documents to Avalara.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "customer_id": 0,
   "status_id": 11,
@@ -441,11 +420,8 @@ Example request object:
   "external_source": "POS"
 }
 ```
-### Response
 
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 100,
   "customer_id": 0,
@@ -532,7 +508,6 @@ Example JSON returned in the response:
 ## Update an Order
 
 Updates an existing order.
-
 
 *   [OAuth](#update-an-order-oauth)
 >`PUT /stores/{store_hash}/v2/orders/{id}`

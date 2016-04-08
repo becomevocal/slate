@@ -20,7 +20,6 @@
 
 Gets the collection of rules associated with a product. (Default sorting is by rule id, from lowest to highest.)
 
-
 *   [OAuth](#list-product-rules-oauth)
 >`GET /stores/{store_hash}/v2/products/{product_id}/rules`
 *   [Basic Auth](#list-product-rules-basic)
@@ -35,11 +34,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/products/{product_id}/rules?page={number}` |
 | `Limit` | int | `/api/v2/products/{product_id}/rules?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -93,11 +88,7 @@ Gets a single product rule.
 *   [Basic Auth](#get-a-product-rule-basic)
 >`GET /api/v2/products/{product_id}/rules/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 2,
   "product_id": 3,
@@ -129,11 +120,7 @@ Gets a count of the number of product rules in the store.
 *   [Basic Auth](#get-a-count-of-product-rules-basic)
 >`GET /api/v2/products/rules/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 3
 }
@@ -162,11 +149,7 @@ The following properties of the product rule are required. The request won’t b
 
 *   `conditions`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 10,
   "product_id": 3,
@@ -209,11 +192,7 @@ The following properties of the product rule are read-only. If one or more of th
 
 The following properties of the product rule are required. The request won’t be fulfilled unless these properties are valid.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 2,
   "product_id": 3,

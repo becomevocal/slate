@@ -6,7 +6,6 @@
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-
 ## Operations
 
 *   [List Product SKUs](#list-product-skus)
@@ -53,11 +52,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/products/{product_id}/skus?page={number}` |
 | `Limit` | int | `/api/v2/products/{product_id}/skus?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -111,12 +106,7 @@ Gets a single product SKU.
 *   [Basic Auth](#get-a-product-sku-basic)
 >`GET /api/v2/products/{product_id}/skus/{id}`
 
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 5,
   "product_id": 7,
@@ -139,17 +129,12 @@ Example JSON returned in the response:
 
 Gets a count of the number of product SKUs in the store.
 
-
 *   [OAuth](#get-a-count-of-product-skus-oauth)
 >`GET /stores/{store_hash}/v2/products/skus/count`
 *   [Basic Auth](#get-a-count-of-product-skus-basic)
 >`GET /api/v2/products/skus/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 1235
 }
@@ -158,7 +143,6 @@ Example JSON returned in the response:
 ## Create a Product SKU
 
 Creates a new product SKU.
-
 
 *   [OAuth](#create-a-product-sku-oauth)
 >`POST /stores/{store_hash}/v2/products/{product_id}/skus`
@@ -181,13 +165,9 @@ The following properties of the sku are required. The request won’t be fulfill
 
 ### Notes
 
-To maximize system performance, Bigcommerce caps the number of SKUs associated with a product at 500\. If you attempt to add a SKU to a product that has 500 SKUs, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the number of SKUs associated with a product at 500. If you attempt to add a SKU to a product that has 500 SKUs, Bigcommerce will return a 403 error.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 5,
   "product_id": 7,
@@ -210,7 +190,6 @@ Example JSON returned in the response:
 
 Updates an existing product SKU.
 
-
 *   [OAuth](#update-a-product-sku-oauth)
 >`PUT /stores/{store_hash}/v2/products/{product_id}/skus/{id}`
 *   [Basic Auth](#update-a-product-sku-basic)
@@ -228,11 +207,7 @@ The following properties of the sku are read-only. If one or more of these prope
 
 The following properties of the sku are required. The request won’t be fulfilled unless these properties are valid.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 5,
   "product_id": 7,
@@ -255,7 +230,6 @@ Example JSON returned in the response:
 
 Deletes a product SKU.
 
-
 *   [OAuth](#delete-a-product-sku-oauth)
 >`DELETE /stores/{store_hash}/v2/products/{product_id}/skus/{id}`
 *   [Basic Auth](#delete-a-product-sku-basic)
@@ -265,12 +239,10 @@ Deletes a product SKU.
 
 Deletes multiple product SKUs.
 
-
 *   [OAuth](#delete-multiple-product-skus-oauth)
 >`DELETE /stores/{store_hash}/v2/products/{product_id}/skus`
 *   [Basic Auth](#delete-multiple-product-skus-basic)
 >`DELETE /api/v2/products/{product_id}/skus`
-
 
 ### Filters
 

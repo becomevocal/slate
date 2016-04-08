@@ -6,9 +6,6 @@
 | **OAuth Scopes** | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
-
 ## Operations
 
 *   [List Order Taxes](#list-order-taxes)

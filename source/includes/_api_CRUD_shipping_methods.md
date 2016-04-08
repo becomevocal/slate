@@ -6,7 +6,6 @@
 | **OAuth Scopes** | `store_v2_information`
 ||`store_v2_information_read_only`
 
-
 ## Operations
 
 *   [List Shipping Methods](#list-shipping-methods)
@@ -20,7 +19,6 @@ Gets the list of shipping methods. (Default sorting is by shipping-method id, fr
 >`GET /stores/{store_hash}/v2/shipping/methods`
 *   [Basic Auth](#list-shipping-methods-basic)
 >`GET /api/v2/shipping/methods`
-
 
 ### Filters
 
@@ -41,10 +39,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/shipping/methods?page={number}` |
 | `Limit` | int | `/api/v2/shipping/methods?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 [
   {
     "id": 1,
@@ -63,11 +58,7 @@ Gets a shipping method.
 *   [Basic Auth](#get-a-shipping-method-basic)
 >`GET /api/v2/shipping/methods/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "name": "Australia Post",

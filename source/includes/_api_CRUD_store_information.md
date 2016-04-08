@@ -6,7 +6,6 @@
 | OAuth Scopes | `store_v2_information`
 ||`store_v2_information_read_only`
 
-
 ## Operations
 
 *   [Get a Store's Information](#get-a-store-s-information)
@@ -20,11 +19,7 @@ Gets metadata about a store.
 *   [Basic Auth](#get-a-store-s-information-basic)
 >`GET /api/v2/store`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": "cl1xgr",
   "domain": "sandbox.mybigcommerce.com",

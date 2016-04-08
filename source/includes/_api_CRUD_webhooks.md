@@ -17,16 +17,10 @@
 
 Index of registered webhooks.
 
-
 *   [OAuth](#list-hooks-oauth)
 >`GET /stores/{store_hash}/v2/hooks`
 
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 101,
@@ -64,12 +58,7 @@ Gets a registered webhook.
 *   [OAuth](#get-a-hook-oauth)
 >`GET /stores/{store_hash}/v2/hooks/{id}`
 
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 101,
   "store_hash": "5ueh97",
@@ -89,7 +78,6 @@ Example JSON returned in the response:
 
 Register a new webhook.
 
-
 *   [OAuth](#create-a-hook-oauth)
 >`POST /stores/{store_hash}/v2/hooks`
 
@@ -104,11 +92,7 @@ The following properties of the webhooks are required. The request won’t be fu
 
 Scopes can be specified using wildcard syntax, or the full path to an event.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "scope": "store/order/*",
   "headers": {
@@ -123,28 +107,17 @@ Example request object:
 
 Edit the details of a registered webhook.
 
-
 *   [OAuth](#update-a-hook-oauth)
 >`PUT /stores/{store_hash}/v2/hooks/{id}`
 
-
-
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "destination": "https://app.example.com/orders_changed",
   "is_active": true
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 101,
   "store_hash": "5ueh97",

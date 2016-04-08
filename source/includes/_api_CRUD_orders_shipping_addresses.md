@@ -6,10 +6,6 @@
 | **OAuth Scopes** | `store_v2_orders`
 ||`store_v2_orders_read_only`
 
-
-
-
-
 ## Operations
 
 *   [List Order Shipping Addresses](#list-order-shipping-addresses)
@@ -41,11 +37,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/orders/{order_id}/shipping_addresses?page={number}` |
 | `Limit` | int | `/api/v2/orders/{order_id}/shipping_addresses?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 15,
@@ -90,10 +82,7 @@ Gets a shipping address associated with an order.
 *   [Basic Auth](#get-an-order-shipping-address-basic)
 >`GET /api/v2/orders/{order_id}/shipping_addresses/{id}`
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "id": 15,
   "order_id": 114,
@@ -136,12 +125,7 @@ Gets a count of the number of orders that have shipped.
 *   [Basic Auth](#get-a-count-of-shipments-basic)
 >`GET /api/v2/orders/shipments/count`
 
-
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 6
 }

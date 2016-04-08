@@ -6,7 +6,6 @@
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-
 ## Operations
 
 *   [List Product Videos](#list-product-videos)
@@ -35,11 +34,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `page` | int | `/api/v2/products/{product_id}/videos?page={number}` |
 | `limit` | int | `/api/v2/products/{product_id}/videos?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": "UmhvxsOwhqk",
@@ -54,28 +49,21 @@ Example JSON returned in the response:
 
 Gets a product video.
 
-
 *   [OAuth](#get-a-product-video-oauth)
 >`GET /stores/{store_hash}/v2/products/{product_id}/videos/{id}`
 *   [Basic Auth](#get-a-product-video-basic)
 >`GET /api/v2/products/{product_id}/videos/{id}`
 
-
 ## Get a Count of Product Videos
 
 Gets a count of the number of product videos in the store.
-
 
 *   [OAuth](#get-a-count-of-product-videos-oauth)
 >`GET /stores/{store_hash}/v2/products/videos/count`
 *   [Basic Auth](#get-a-count-of-product-videos-basic)
 >`GET /api/v2/products/videos/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 0
 }
@@ -84,7 +72,6 @@ Example JSON returned in the response:
 ## Create a Product Video
 
 Adds a link to a YouTube video to a product.
-
 
 *   [OAuth](#create-a-product-video-oauth)
 >`POST /stores/{store_hash}/v2/products/{product_id}/videos`
@@ -108,11 +95,7 @@ The following properties of the product video are required. The request won’t 
 
 Only YouTube videos are supported. To create a new video, pass the full `url` in the request body.
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "url": "https://www.youtube.com/watch?v=4wZ3ZG_Wams"
 }
@@ -140,10 +123,7 @@ The `name`, `sort_order` and `url` properties of the product video are editable.
 
 Posting a new `url` will update the `id` of the video to reference the new video.
 
-### Request
-
-Example request object:
-```
+```curl
 {
   "name": "New video title",
   "sort_order": 2
@@ -162,7 +142,6 @@ Delete a product video.
 ## Delete All Product Videos
 
 Deletes all videos belonging to a product.
-
 
 *   [OAuth](#delete-all-product-videos-oauth)
 >`DELETE /stores/{store_hash}/v2/products/{product_id}/videos`

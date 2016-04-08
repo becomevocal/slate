@@ -6,7 +6,6 @@
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
 
-
 ## Operations
 
 *   [List Custom Fields](#list-custom-fields)
@@ -26,7 +25,6 @@ Gets custom fields associated with a product.
 *   [Basic Auth](#list-custom-fields-basic)
 >`GET /api/v2/products/{product_id}/custom_fields`
 
-
 ### Pagination
 
 Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 custom_fields are returned by default.
@@ -36,11 +34,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/products/{product_id}/custom_fields?page={number}` |
 | `Limit` | int | `/api/v2/products/{product_id}/custom_fields?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -66,11 +60,7 @@ Gets a custom field associated with a product.
 *   [Basic Auth](#get-a-custom-field-basic)
 >`GET /api/v2/products/{product_id}/custom_fields/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 2,
   "product_id": 30,
@@ -88,11 +78,7 @@ Gets a count of the number of custom fields in the store.
 *   [Basic Auth](#get-a-count-of-custom-fields-basic)
 >`GET /api/v2/products/custom_fields/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 0
 }
@@ -101,7 +87,6 @@ Example JSON returned in the response:
 ## Create a Custom Field
 
 Creates a new custom field associated with a product
-
 
 *   [OAuth](#create-a-custom-field-oauth)
 >`POST /stores/{store_hash}/v2/products/{product_id}/custom_fields`
@@ -121,22 +106,14 @@ The following properties of the custom field are required. The request won’t b
 *   `name`
 *   `text`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "Release Date",
   "text": "2013-12-25"
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 5,
   "product_id": 45,
@@ -167,22 +144,14 @@ The following properties of the custom field are required. The request won’t b
 *   `name`
 *   `text`
 
-### Request
-
-Example request object:
-
-```
+```curl
 {
   "name": "Release Date",
   "text": "2013-12-31"
 }
 ```
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 5,
   "product_id": 45,

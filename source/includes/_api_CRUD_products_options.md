@@ -15,7 +15,6 @@
 
 Gets the options associated with a product.
 
-
 *   [OAuth](#list-product-options-oauth)
 >`GET /stores/{store_hash}/v2/products/{product_id}/options`
 *   [Basic Auth](#list-product-options-basic)
@@ -30,11 +29,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `page` | int | `/api/v2/products/{product_id}/options?page={number}` |
 | `limit` | int | `/api/v2/products/{product_id}/options?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 13,
@@ -62,11 +57,7 @@ Gets an option associated with a product.
 *   [Basic Auth](#get-a-product-option-basic)
 >`GET /api/v2/products/{product_id}/options/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 14,
   "option_id": 9,

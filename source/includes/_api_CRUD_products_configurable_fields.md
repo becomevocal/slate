@@ -32,11 +32,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/products/{product_id}/configurable_fields?page={number}` |
 | `Limit` | int | `/api/v2/products/{product_id}/configurable_fields?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 1,
@@ -61,11 +57,7 @@ Gets a configurable field associated with a product.
 *   [Basic Auth](#get-a-configurable-field-basic)
 >`GET /api/v2/products/{product_id}/configurable_fields/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 1,
   "product_id": 30,
@@ -88,11 +80,7 @@ Gets a count of the number of configurable fields in the store.
 *   [Basic Auth](#get-a-count-of-configurable-fields-basic)
 >`GET /api/v2/products/configurable_fields/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 0
 }
@@ -118,7 +106,7 @@ Deletes multiple configurable fields associated with a product.
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 configurable_fields are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 configurable_fields are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |

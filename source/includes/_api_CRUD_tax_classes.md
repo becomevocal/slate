@@ -6,7 +6,6 @@
 | OAuth Scopes | `store_v2_information`
 ||`store_v2_information_read_only`
 
-
 ## Operations
 
 *   [List Tax Classes](#list-tax-classes)
@@ -15,7 +14,6 @@
 ## List Tax Classes
 
 Gets the tax classes set up for a store. (Default sorting is by tax-class id, from lowest to highest.)
-
 
 *   [OAuth](#list-tax-classes-oauth)
 >`GET /stores/{store_hash}/v2/tax_classes`

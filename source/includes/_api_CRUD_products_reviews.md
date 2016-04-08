@@ -2,12 +2,9 @@
 
 |||
 |---|---|
-| **Manages** | [Product Review Object](/api/objects/v2/product_review)
- |
+| **Manages** | [Product Review Object](/api/objects/v2/product_review)|
 | **OAuth Scopes** | `store_v2_products`
 ||`store_v2_products_read_only`
-
-
 
 ## Operations
 
@@ -21,7 +18,6 @@
 ## List Product Reviews
 
 Gets the reviews associated with a product. (Default sorting is by review id, from lowest to highest.)
-
 
 *   [OAuth](#list-product-reviews-oauth)
 >`GET /stores/{store_hash}/products/{id}/reviews`
@@ -37,11 +33,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `page` | int | `/api/v2/products/{product_id}/reviews?page={number}` |
 | `limit` | int | `/api/v2/products/{product_id}/reviews?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 190,
@@ -80,17 +72,12 @@ Example JSON returned in the response:
 
 Gets a product review.
 
-
 *   [OAuth](#get-a-product-review-oauth)
 >`GET /stores/{store_hash}/v2/products/{product_id}/reviews/{id}`
 *   [Basic Auth](#get-a-product-review-basic)
 >`GET /api/v2/products/{product_id}/reviews/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 190,
   "product_id": 5310,
@@ -106,7 +93,6 @@ Example JSON returned in the response:
 ## Create a Product Review
 
 Creates a new product review. (Details: The "review" property is the review's text. The "rating" property must be a whole number between 1–5. If the optional "date_created" property is not specified, it defaults to the current date/time. If the optional "status" property is not specified, it defaults to 0 [“Pending”]. Other allowable values are 1 [“Approved”] or 2 [“Disapproved”].)
-
 
 *   [OAuth](#create-a-product-review-oauth)
 >`POST /stores/{store_hash}/v2/products/{product_id}/reviews`
@@ -129,11 +115,7 @@ The following properties of the product review are required. The request won’t
 *   `review`
 *   `rating`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 8,
   "product_id": 32,
@@ -150,7 +132,6 @@ Example JSON returned in the response:
 
 Updates an existing product review. Your request may update any of the properties that are writeable for the Create (POST) operation.
 
-
 *   [OAuth](#update-a-product-review-oauth)
 >`PUT /stores/{store_hash}/v2/products/{product_id}/reviews/{id}`
 *   [Basic Auth](#update-a-product-review-basic)
@@ -163,11 +144,7 @@ The following properties of the product review are read-only. If one or more of 
 *   `id`
 *   `product_id`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 8,
   "product_id": 32,

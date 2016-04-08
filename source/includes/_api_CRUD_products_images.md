@@ -29,18 +29,14 @@ Gets the images associated with a product. (Default sorting is by image id, from
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 product_images are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 product_images are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |
 | `page` | int | `/api/v2/products/{product_id}/images?page={number}` |
 | `limit` | int | `/api/v2/products/{product_id}/images?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 [
   {
     "id": 247,
@@ -80,11 +76,7 @@ Gets a product image.
 *   [Basic Auth](#get-a-product-image-basic)
 >`GET /api/v2/products/{product_id}/images/{id}`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 248,
   "product_id": 32,
@@ -109,11 +101,7 @@ Gets a count of the number of product images in the store.
 *   [Basic Auth](#get-a-count-of-product-images-basic)
 >`GET /api/v2/products/images/count`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "count": 105
 }
@@ -142,11 +130,7 @@ The following properties of the product image are required. The request won’t 
 
 *   `image_file`
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 116,
   "product_id": 29,
@@ -179,11 +163,7 @@ The following properties of the product image are read-only. If one or more of t
 
 The following properties of the product image are required. The request won’t be fulfilled unless these properties are valid.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "id": 118,
   "product_id": 30,
@@ -204,7 +184,6 @@ Deletes a product image.
 *   [Basic Auth](#delete-a-product-image-basic)
 >`DELETE /api/v2/products/{product_id}/images/{id}`
 
-
 ## Delete Multiple Product Images
 
 Deletes multiple product images.
@@ -216,7 +195,7 @@ Deletes multiple product images.
 
 ### Pagination
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250\. If a limit isn’t provided, up to 50 product_images are returned by default.
+Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 product_images are returned by default.
 
 | Parameter | Type | Example |
 | --- | --- | --- |

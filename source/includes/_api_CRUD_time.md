@@ -5,7 +5,6 @@
 | **Manages** |
 | **OAuth Scopes** | `default`
 
-
 ## Operations
 
 *   [Get a Timestamp](#get-a-timestamp)
@@ -25,11 +24,7 @@ The time resource is useful for validating API authentication details and testin
 
 It returns the [system timestamp](http://en.wikipedia.org/wiki/Unix_time) at the time of the request.
 
-### Response
-
-Example JSON returned in the response:
-
-```
+```json
 {
   "time": 1393657780
 }

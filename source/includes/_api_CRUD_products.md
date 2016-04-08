@@ -281,7 +281,6 @@ Gets the collection of products. (Default sorting is by product id, from lowest 
 | Basic Auth: | `GET /api/v2/products` |
 | OAuth: | `GET /stores/{store_hash}/v2/products` |
 
-
 ### Filters
 
 Filter parameters can be added to the URL query string to select specific products in the collection.
@@ -324,19 +323,12 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/products?page={number}` |
 | `Limit` | int | `/api/v2/products?limit={count}` |
 
-
 ## Get a Product
 
 Gets a product.
 
-
-```javascript
-[Request would be here.]
+```curl
 ```
-
-<!--- ### Response
-
-Example JSON returned in the response: -->
 
 ```json
 {
@@ -462,34 +454,28 @@ Example JSON returned in the response: -->
 }
 ```
 
-
 |||
 |---|---|
 | Basic Auth: | `GET /api/v2/products/{id}` |
 | OAuth: | `GET /stores/{store_hash}/v2/products/{id}` |
 
-
 ## Get a Product Count
 
 Gets a count of products.
 
-
 ```curl
-[Request would be here.]
-```
 
+```
 ```json
 {
   "count": 44
 }
 ```
 
-
 |||
 |---|---|
 | Basic Auth: | `GET /api/v2/products/count` |
 | OAuth: | `GET /stores/{store_hash}/v2/products/count` |
-
 
 ### Filters
 
@@ -528,12 +514,11 @@ Filter parameters can be added to the URL query string to select specific produc
 
 If no filters are applied, the total number of products is returned.
 
-
 ## Create a Product
 
 Creates a new product. The example request shows how to create a basic product by sending a [product object](/api/?javascript#product-properties) with the minimum required properties.
 
-```json request
+```json
 {
     "name": "Plain T-Shirt",
     "type": "physical",
@@ -544,7 +529,6 @@ Creates a new product. The example request shows how to create a basic product b
     "weight": "0.5"
 }
 ```
-
 |||
 |---|---|
 | Basic Auth: | `POST /api/v2/products` |
@@ -584,7 +568,7 @@ When the `is_visible` property is not provided, the product visibility is `false
 
 To make newly created products immediately visible on the storefront, you must set `is_visible` to `true` when you create the product.
 
-To maximize system performance, Bigcommerce caps the number of categories that a product can belong to at 1,000\. If your `POST` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
+To maximize system performance, Bigcommerce caps the number of categories that a product can belong to at 1,000. If your `POST` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
 
 ```json
 403 Access Denied/Forbidden
@@ -592,17 +576,14 @@ To maximize system performance, Bigcommerce caps the number of categories that a
 
 If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
 
-
 ## Update a Product
 
 Updates an existing product.
-
 
 |||
 |---|---|
 | Basic Auth: | `PUT /api/v2/products/{id}` |
 | OAuth: | `PUT /stores/{store_hash}/v2/products/{id}` |
-
 
 ### Read-only Properties
 
@@ -636,73 +617,68 @@ The following properties of the product are required. The request won’t be ful
 
 To update a product, set one or more [product properties](/api/?javascript#product-properties) in the `PUT` request:
 
-```json request
+```json
 {
     "custom_url": "/plain-tshirt/",
     "is_visible": true
 }
 ```
 
-<br><br><br><br><br>For example, you can use a `PUT` to link a product to an option set:
+For example, you can use a `PUT` to link a product to an option set:
 
-```json request
+```curl
 {
     "option_set_id": 14
 }
 ```
 
-<br><br><br><br><br>Invalid property values will produce a `400 Bad Request` error response:
+Invalid property values will produce a `400 Bad Request` error response:
 
-```json request
+```curl 
 {
     "condition": "Worn"
 }
 ```
 
-```json response
+```json 
 400 Bad Request
 ```
 
-<br><br><br><br><br>Trying to set read-only properties will also produce a `400 Bad Request` error response:
+Trying to set read-only properties will also produce a `400 Bad Request` error response:
 
-```json request
+```curl
 {
     "number_sold": 99
 }
 ```
 
-```json response
+```json 
 400 Bad Request
 ```
-<br><br><br><br><br>To maximize system performance, Bigcommerce caps the maximum number of categories to which a product can belong, at 1,000. If your `PUT` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
-
+To maximize system performance, Bigcommerce caps the maximum number of categories to which a product can belong, at 1,000. If your `PUT` includes an array of more than 1,000 `categories` ID values, Bigcommerce will return a 403 error.
 
 ```json
 403 Access Denied/Forbidden
 ```
 
-<br><br><br>If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
-
+If automatic tax is enabled on the store, the value of `tax_class_id` will have no effect on the calculation of taxes.
 
 ## Delete a Product
 
 Deletes a product.
-
 
 |||
 |---|---|
 | Basic Auth: | `DELETE /api/v2/products/{id}` |
 | OAuth: | `DELETE /stores/{store_hash}/v2/products/{id}` |
 
-
 ### Notes
 
 Successful deletion of a product results in a `204 No Content` response.
 
-```json response
+```json
 204 No Content
 ```
-
 
 ## Delete All Products
 
@@ -713,12 +689,10 @@ Deletes all products from the store.
 | Basic Auth: | `DELETE /api/v2/products` |
 | OAuth: | `DELETE /stores/{store_hash}/v2/products` |
 
-
 ### Notes
 
 Successful deletion of all products returns a `204 No Content` response.
 
-```json response
+```json 
 204 No Content
 ```
-

@@ -6,11 +6,6 @@
 | OAuth Scopes | `store_v2_information`
 ||`store_v2_information_read_only`
 
-
-
-
-
-
 ## Operations
 
 *   [List Payment Methods](#list-payment-methods)
@@ -19,12 +14,10 @@
 
 Gets the list of enabled payment methods. (Default sorting is by payment method, alphabetically from A to Z.)
 
-
 *   [OAuth](#list-payment-methods-oauth)
 *   [Basic Auth](#list-payment-methods-basic)
 `GET /stores/{store_hash}/v2/payments/methods`
 `GET /api/v2/payments/methods`
-
 
 
 ### Filters
@@ -43,10 +36,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/payments/methods?page={number}` |
 | `Limit` | int | `/api/v2/payments/methods?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-
+```json
 [
   {
     "code": "bankdeposit",
@@ -69,3 +59,4 @@ Example JSON returned in the response:
     "test_mode": false
   }
 ]
+```

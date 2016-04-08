@@ -4,10 +4,7 @@
 |----|-----|
 | **Manages** |
 | **OAuth Scopes** | `store_v2_content`
-||`store_v2_content_read_only`
- |
-
-
+||`store_v2_content_read_only`|
 
 ## Operations
 
@@ -23,13 +20,10 @@
 
 Gets the collection of URL redirects.
 
-
 *   [OAuth](#list-redirects-oauth)
 >`GET /stores/{store_hash}/v2/redirects`
 *   [Basic Auth](#list-redirects-basic)
 >`GET /api/v2/redirects`
-
-
 
 ### Pagination
 
@@ -40,10 +34,7 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | `Page` | int | `/api/v2/redirects?page={number}` |
 | `Limit` | int | `/api/v2/redirects?limit={count}` |
 
-### Response
-
-Example JSON returned in the response:
-```
+```json
 [
   {
     "id": 1,
@@ -65,6 +56,7 @@ Example JSON returned in the response:
   }
 ]
 ```
+
 ## Get a Redirect
 
 Gets a single URL redirect.
@@ -74,12 +66,7 @@ Gets a single URL redirect.
 *   [Basic Auth](#get-a-redirect-basic)
 >`GET /api/v2/redirects/{id}`
 
-
-
-### Response
-
-Example JSON returned in the response:
-```
+```json
 {
   "id": 1,
   "path": "/redirect_path1",
@@ -90,6 +77,7 @@ Example JSON returned in the response:
   "url": "http://www.bigcommerce.com"
 }
 ```
+
 ## Get a Count of Redirects
 
 Gets a count of redirects.
