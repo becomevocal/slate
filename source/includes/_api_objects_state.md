@@ -6,8 +6,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Title | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `state` | `string` | state name |
 | `state_abbreviation` | `string` | state abbreviation |
