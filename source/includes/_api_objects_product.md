@@ -96,7 +96,7 @@ Properties for a saleable item in the catalog
 
 ### Product Created
 
-```js
+```json
 store/product/created
 ```
 
@@ -104,7 +104,7 @@ Occurs when a product is created from the control panel, bulk import or via the 
 
 ### Product Updated
 
-```js
+```json
 store/product/updated
 ```
 
@@ -113,11 +113,9 @@ Occurs when a product is updated from the control panel or via the API.
 
 ### Product Deleted
 
-```js
+```json
 store/product/deleted
 ```
 
 Occurs when a product is deleted from the control panel or via the API.
-
-#### Eek I am a Head 4!
 

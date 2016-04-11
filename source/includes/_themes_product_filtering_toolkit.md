@@ -63,7 +63,3 @@ When switched on:
 *   search page > search_with_facets.html
 
 **Please note:** You will not see the category filter on storefront category pages. This has been hidden for SEO reasons.
-
-</div>
-
-</div>

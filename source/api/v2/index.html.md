@@ -1,10 +1,9 @@
 ---
-title: Bigcommerce APIs
+title: BigCommerce API Documentation
 
 language_tabs:
   - curl: Request
   - json: Response
-
 
 toc_footers:
   - <a href="/">Home</a>
@@ -34,7 +33,5 @@ includes:
 search: true
 ---
 
-# API Home
-
-Hello, you have reached the /api subdirectory! 
+# API v2 Documentation
 
