@@ -4,11 +4,10 @@
 |---|---|
 | Managed by | [Order Statuses Resource](/api/stores/v2/order_statuses)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `name` | `string` |
 | `order` | `int` |

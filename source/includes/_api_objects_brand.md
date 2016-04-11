@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `name` | `string` | The name of the brand. Must be unique. |
 | `page_title` | `string` | The title shown in the browser while viewing the brand |

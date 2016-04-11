@@ -118,4 +118,3 @@ store/product/deleted
 ```
 
 Occurs when a product is deleted from the control panel or via the API.
-

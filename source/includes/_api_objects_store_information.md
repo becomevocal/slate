@@ -4,11 +4,10 @@
 |---|---|
 | Managed by | [Store Information Resource](/api/stores/v2/store_information)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `string` | Unique store identifier. |
 | `domain` | `string` | Primary domain name. |
 | `name` | `string` | The store's name |
@@ -42,4 +41,3 @@ store/app/uninstall
 ```
 
 Occurs when a client store is cancelled and uninstalled from the platform.
-

@@ -7,8 +7,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | coupon id |
 | `name` | `string` | The name of the coupon. |
 | `type` | `enum` | The coupon type field is an enumerated field and a value from the following list should be used. per_item_discount per_total_discount shipping_discount free_shipping percentage_discount |

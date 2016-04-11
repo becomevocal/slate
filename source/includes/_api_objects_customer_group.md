@@ -3,11 +3,10 @@
 |---|---|
 | **Managed by** | [Customer Groups Resource](/api/stores/v2/customer_groups)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `name` | `string` | Name of the group |
 | `is_default` | `boolean` | Determines whether new customers are assigned to this group by default |

@@ -2,14 +2,12 @@
 
 |||
 |---|---|
-| **Managed by** | [Redirects Resource](/api/stores/v2/redirects)
- |
-
+| **Managed by** | [Redirects Resource](/api/stores/v2/redirects)|
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `path` | `string` | The path that will be redirected from |
 | `forward` | `forward` | The destination of the redirect |

@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | Unique database ID for this product review. Read-only. |
 | `product_id` | `int` | The ID of the product to which this review belongs. Read-only. |
 | `author` | `string` | The review's author, displayed on the storefront. |

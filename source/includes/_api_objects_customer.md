@@ -4,11 +4,10 @@
 |---|---|
 | **Managed by** | [Customers Resource](/api/stores/v2/customers)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `_authentication` | `object` | Not returned in any responses, but accepts up to two fields allowing you to set the customer's password. If not supplied, a password is generated automatically. See the customers resource documentation for more information about the use of this object. |
 | `company` | `string` | The name of the company that the customer works for. |
@@ -44,4 +43,3 @@ Occurs when a customer updates their details in the storefront or is updated in 
 `store/customer/deleted`
 
 Occurs when a customer is deleted in the control panel.
-

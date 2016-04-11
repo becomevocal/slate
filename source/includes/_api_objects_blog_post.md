@@ -6,8 +6,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `title` | `string` |
 | `content` | `text` |

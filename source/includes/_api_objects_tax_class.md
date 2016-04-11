@@ -6,7 +6,7 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | The unique numerical ID of the tax class. A read-only value which is automatically assigned and increments sequentially. |
 | `name` | `string` | The name of the tax class. 

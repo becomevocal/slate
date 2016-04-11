@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | A unique, read-only value that identifies this option value. |
 | `option_id` | `int` | A read-only value identifying the option that this option value is assigned to. |
 | `label` | `string` | The name of the label. Cannot be the same as the label of another value already assigned to the option. |

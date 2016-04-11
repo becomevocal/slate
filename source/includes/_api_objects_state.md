@@ -6,7 +6,7 @@
 
 ## Properties
 
-| Title | Type | Description |
+| Name | Type | Description |
 | --- | --- | --- |
 | `id` | `int` |
 | `state` | `string` | state name |

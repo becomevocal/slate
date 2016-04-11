@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `name` | `string` | The name of the optionset. Must be unique. |
 | `options` | `resource` |

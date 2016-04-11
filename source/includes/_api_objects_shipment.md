@@ -4,11 +4,10 @@
 |---|---|
 | **Managed by** | [Shipments Resource](/api/stores/v2/orders/shipments)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `order_id` | `int` |
 | `customer_id` | `int` |

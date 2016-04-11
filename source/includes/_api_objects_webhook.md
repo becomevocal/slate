@@ -7,8 +7,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | A read-only value that uniquely identifies a webhook object. Do not attempt to set this value in a PUT or POST. |
 | `client_id` | `string` | The OAuth client ID that uniquely identifies your application. Bigcommerce returns this name-value pair in the JSON body of its responses. |
 | `store_hash` | `string` | The hash value that uniquely identifies the store. Your application does not need to set this value via the JSON object; instead, you pass it in the path of your API requests. |

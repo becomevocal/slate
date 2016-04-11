@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `product_id` | `int` |
 | `sku` | `string` | The unique sku |

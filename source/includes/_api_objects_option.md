@@ -5,8 +5,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `name` | `string` | The name of the option. Must be unique. |
 | `display_name` | `string` | Friendly name displayed to the customer |

@@ -6,8 +6,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `country` | `string` | Country name |
 | `country_iso2` | `string` | 2 letter countryt code |

@@ -8,8 +8,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | The ID of the order, a read-only value. Do not pass in PUT or POST. |
 | `customer_id` | `int` | The ID of the customer placing the order or 0 if it was a guest order. |
 | `date_created` | `date` | The date this order was created, if not specified will default to current time. The date should be in RFC format - 'Tue, 20 Nov 2012 00:00:00 +0000' |

@@ -4,11 +4,10 @@
 |---|---|
 | **Managed by** | [Customer Addresses Resource](/api/stores/v2/customers/addresses)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `customer_id` | `int` |
 | `first_name` | `string` | The customer address first name. |

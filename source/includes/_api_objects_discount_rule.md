@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `string` | The ID of the bulk discount rule. |
 | `product_id` | `int` | The ID of the product associated with this bulk discount rule. |
 | `min` | `int` | The minimum inclusive quantity of a product to satisfy this rule. Must be greater than or equal to zero. |

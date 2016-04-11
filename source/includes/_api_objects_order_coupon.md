@@ -4,11 +4,10 @@
 |---|---|
 | **Managed by** | [Order Coupons Resource](/api/stores/v2/orders/coupons)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `coupon_id` | `int` |
 | `order_id` | `int` |

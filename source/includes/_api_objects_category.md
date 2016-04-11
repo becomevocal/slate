@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | A read-only field containing the unique numeric identifier of this category. |
 | `parent_id` | `int` | The ID of the parent category this category belongs to. NOTE: the total number of parent categories cannot exceed seven. |
 | `name` | `string` | The name of the category. Must be unique. |

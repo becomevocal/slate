@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | The ID of the rule. |
 | `product_id` | `int` | The ID of the product the rule belongs to |
 | `sort_order` | `int` | The order in which the rule will be displayed on the product page. When updating if the rule is given a lower priority, all rules with a sort_order the same or greater than the rules new sort_order value will have their sort_order reordered |

@@ -4,8 +4,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `enabled` | `boolean` |
 | `product_id` | `int` |
 | `category_id` | `int` |

@@ -4,11 +4,10 @@
 |---|---|
 | **Managed by** | [Order Taxes Resource](/api/stores/v2/orders/taxes)
 
-
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` | The unique numeric identifier of the taxes object. |
 | `order_id` | `int` | The unique numeric identifier of the order the tax was applied to. NOTE: Not included if the store was using the automatic tax feature. |
 | `order_address_id` | `int` | The unique numeric identifier of the order address object associated with the order. NOTE: Not included if the store was using the automatic tax feature. |

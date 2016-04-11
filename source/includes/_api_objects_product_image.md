@@ -8,7 +8,6 @@ Properties for a product image
 |---|---|
 | Managed by | [Product Images Resource](/api/?BasicAuth#product-images-resource)
 
-
 | Name | Type | Description |
 | --- | --- | --- | --- |
 | `id` | `int` |

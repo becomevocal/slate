@@ -5,8 +5,8 @@
 
 ## Properties
 
-| Title | Name | Type | Description |
-| --- | --- | --- | --- |
+| Name | Type | Description |
+| --- | --- | --- |
 | `id` | `int` |
 | `option_id` | `int` | The id of the option this optionset connects to |
 | `option_set_id` | `int` |
