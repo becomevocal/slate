@@ -2,7 +2,7 @@
 
 |||
 |---|---|
-| Managed by | [SKUs Resource](/api/stores/v2/products/skus)
+| Managed by | [SKUs Resource](/api/v2/products/skus)
 
 ## Properties
 

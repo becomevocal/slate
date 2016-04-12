@@ -1,4 +1,8 @@
-# New API SKU Properties Available
+# 2016
+
+## April 
+
+### New API SKU Properties Available
 
 We have updated the product SKU API to make several new properties available directly on the SKU resource. This update means that you no longer need to create a product rule in order to set these properties – you can now update them directly on the SKU:
 
@@ -20,3 +24,47 @@ However, as we make SKU-only properties available directly on SKUs, BigCommerce 
 
 [1]: /api/v2/
 [2]: /api/v2/
+
+## March
+
+###SNI (Server Name Indication) required as of June 30, 2016
+
+As of June 30, 2016, all requests to the Bigcommerce API will be required to support [Server Name Indication][1] (SNI). After that date, requests will fail if they don't support SNI.
+
+[1]: https://en.m.wikipedia.org/wiki/Server_Name_Indication
+
+### Orders API provies opt-in email field
+
+The Orders API provides a new `is_email_opt_in` field. This Boolean field will be `true` if the shopper has opted in (on the checkout page) to receive a store's email newsletter. It is read-only.
+
+We have updated the following documentation to cover this new field:  
+
+* [Orders][1] object
+* [Create an Order][2] endpoint
+* [Update an Order][3] endpoint
+
+[1]: /api/v2/#orders
+[2]: /api/v2/#create-an-order
+[3]: /api/v2/#update-an-order
+
+### Stencil Framework now generally available
+
+Developers can now install the Stencil themes framework without registering for access. Please follow the documentation link that's relevant to your experience with Stencil:
+
+* New to Stencil? We recommend starting with [this overview][1].
+* Installing Stencil for the first time? Use these [complete instructions][2].
+* Early Access participant? To receive future updates of the framework, we ask that you please [reinstall Stencil][3] from our new open repositories.
+
+[1]: https://stencil.bigcommerce.com/docs
+[2]: https://stencil.bigcommerce.com/docs/installing-and-launching-stencil-1
+[3]: https://stencil.bigcommerce.com/docs/early-access-please-reinstall
+
+## February 
+
+### Gift Certificate API
+
+Bigcommerce has published a new API for managing gift certificates. The API allows your applications to manage gift certificates' amount/balance, purchaser, recipient, dates of purchase and expiration, and current status.
+
+The new endpoint information is available [here][1].
+
+[1]: /api/v2#gift_certificates
