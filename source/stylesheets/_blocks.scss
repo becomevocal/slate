@@ -1101,6 +1101,18 @@
         width: 16.66667%;
         float: left
     }
+    .block--twoColTextOverBg-row--split11 .block--twoColTextOverBg-column {
+        padding-left: 0.83333rem;
+        padding-right: 0.83333rem;
+        width: 25%;
+        float: left
+    }
+    .block--twoColTextOverBg-row--split11 .block--twoColTextOverBg-column+.block--twoColTextOverBg-column {
+        padding-left: 0.83333rem;
+        padding-right: 0.83333rem;
+        width: 25%;
+        float: left
+    }
 }
 
 .block--multiColTextImage .block-image {
