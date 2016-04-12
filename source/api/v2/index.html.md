@@ -21,12 +21,16 @@ includes:
   - api_CRUD_products
   - api_objects_product_image
   - api_CRUD_products_images
+  - api_objects_sku
+  - api_CRUD_products_skus
   - api_objects_category
   - api_CRUD_categories
   - api_objects_brand
   - api_CRUD_brands
   - api_objects_order
   - api_CRUD_orders
+  - api_objects_gift_certificate
+  - api_CRUD_gift_certificates
 
   - video_test
 

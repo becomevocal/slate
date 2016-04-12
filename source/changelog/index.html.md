@@ -13,6 +13,10 @@ toc_footers:
 
 includes:
 - changelog_April_16_2016
+- changelog_March_17_2016
+- changelog_March_16_2016
+- changelog_March_15_2016
+- changelog_February_19_2016
 
 search: true
 ---
