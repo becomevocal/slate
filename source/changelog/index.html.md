@@ -12,6 +12,7 @@ toc_footers:
   - <a href='http://github.com/tripit/slate'>Documentation by Slate</a>
 
 includes:
+- changelog_April_16_2016
 
 search: true
 ---
