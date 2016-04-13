@@ -490,6 +490,10 @@ html, body {
       padding: 10px;
     }
 
+    td:nth-child(3) {
+      word-break: break-word;
+    }
+
     tr:last-child {
       border-bottom: 1px solid #ccc;
     }
@@ -824,5 +828,11 @@ img {
   }
   .content h1, .content h2 {
     display: none;
+  }
+}
+
+.api_v2 {
+  .content h1, content h2 {
+    margin-top: 0; 
   }
 }
