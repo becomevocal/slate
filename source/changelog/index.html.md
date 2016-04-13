@@ -13,6 +13,9 @@ toc_footers:
 
 includes:
 - changelog_2016
+- changelog_2015
+- changelog_2014
+- changelog_2013
 
 search: true
 ---
