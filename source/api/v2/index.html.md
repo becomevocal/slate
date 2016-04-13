@@ -31,7 +31,7 @@ includes:
   - api_CRUD_orders
   - api_objects_gift_certificate
   - api_CRUD_gift_certificates
-
+  - api_objects_store_information
   - video_test
 
 search: true

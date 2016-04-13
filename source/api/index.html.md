@@ -26,7 +26,7 @@ includes:
   - api_CRUD_brands
   - api_objects_order
   - api_landing_orders
-
+  - api_objects_store_information
   - video_test
 
 search: true
