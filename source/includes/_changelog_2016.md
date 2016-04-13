@@ -138,7 +138,7 @@ Bigcommerce has made available several new webhooks. In the list below, the new 
 `store/product/inventory/`, `store/sku/`, and `store/sku/inventory*` categories. We encourage you to use these webhooks, as appropriate,  
 in your applications:
 
-```
+
   store/order/
   	store/order/created
   	store/order/updated
@@ -167,7 +167,7 @@ in your applications:
   	store/customer/updated
   	store/customer/deleted
   store/app/uninstalled
-```
+
 
 We have updated the [webhooks reference page][20] to include these new webhooks.
 
@@ -185,12 +185,12 @@ As of January 21ish, 2016, the webhook message will include details about the or
 
 The   `new_status_id`   and   `previous_status_id`   fields will be included in a newly added   `status`   element, formatted like this:
 
-```
+
     "status": {
              "previous_status_id": "0",
              "new_status_id": "11"
     }
-```
+
 
 The   `previous_status_id`   field will allow your applications to troubleshoot orders by tracing the path these orders took through fulfillment. You could also build logic around this field, allowing your application to process only orders that pass from one certain status to another.
 
@@ -198,7 +198,7 @@ For example, you could prevent the double-processing of orders whose status acci
 
 Here is an example of a webhook message in its currently supported format:
 
-```
+
     {
       "scope": "store/order/statusUpdated",
       "store_id": "353242",
@@ -210,11 +210,10 @@ Here is an example of a webhook message in its currently supported format:
       "created_at": 1449701096,
       "producer": "stores/z4zn3wo"
     }
-```
+
 
 Here is the same webhook message in the new format, with the added   `status`   fields set off with blank lines for visibility:
 
-```
     {
       "scope": "store/order/statusUpdated",
       "store_id": "353242",
@@ -232,7 +231,6 @@ Here is the same webhook message in the new format, with the added   `status`   
       "created_at": 1449701096,
       "producer": "stores/z4zn3wo"
     }
-```
 
 (This second example shows an order moving from an "Incomplete" status [`id: 0`] to an "Awaiting Fulfillment" status [`id: 11`]. This change occurs whenever an order is paid for during storefront checkout.)
 

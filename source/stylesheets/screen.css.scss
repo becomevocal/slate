@@ -818,10 +818,11 @@ img {
   display: none;
 }
 
-.changelog .content h1 {
-  display: none;
-}
-
-.changelog .content h2 {
-  display: none;
+.changelog {
+  .content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6, .content > p, .content > table, .content > ul, .content > ol, .content > aside, .content > dl {
+    margin-right: 10% !important;
+  }
+  .content h1, .content h2 {
+    display: none;
+  }
 }
